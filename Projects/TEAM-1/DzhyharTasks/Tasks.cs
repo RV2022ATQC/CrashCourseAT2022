@@ -53,5 +53,21 @@ namespace DzhyharTasks
             Console.WriteLine($"Сума чисел буде:  {c + e + f} Добуток чисел буде {c * e * f} ");
             return this;
         }
+        public Tasks task206()
+        {
+            Console.Write("Enter a number: ");
+            int i = Convert.ToInt32(Console.ReadLine());
+            if (i % 2 == 0)
+                Console.WriteLine("Number is even: ");
+            else
+                Console.WriteLine("Number is odd");
+            return this;
+
+
+
+
+        }
     }
 }
+    
+
