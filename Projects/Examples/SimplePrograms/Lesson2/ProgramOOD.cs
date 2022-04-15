@@ -7,7 +7,7 @@ namespace Lesson2
     class ProgramOOD
     {
         #region Functions
-        //перезавантажені overload методи 
+        //перезавантажені overload методи - методи з різною сигнатурою
         public static string calculate(int a, int b = 2323)
         {
             return (a + b).ToString();
