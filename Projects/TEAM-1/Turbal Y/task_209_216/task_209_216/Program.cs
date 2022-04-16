@@ -116,7 +116,8 @@ namespace task_209_216
             tasks_functions.FigurePrint(m, n1);
             Console.ReadLine();
                     break;
-                default:  Console.WriteLine("На жвль, інші незробив"); break;
+                default:  Console.WriteLine("На жвль, інші незробив");
+                    break;
             }
             }
     }
