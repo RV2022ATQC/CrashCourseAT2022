@@ -16,8 +16,8 @@ namespace _202
 
             double hrn = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("In $ = " + hrn * 29.34);
-            Console.WriteLine("In Є = " + hrn * 31.78);
+            Console.WriteLine($"In $ = {hrn / 29.34}");
+            Console.WriteLine($"In Є = {hrn / 31.78}");
         }
     }
 }
