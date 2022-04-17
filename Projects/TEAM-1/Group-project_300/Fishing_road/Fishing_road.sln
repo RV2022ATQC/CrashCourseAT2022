@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fishing_road", "Fishing_road.csproj", "{C3BF3A75-D260-4FAE-A143-0C869A406C57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3BF3A75-D260-4FAE-A143-0C869A406C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BF3A75-D260-4FAE-A143-0C869A406C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BF3A75-D260-4FAE-A143-0C869A406C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BF3A75-D260-4FAE-A143-0C869A406C57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52EDC9F2-B245-43C3-872D-0255BC83F93B}
+	EndGlobalSection
+EndGlobal
