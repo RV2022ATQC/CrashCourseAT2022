@@ -37,15 +37,15 @@ namespace task_220_226
         public string RemoveFromString(string s, string removeSet)
         {
             int i ;
-            foreach (char ch in removeSet)
+            foreach(var ch in removeSet)
             {
-                // Console.Write(ch);
-                  i = 0;
+               i = 0;
                 while (i < s.Length)
-                { if (ch == s[i]) s.Remove(i, 1); else i++; }
+                { if (ch == s[i]) s=s.Remove(i, 1);
+                    else i++;
+                }
         }      
-                
-            return s;
+        return s;
         }
 
     }
@@ -54,8 +54,8 @@ namespace task_220_226
         static void Main(string[] args)
         {
             tasks t1 = new tasks();
-            Console.WriteLine(t1.Add("Hello"));
-            Console.WriteLine(t1.RemoveFromString("Hello",2,3));
+            //Console.WriteLine(t1.Add("Hello"));
+            //Console.WriteLine(t1.RemoveFromString("Hello",2,3));
             Console.WriteLine(t1.RemoveFromString("Hello", "Hl"));
             Console.ReadLine();
         }
