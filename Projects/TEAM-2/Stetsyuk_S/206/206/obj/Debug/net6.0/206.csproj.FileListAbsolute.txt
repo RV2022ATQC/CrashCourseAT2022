@@ -1,0 +1,15 @@
+D:\QA Tester\206\206\bin\Debug\net6.0\206.exe
+D:\QA Tester\206\206\bin\Debug\net6.0\206.deps.json
+D:\QA Tester\206\206\bin\Debug\net6.0\206.runtimeconfig.json
+D:\QA Tester\206\206\bin\Debug\net6.0\206.dll
+D:\QA Tester\206\206\bin\Debug\net6.0\ref\206.dll
+D:\QA Tester\206\206\bin\Debug\net6.0\206.pdb
+D:\QA Tester\206\206\obj\Debug\net6.0\206.csproj.AssemblyReference.cache
+D:\QA Tester\206\206\obj\Debug\net6.0\206.GeneratedMSBuildEditorConfig.editorconfig
+D:\QA Tester\206\206\obj\Debug\net6.0\206.AssemblyInfoInputs.cache
+D:\QA Tester\206\206\obj\Debug\net6.0\206.AssemblyInfo.cs
+D:\QA Tester\206\206\obj\Debug\net6.0\206.csproj.CoreCompileInputs.cache
+D:\QA Tester\206\206\obj\Debug\net6.0\206.dll
+D:\QA Tester\206\206\obj\Debug\net6.0\ref\206.dll
+D:\QA Tester\206\206\obj\Debug\net6.0\206.pdb
+D:\QA Tester\206\206\obj\Debug\net6.0\206.genruntimeconfig.cache
