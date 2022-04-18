@@ -4,11 +4,7 @@ namespace Lesson2
 {
     // клас Cat наслідується від батьківсього класу Animal - принцип ООП наслідування.
     // Клас нащадок успадковує від батьківського класу усі (protected + public) поля і методи.
-
-    // інтерфейс IDisposable - реалізовує логіку яка буде виконана під час
-    // видалення об'єкта процесом GarbageCollector. Не потрібно деструкторів як в C++
-    // логіка має бути прописана в методі Dispose()
-    public class Cat : Animal, IDisposable
+    public class Cat : Animal
     {
         public string voise;
 
@@ -18,13 +14,6 @@ namespace Lesson2
             SetAge();
             CatsAmount++;
             Animal.IncreaseCountOfAnimals();
-        }
-
-        //метод інтерфейсу IDisposable, який
-        //містить логіку, що буде виконана під час видалення об'єкту
-        public void Dispose()
-        {
-            CatsAmount--;
         }
 
         private static int CatsAmount { get; set; }

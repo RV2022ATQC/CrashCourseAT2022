@@ -7,7 +7,7 @@ namespace Lesson2
     class ProgramOOD
     {
         #region Functions
-        //перезавантажені overload методи 
+        //перезавантажені overload методи - методи з різною сигнатурою
         public static string calculate(int a, int b = 2323)
         {
             return (a + b).ToString();
@@ -44,12 +44,6 @@ namespace Lesson2
             cat2.SetAge(12);
 
             Console.WriteLine($"cat2.age {cat2.age}");
-
-            var myFavoritFood = new Restaurant();
-
-            //об'єкт класу Restauranr приймає як параметр об'єкт будь-якого класу який реалізував інтерфейс ICook 
-            myFavoritFood.MadeFood(new Fish());
-            myFavoritFood.MadeFood(new Plants());
 
 
             //викликаємо СТАТИЧНИЙ метод класу Animals, який вичитує дані з ПРИВАТНОГО поля countOfAnimals
