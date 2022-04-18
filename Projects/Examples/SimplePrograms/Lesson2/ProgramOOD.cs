@@ -45,12 +45,6 @@ namespace Lesson2
 
             Console.WriteLine($"cat2.age {cat2.age}");
 
-            var myFavoritFood = new Restaurant();
-
-            //об'єкт класу Restauranr приймає як параметр об'єкт будь-якого класу який реалізував інтерфейс ICook 
-            myFavoritFood.MadeFood(new Fish());
-            myFavoritFood.MadeFood(new Plants());
-
 
             //викликаємо СТАТИЧНИЙ метод класу Animals, який вичитує дані з ПРИВАТНОГО поля countOfAnimals
             //іншим чином ми не можемо отримати значення цього поля - це ІНКАПСУЛЯЦІЯ + робота зі стат полями і методами
