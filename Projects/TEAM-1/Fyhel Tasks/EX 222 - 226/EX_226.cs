@@ -54,8 +54,6 @@ namespace EX_222___226
                 Console.Write(i + ", ");
             }
 
-
-
             Console.ReadLine();
         }
     }
