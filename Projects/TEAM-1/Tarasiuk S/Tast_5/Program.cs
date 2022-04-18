@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tast_5
+namespace Task_5
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            //if U/
             Console.Write("a=");
             double a = 0;
-             a =   Convert.ToSingle(Console.ReadLine());
+            a = Convert.ToSingle(Console.ReadLine());
 
             Console.Write("b=");
             double b = 0;

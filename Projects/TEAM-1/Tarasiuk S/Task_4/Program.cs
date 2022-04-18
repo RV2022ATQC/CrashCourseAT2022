@@ -15,11 +15,8 @@ namespace Task_4
             number = Convert.ToSingle(Console.ReadLine());
 
             Double square = number * number;
-            Console.Write(number);
-            Console.Write("*");
-            Console.Write(number);
-            Console.Write("=");
-            Console.WriteLine(square);
+       
+            Console.WriteLine($"{number}*{number}={square}");
 
 
 
