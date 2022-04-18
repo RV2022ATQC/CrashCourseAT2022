@@ -8,33 +8,61 @@ namespace EX_209___215
 {
     class Program
     {
-        //1. Розробити програму, яка виводить на екран горизонтальну лінію з символів. Кількість символів, який використовувати символ, і яка буде лінія - вертикальна, або горизонтальна - вказує користувач.
-        static void EX_209()
+        static int EnterNumber()
+        {
+            string inputStr = Console.ReadLine();
+            bool isNumber = true;
+
+            for (int i = 0; i < inputStr.Length; i++)
+                if (inputStr[i] < 48 || inputStr[i] > 57)
+                    isNumber = false;
+            while (inputStr.Equals("")|| isNumber == false)//checking for right input
+            {
+                isNumber = true;
+                Console.WriteLine("\nERROR " + inputStr + " is not a number, try again:");
+                inputStr = Console.ReadLine();
+                for (int i = 0; i < inputStr.Length; i++)
+                    if (inputStr[i] < 48 || inputStr[i] > 57)
+                        isNumber = false;
+            }
+
+            return int.Parse(inputStr);
+        }
+
+        static string EnterString()
+        {
+            
+            string inputStr = Console.ReadLine();
+            while(inputStr.Equals(""))//checking for right input
+            {
+                
+                Console.WriteLine("\nWrong line, try again:");
+                inputStr = Console.ReadLine();
+            }
+            return inputStr;
+        }
+        static void EX_209()//1. Розробити програму, яка виводить на екран горизонтальну лінію з символів. Кількість символів, який використовувати символ, і яка буде лінія - вертикальна, або горизонтальна - вказує користувач.
         {
             char symbol = ' ';
             string inputStr=" ";
             int lengthOfLine, varriantOfLine;
 
             Console.WriteLine("\nEnter symbol for making line:");
-            inputStr = Console.ReadLine();
-            while(inputStr.Equals(null))//checking for right input
-            {
-                Console.WriteLine("\nWrong line, try again:");
-                inputStr = Console.ReadLine();
-            }
+
+            inputStr = EnterString();
             symbol = inputStr[0];
 
 
             Console.WriteLine("\nEnter length of line:");
-            lengthOfLine = int.Parse(Console.ReadLine());
+            lengthOfLine = EnterNumber();
             while (lengthOfLine == 0)//checking for right input
             {
                 Console.WriteLine("\nWrong line length, try again:");
-                lengthOfLine = int.Parse(Console.ReadLine());
+                lengthOfLine = EnterNumber();
             }
             
             Console.WriteLine("\nEnter \n\n1 for gorizontal line or \n\n2 for vertical line or \n\n3 for diagonal line:");
-            varriantOfLine = int.Parse(Console.ReadLine());
+            varriantOfLine = EnterNumber();
             while (varriantOfLine!=1 && varriantOfLine != 2 && varriantOfLine != 3)//checking for right input
             {
                 Console.WriteLine("\nWrong line varriant, try again:");
@@ -74,19 +102,14 @@ namespace EX_209___215
             Console.ReadLine();
         }
 
-        //4. Користувач вводить з клавіатури число - програма повинна показати скільки в даному числі цифр. Число вводиться повністю в одну змінну. Примітка: Наприклад, користувач ввів число 11123445555.На екрані має з'явитися повідомлення про те, що в числі 5 цифр."
-        static void EX_212()
+        static void EX_212()//4. Користувач вводить з клавіатури число - програма повинна показати скільки в даному числі цифр. Число вводиться повністю в одну змінну. Примітка: Наприклад, користувач ввів число 11123445555.На екрані має з'явитися повідомлення про те, що в числі 5 цифр."
+
         {
             string numberInputStr = String.Empty;
             List<int> numbersList = new List<int>();
 
             Console.WriteLine("\nEnter number:");
-            numberInputStr = Console.ReadLine();
-            while (numberInputStr.Equals(null))//checking for right input
-            {
-                Console.WriteLine("\nWrong number, try again:");
-                numberInputStr = Console.ReadLine();
-            }
+            numberInputStr = EnterString();
 
             for(int i = 0; i< numberInputStr.Length;i++)//adding symbols to list
             {
@@ -105,30 +128,14 @@ namespace EX_209___215
 
         }
 
-        //5. Користувач вводить з клавіатури число, необхідно перевернути його (число) і вивести на екран.Примітка: Наприклад, користувач ввів число 12345.На екрані має з'явитися число навпаки - 54321."
-        static void EX_213()
+        
+        static void EX_213()//5. Користувач вводить з клавіатури число, необхідно перевернути його (число) і вивести на екран.Примітка: Наприклад, користувач ввів число 12345.На екрані має з'явитися число навпаки - 54321."
         {
+            
             string numberInputStr = String.Empty, numberReverseStr = String.Empty;
-            bool isNumber=true;
 
             Console.WriteLine("\nEnter number:");
-            numberInputStr = Console.ReadLine();
-
-            for (int i = 0; i < numberInputStr.Length; i++)//checking if input string is number
-                if ((int)numberInputStr[i] > 57 || (int)numberInputStr[i] < 48)
-                    isNumber = false;
-
-            while (numberInputStr.Equals(null)|| isNumber == false)//checking for right input
-            {
-                isNumber = true;
-                Console.WriteLine("\nERROR "+ numberInputStr+" is not a number, try again:");
-                numberInputStr = Console.ReadLine();
-
-                for (int i = 0; i < numberInputStr.Length; i++)//checking if input string is number again
-                    if ((int)numberInputStr[i] > 57 || (int)numberInputStr[i] < 48)
-                        isNumber = false;
-            }
-
+            numberInputStr =EnterNumber().ToString();
 
             for (int i = numberInputStr.Length - 1; i >= 0; i--)//reversing
                 numberReverseStr += numberInputStr[i];
@@ -136,66 +143,59 @@ namespace EX_209___215
             Console.WriteLine("Forvard - " + numberInputStr+"\n\nReverse - "+ numberReverseStr);
 
             Console.ReadLine();
-
         }
 
-        //6. Користувач вводить з клавіатури число, необхідно показати на екран суму його цифр.Примітка: Наприклад, користувач ввів число 12345.На екрані має з'явитися повідомлення про те, що сума цифр числа 15."
-        static void EX_214()
+        static void EX_214()//6. Користувач вводить з клавіатури число, необхідно показати на екран суму його цифр.Примітка: Наприклад, користувач ввів число 12345.На екрані має з'явитися повідомлення про те, що сума цифр числа 15."
         {
+            int numberInputInt;
             string numberInputStr = String.Empty, numberReverseStr = String.Empty;
-            bool isNumber = true;
             int sumOfsymbols=0;
 
             Console.WriteLine("\nEnter number:");
-            numberInputStr = Console.ReadLine();
+            numberInputInt = EnterNumber();
+            numberInputStr = numberInputInt.ToString();
 
-            for (int i = 0; i < numberInputStr.Length; i++)//checking if input string is number
-                if ((int)numberInputStr[i] > 57 || (int)numberInputStr[i] < 48)
-                    isNumber = false;
-
-            while (numberInputStr.Equals(null) || isNumber == false)//checking for right input
-            {
-                isNumber = true;
-                Console.WriteLine("\nERROR, " + numberInputStr + " is not a number, try again:");
-                numberInputStr = Console.ReadLine();
-
-                for (int i = 0; i < numberInputStr.Length; i++)//checking if input string is number again
-                    if ((int)numberInputStr[i] > 57 || (int)numberInputStr[i] < 48)
-                        isNumber = false;
-            }
 
             for (int i = 0; i < numberInputStr.Length; i++)//calculating
                 sumOfsymbols += (int)numberInputStr[i] - 48;
-
 
             Console.WriteLine("\nThe sum of symbols in " + numberInputStr + " is " + sumOfsymbols);
 
             Console.ReadLine();
         }
 
-        //7. Написати програму, яка виводить на екран - наступну фігуру:ширина і висота фігури встановлюються користувачем з клавіатури.
-        static void EX_215()
+        static void EX_215()//7. Написати програму, яка виводить на екран - наступну фігуру:ширина і висота фігури встановлюються користувачем з клавіатури.
+        /*
+
+        *********************
+        *                   *
+        *                   *
+        *                   *
+        *                   *
+        *********************
+
+        */
         {
-            string inputStr = String.Empty;
+            int inputInt = 0 ;
             int lengthOfLine = 0, heightOfLine=0;
 
             Console.WriteLine("\nEnter height of line:");
-            inputStr = Console.ReadLine();
-            while (inputStr.Equals(null) || inputStr.Equals("0"))//checking for right input height
+            inputInt = EnterNumber();
+            while (inputInt.Equals(null) || inputInt.Equals("0"))//checking for right input height
             {
                 Console.WriteLine("\nWrong height, try again:");
-                inputStr = Console.ReadLine();
+                inputInt = EnterNumber();
             }
-            heightOfLine = int.Parse(inputStr);
+            heightOfLine = inputInt;
 
             Console.WriteLine("\nEnter length of line:");
-            inputStr = Console.ReadLine();
-            while (inputStr.Equals(null) || inputStr.Equals("0"))//checking for right input length
+            inputInt = EnterNumber();
+            while (inputInt.Equals(null) || inputInt.Equals("0"))//checking for right input length
             {
                 Console.WriteLine("\nWrong length, try again:");
-                inputStr = Console.ReadLine();
+                inputInt = EnterNumber();
             }
-            lengthOfLine = int.Parse(inputStr);
+            lengthOfLine = inputInt;
 
             Console.Write("\n\n");
             for (int l = 0; l < lengthOfLine; l++)
@@ -216,28 +216,34 @@ namespace EX_209___215
                 for (int l = 0; l < lengthOfLine; l++)
                     Console.Write("*");
 
-
             Console.ReadLine();
-
         }
-            static void Main(string[] args)
-        {
-            //EX_209();//1. Розробити програму, яка виводить на екран горизонтальну лінію з символів. Кількість символів, який використовувати символ, і яка буде лінія - вертикальна, або горизонтальна - вказує користувач.
-            //EX_212();//4. Користувач вводить з клавіатури число - програма повинна показати скільки в даному числі цифр. Число вводиться повністю в одну змінну. Примітка: Наприклад, користувач ввів число 11123445555.На екрані має з'явитися повідомлення про те, що в числі 5 цифр."
-            //EX_213();//5. Користувач вводить з клавіатури число, необхідно перевернути його (число) і вивести на екран.Примітка: Наприклад, користувач ввів число 12345.На екрані має з'явитися число навпаки - 54321."
-            //EX_214();//6. Користувач вводить з клавіатури число, необхідно показати на екран суму його цифр.Примітка: Наприклад, користувач ввів число 12345.На екрані має з'явитися повідомлення про те, що сума цифр числа 15."
-            //EX_215();//7. Написати програму, яка виводить на екран - наступну фігуру:ширина і висота фігури встановлюються користувачем з клавіатури."
-           /*
-            
-            *********************
-            *                   *
-            *                   *
-            *                   *
-            *                   *
-            *********************
-           
-            */
 
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter:\n\n9  -  Ex 209\n12  -  Ex 212\n13  -  Ex 213\n14  -  Ex 214\n15  -  Ex 215\n");
+            int varriant = -1;
+            varriant = EnterNumber();
+
+            switch (varriant)
+            {
+                case 9:
+                    EX_209();
+                    break;
+                case 12:
+                    EX_212();
+                    break;
+                case 13:
+                    EX_213();
+                    break;
+                case 14:
+                    EX_214();
+                    break;
+                case 15:
+                    EX_215();
+                    break;
+            }
         }
     }
 }
