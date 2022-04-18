@@ -17,13 +17,13 @@ namespace Task_2
             
             double dollar = hrn/(32.45);
        
-            Console.Write(dollar);
-            Console.WriteLine(" Dollar");
+          
+            Console.WriteLine($"{dollar} Dollar");
 
             double euro = hrn / (34.80);
-            Console.Write(euro);
-            Console.WriteLine(@" Euro€");
-
+           
+            Console.WriteLine($"{euro} Euro");
+            
 
 
 
