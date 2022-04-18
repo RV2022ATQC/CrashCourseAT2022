@@ -15,10 +15,13 @@ namespace Lesson2
 
         public int speed;
 
-        public const string CLASS_NAME = "ТВАРИНИ";
-    #endregion Fields
+        public const string CLASS_NAME = "ТВАРИНИ"; //приклад константи
 
-    #region Methods
+        public string Name  //властивіть - поле для якого визначені методи Get i Set
+        { get; private set; }
+        #endregion Fields
+
+        #region Methods
 
 
         #region Constructors
@@ -30,6 +33,7 @@ namespace Lesson2
         public Animal()
         {
             Animal.IncreaseCountOfAnimals();
+            Console.WriteLine("Animals constructor!");
         }
 
         // як і інші методи ми може мо мати перегружені конструктори
@@ -42,6 +46,8 @@ namespace Lesson2
 
             //виклик статичного методу, що належить класу Animals
             Animal.IncreaseCountOfAnimals();
+            Console.WriteLine("Animals constructor with parameters!");
+
         }
         #endregion Constructors
 
@@ -58,6 +64,11 @@ namespace Lesson2
         {
             this.age = 0;
             return age.ToString();
+        }
+
+        public string Eat()
+        {
+            return "Thank you!";
         }
 
         public int GetWeight()
@@ -101,7 +112,7 @@ namespace Lesson2
 
         #endregion Methods
 
-    #region StaticConstructions
+    #region StaticElements
         //---------------------------СТАТИЧНІ ПОЛЯ І МЕТОДИ--------------------------------------------
         //статичні поля і методи належать класу а не конкретному об'єкту цього класу
         //статичні елементи створюються під час компіляції програми, а не під час створення нового об'єкту класу
@@ -113,14 +124,15 @@ namespace Lesson2
         public static string GetCountOfAnimals()
         {
             return countOfAnimals.ToString();
+
+            IncreaseCountOfAnimals();
         }
 
-        public static void IncreaseCountOfAnimals()
-        {
-            countOfAnimals++;
+        public static void IncreaseCountOfAnimals( int i = 1)        {
+            countOfAnimals = countOfAnimals + i;
         }
 
-        public static void DecreaseCountOfAnimals() => countOfAnimals--;  // скорочене оголошення методу через оператор =>
-    #endregion StaticConstructions
+        public static int DecreaseCountOfAnimals() => countOfAnimals--;  // скорочене оголошення методу через оператор =>
+        #endregion StaticElements
     }
 }
