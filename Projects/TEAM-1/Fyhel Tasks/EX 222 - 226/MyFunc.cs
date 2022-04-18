@@ -10,7 +10,6 @@ namespace EX_222___226
     {
         public int EnterInteger()
         {
-
             string inputStr = Console.ReadLine();
             while (inputStr.Equals("") || inputStr[0] < 48 || inputStr[0] > 57)//checking for right input
             {

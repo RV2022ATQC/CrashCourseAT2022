@@ -5,3 +5,10 @@ D:\visualstudio\SOFTSERVER\EX 209 - 215\obj\Debug\EX 209 - 215.csproj.AssemblyRe
 D:\visualstudio\SOFTSERVER\EX 209 - 215\obj\Debug\EX 209 - 215.csproj.CoreCompileInputs.cache
 D:\visualstudio\SOFTSERVER\EX 209 - 215\obj\Debug\EX 209 - 215.exe
 D:\visualstudio\SOFTSERVER\EX 209 - 215\obj\Debug\EX 209 - 215.pdb
+C:\Users\User\Documents\GitHub\CrashCourseAT2022\Projects\TEAM-1\Fyhel Tasks\EX 209 - 215\obj\Debug\EX 209 - 215.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\CrashCourseAT2022\Projects\TEAM-1\Fyhel Tasks\EX 209 - 215\obj\Debug\EX 209 - 215.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\CrashCourseAT2022\Projects\TEAM-1\Fyhel Tasks\EX 209 - 215\obj\Debug\EX 209 - 215.exe
+C:\Users\User\Documents\GitHub\CrashCourseAT2022\Projects\TEAM-1\Fyhel Tasks\EX 209 - 215\obj\Debug\EX 209 - 215.pdb
+C:\Users\User\Documents\GitHub\CrashCourseAT2022\Projects\TEAM-1\Fyhel Tasks\EX 209 - 215\bin\Debug\EX 209 - 215.exe.config
+C:\Users\User\Documents\GitHub\CrashCourseAT2022\Projects\TEAM-1\Fyhel Tasks\EX 209 - 215\bin\Debug\EX 209 - 215.exe
+C:\Users\User\Documents\GitHub\CrashCourseAT2022\Projects\TEAM-1\Fyhel Tasks\EX 209 - 215\bin\Debug\EX 209 - 215.pdb
