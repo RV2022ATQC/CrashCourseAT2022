@@ -1,0 +1,8 @@
+C:\Users\makci\source\repos\Task216\Task216\obj\Debug\Task216.csproj.AssemblyReference.cache
+C:\Users\makci\source\repos\Task216\Task216\obj\Debug\Task216.csproj.SuggestedBindingRedirects.cache
+C:\Users\makci\source\repos\Task216\Task216\obj\Debug\Task216.csproj.CoreCompileInputs.cache
+C:\Users\makci\source\repos\Task216\Task216\bin\Debug\Task216.exe.config
+C:\Users\makci\source\repos\Task216\Task216\bin\Debug\Task216.exe
+C:\Users\makci\source\repos\Task216\Task216\bin\Debug\Task216.pdb
+C:\Users\makci\source\repos\Task216\Task216\obj\Debug\Task216.exe
+C:\Users\makci\source\repos\Task216\Task216\obj\Debug\Task216.pdb
