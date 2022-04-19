@@ -7,7 +7,7 @@ namespace Lesson2
     class ProgramOOD
     {
         #region Functions
-        //перезавантажені overload методи 
+        //перезавантажені overload методи - методи з різною сигнатурою
         public static string calculate(int a, int b = 2323)
         {
             return (a + b).ToString();
@@ -21,6 +21,9 @@ namespace Lesson2
         
         public static async Task Main(string[] args)
         {
+
+            Console.WriteLine($"Animals.GetCountOfAnimals() = {Animal.GetCountOfAnimals()}");
+
             //виклик перезавантажених overload методів
             calculate(3);
             calculate(3, 7);
@@ -29,6 +32,7 @@ namespace Lesson2
             //створення об'єкту типу Animals
             Animal animal1 = new Animal(12, 7, 30);
             animal1.Move(2, 4);
+            animal1.GetState();
 
             //створення об'єкту типу Cats двома різними конструкторами, відповідно отримаємо
             //різну ініціалізацію і різні значення для age створених об'єктів
@@ -41,23 +45,22 @@ namespace Lesson2
 
             Cat cat2 = new Cat();
 
+            Cat cat3 = cat2;
+
             cat2.SetAge(12);
 
-            Console.WriteLine($"cat2.age {cat2.age}");
-
-            var myFavoritFood = new Restaurant();
-
-            //об'єкт класу Restauranr приймає як параметр об'єкт будь-якого класу який реалізував інтерфейс ICook 
-            myFavoritFood.MadeFood(new Fish());
-            myFavoritFood.MadeFood(new Plants());
-
+            Console.WriteLine($"cat2.age {cat2.age}, {cat2.GetName()}");
+            Console.WriteLine($"cat3.age {cat3.age}, {cat3.GetName()}"); //приклад роботи типу даних за посиланням
 
             //викликаємо СТАТИЧНИЙ метод класу Animals, який вичитує дані з ПРИВАТНОГО поля countOfAnimals
             //іншим чином ми не можемо отримати значення цього поля - це ІНКАПСУЛЯЦІЯ + робота зі стат полями і методами
             Console.WriteLine($"Animals.GetCountOfAnimals() = {Animal.GetCountOfAnimals()}");
+
+            Animal animalFromCat = cat2;
+            Console.WriteLine($"animalFromCat {cat2.Eat()}");
+            Console.WriteLine($"animalFromCat {animalFromCat.Eat()}");
         }
     }
-
 
 
     //-------------------------------------------Структури----------------------------------

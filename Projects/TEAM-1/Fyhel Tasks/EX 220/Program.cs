@@ -13,6 +13,7 @@ namespace EX_220
         static int resultInt = 0;//global variables
         static string resultStr = string.Empty;
         
+
         static void Add(string lineStr)//string overload
         {
             resultStr += lineStr+" ";
@@ -23,10 +24,8 @@ namespace EX_220
         }
         static void Main(string[] args)
         {
-
             string inputStr = String.Empty;
             bool isNumber = true;
-
 
             Console.WriteLine("\nEnter number or string:");
             inputStr = Console.ReadLine();
@@ -35,7 +34,6 @@ namespace EX_220
                 if ((int)inputStr[i] > 57 || (int)inputStr[i] < 48)
                     isNumber = false;
 
-
             if (isNumber)
             {
                 while (inputStr.Equals(""))//checking for right input
@@ -43,18 +41,14 @@ namespace EX_220
                     Console.WriteLine("Wrong input, try again");
                     inputStr = Console.ReadLine();
                 }
-                    Add(int.Parse(inputStr));
+                Add(int.Parse(inputStr));
 
                 Console.WriteLine("Enter another number: ");
             }
 
             else if (!isNumber)
             {
-                while (inputStr.Equals(""))//checking for right input
-                {
-                    Console.WriteLine("Wrong input, try again");
-                    inputStr = Console.ReadLine();
-                }
+                //isNumber can't become false if it is ""
                 Add(inputStr);
                 Console.WriteLine("Enter another string: ");
             }
@@ -69,10 +63,15 @@ namespace EX_220
 
                 if (isNumber)
                 {
-                    if (!inputStr.Equals(""))
+                for (int i = 0; i < inputStr.Length; i++)//checking if input string is number
+                        if ((int)inputStr[i] > 57 || (int)inputStr[i] < 48)
+                            isNumber = false;
+                    
+                    if (!inputStr.Equals("")&&isNumber)
                         Add(int.Parse(inputStr));
                     else
                         Console.WriteLine("Wrong input, try again");
+                    if(isNumber)
                     Console.WriteLine("Result of adding numbers = " + resultInt + "\n\nEnter another number or \"END\" to stop");
                 }
 
@@ -89,7 +88,6 @@ namespace EX_220
 
                 inputStr = Console.ReadLine();
             }
-
         }
     }
 }

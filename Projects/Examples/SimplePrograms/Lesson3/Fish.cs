@@ -13,7 +13,7 @@ namespace Lesson3
         public Food GetFood() {
 
             Console.WriteLine("It is your sushi");
-            return this.isEdible ? new Food() : throw new Exception("This food isn't edible");
+            return this.isEdible ? new Food() : throw new Exception("This food isn't edible"); //приклад використання тренарного оператора
         }
     }
 }

@@ -7,7 +7,6 @@ namespace Lesson3
     public class Cat : Animal  // клас Cat наслідується від батьківсього класу Animal - принцип ООП наслідування.
                                  // Клас нащадок успадковує від батьківського класу усі (protected + public) поля і методи.
     {
-        [XmlElement()]
         public string voise;
 
         //конструктор без параметрів
