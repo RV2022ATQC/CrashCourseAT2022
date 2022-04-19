@@ -170,14 +170,17 @@ namespace Lesson1
             } while (i >= 1);
 
 
-            //непримітивні типи даних
+            //НЕПРИМІТИВНІ типи даних (типи даниз за посиланням)
 
+            //string - строкові дані
             string stringExample = "Simple string";
             string stringExample2 = stringExample;
 
-            stringExample = "Changed string";
+            stringExample = "Changed" + "string";  //коли ми змінюємо string, то програма не міняє значення в пам'яті,
+                                               //а створює новий об'єкт, який вже і містить змінений текст
+                                               //Тому, хоча string є типом даних "за посиланням", у нашому випадку stringExample != stringExample2
+                                               //оскільки stringExample вже посилається на іншу область пам'яті, яка містить новий текст
             Console.WriteLine(stringExample2);
-
             Console.Write(stringExample);
 
 
@@ -208,6 +211,5 @@ namespace Lesson1
             Saturday,
             Sunday
         }
-
     }
 }
