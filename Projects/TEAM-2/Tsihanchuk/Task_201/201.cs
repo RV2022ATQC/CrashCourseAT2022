@@ -1,17 +1,17 @@
 using System;
 
-namespace AVG;
+namespace AVG
 {
     class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            int first = Console.ReadLine(); \\first number
-            int second = Console.ReadLine();\\second number
+        string first = Console.ReadLine(); 
+            string second = Console.ReadLine();
 
-            float avg=(first+second)\2
+            float avg = (Int32.Parse(first) + Int32.Parse(second)) /2;
 
-            System.WriteLine(avg);
-        }
+           Console.WriteLine(avg);
     }
+}
 }
