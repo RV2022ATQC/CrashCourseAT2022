@@ -1,0 +1,8 @@
+C:\Users\jakst\Documents\C#\Task_202\bin\Debug\Task_202.exe.config
+C:\Users\jakst\Documents\C#\Task_202\bin\Debug\Task_202.exe
+C:\Users\jakst\Documents\C#\Task_202\bin\Debug\Task_202.pdb
+C:\Users\jakst\Documents\C#\Task_202\obj\Debug\Task_202.csproj.AssemblyReference.cache
+C:\Users\jakst\Documents\C#\Task_202\obj\Debug\Task_202.csproj.SuggestedBindingRedirects.cache
+C:\Users\jakst\Documents\C#\Task_202\obj\Debug\Task_202.csproj.CoreCompileInputs.cache
+C:\Users\jakst\Documents\C#\Task_202\obj\Debug\Task_202.exe
+C:\Users\jakst\Documents\C#\Task_202\obj\Debug\Task_202.pdb
