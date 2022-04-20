@@ -1,0 +1,8 @@
+C:\Users\jakst\Documents\C#\204\bin\Debug\204.exe.config
+C:\Users\jakst\Documents\C#\204\bin\Debug\204.exe
+C:\Users\jakst\Documents\C#\204\bin\Debug\204.pdb
+C:\Users\jakst\Documents\C#\204\obj\Debug\204.csproj.AssemblyReference.cache
+C:\Users\jakst\Documents\C#\204\obj\Debug\204.csproj.SuggestedBindingRedirects.cache
+C:\Users\jakst\Documents\C#\204\obj\Debug\204.csproj.CoreCompileInputs.cache
+C:\Users\jakst\Documents\C#\204\obj\Debug\204.exe
+C:\Users\jakst\Documents\C#\204\obj\Debug\204.pdb
