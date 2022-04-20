@@ -1,0 +1,8 @@
+C:\Users\jakst\Documents\C#\205\bin\Debug\205.exe.config
+C:\Users\jakst\Documents\C#\205\bin\Debug\205.exe
+C:\Users\jakst\Documents\C#\205\bin\Debug\205.pdb
+C:\Users\jakst\Documents\C#\205\obj\Debug\205.csproj.AssemblyReference.cache
+C:\Users\jakst\Documents\C#\205\obj\Debug\205.csproj.SuggestedBindingRedirects.cache
+C:\Users\jakst\Documents\C#\205\obj\Debug\205.csproj.CoreCompileInputs.cache
+C:\Users\jakst\Documents\C#\205\obj\Debug\205.exe
+C:\Users\jakst\Documents\C#\205\obj\Debug\205.pdb
