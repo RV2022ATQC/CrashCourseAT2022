@@ -1,0 +1,8 @@
+C:\Users\makci\source\repos\Task214\Task214\obj\Debug\Task214.csproj.AssemblyReference.cache
+C:\Users\makci\source\repos\Task214\Task214\obj\Debug\Task214.csproj.SuggestedBindingRedirects.cache
+C:\Users\makci\source\repos\Task214\Task214\obj\Debug\Task214.csproj.CoreCompileInputs.cache
+C:\Users\makci\source\repos\Task214\Task214\bin\Debug\Task214.exe.config
+C:\Users\makci\source\repos\Task214\Task214\bin\Debug\Task214.exe
+C:\Users\makci\source\repos\Task214\Task214\bin\Debug\Task214.pdb
+C:\Users\makci\source\repos\Task214\Task214\obj\Debug\Task214.exe
+C:\Users\makci\source\repos\Task214\Task214\obj\Debug\Task214.pdb

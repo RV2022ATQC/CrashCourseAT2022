@@ -6,17 +6,20 @@ namespace Lesson1
 {
     class Syntax
     {
-        public static bool tryTrenary() {
 
+
+        //оголошення статичного методу tryTrenary()
+        //статичні методи належать класу а не об'єкту, для роботи зі статичними методами не потрібно створювати об'єкт
+        public static bool tryTrenary()
+        {
             Console.WriteLine("Test breakpoins");
             return true;
         }
 
+
         public static void Main(string[] args)
         {
             float floatExample = 1.3f;
-
-            string stringExample = "Simple string";
 
             var caracterVariable = 'C';
 
@@ -39,12 +42,24 @@ namespace Lesson1
             isTrue = a <= b;
             isTrue = a == b;
 
-            //var variableExample = "45567";
+            //тринарний логічний оператор
+            var logicalResult =
+                isTrue ? tryTrenary() : false;
 
-            DateTime currentDay = DateTime.Now;
+            Console.WriteLine(logicalResult);
+            //Console.Beep();
 
+            //Бажано використовувати var - компілятор сам визначить і встановить необхідний тип даних для змінної
+            var variableExample = "45567";
+
+
+            DateTime currentDay = DateTime.Today;
+
+
+            //Масиви
             int[] intArray, intArray2;
 
+            DateTime[] intArray3;
 
             intArray = new int[3] { 1, 2, 3 };
 
@@ -52,136 +67,140 @@ namespace Lesson1
 
             int[,] Array2D = new int[4, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 } };
 
+            int[,,] Array3D = new int[4, 3, 3] { { { 1, 2, 3 }, { 1, 2, 3 }, { 1, 2, 3 } },
+                                                 { { 4, 5, 6 }, { 4, 5, 6 }, { 4, 5, 6 } },
+                                                 { { 0, 1, 2 }, { 0, 1, 2 }, { 1, 1, 2 } },
+                                                 { { 7, 8, 9 }, { 7, 8, 9 }, { 7, 8, 9 } } };
 
+            //Оператори вітвлень 
             isTrue = true;
-
-            Console.WriteLine(isTrue ? tryTrenary() : false);
-
-            Console.Beep();
-
-            /*
-            for (int i = 0; i <= 3; i++)
+            if (isTrue)
             {
-                for (int j = 0; j <= 2; j++)
+                Console.WriteLine(isTrue);
+            }
+            else if (1 != 1)
+            {
+                Console.WriteLine(isTrue);
+            }
+            else
+            {
+                Console.WriteLine(isTrue);
+            }
+
+
+
+            var fromConsole = Console.ReadLine();
+
+            switch (fromConsole)
+            {
+                case "1":
+                    Console.WriteLine("variable = 1");
+                    break;
+                case "2":
+                    Console.WriteLine("variable = 2");
+                    break;
+                case "3":
+                    Console.WriteLine("variable = 3");
+                    break;
+                case "4":
+                    Console.WriteLine("variable = 4");
+                    break;
+                default:
+                    Console.WriteLine("variable by default");
+                    break;
+                    // goto case "1"; return або throw;
+            }
+
+
+            //цикли
+            //for
+            for (int x = 0; x <= 3; x++)
+            {
+                for (int y = 0; y <= 2; y++)
                 {
-                    Console.WriteLine($"Array value {Array2D[i, j]}");
+                    Console.WriteLine($"Array value {Array2D[x, y]}");
                 }
-
-            ;
-
-                intArray2 = intArray;
-                intArray[0] = 8;
-
-                foreach (var iterator in intArray2)
-                {
-                    Console.WriteLine($"List value {iterator}");
-                }
-
-
-                string stringExample2 = stringExample;
-
-                stringExample = "Changed string";
-                Console.Write(stringExample2);
-
-
-                //Console.WriteLine("Array value " + intArray[0]);
-
-                //Console.Write(stringExample);
+            };
 
 
 
-                var fromConsole = Console.ReadLine();
+            //foreach
+            intArray2 = intArray;
+            intArray[0] = 8;
 
-                switch (fromConsole)
-                {
-                    case "1":
-                        Console.WriteLine("variable = 1");
-                        break;
-                    case "2":
-                        Console.WriteLine("variable = 2");
-                        break;
-                    case "3":
-                        Console.WriteLine("variable = 3");
-                        break;
-                    case "4":
-                        Console.WriteLine("variable = 4");
-                        break;
-                    default:
-                        Console.WriteLine("variable by default");
-                        break;
-                        // goto case "1"; return или throw;
-                }
+            foreach (var iterator in intArray2) //проходимось циклом по кожному значенню з масиву
+            {
+                Console.WriteLine($"List value {iterator}");  //приклад інтерполяції строки
+            }
 
-                if (isTrue)
-                {
-                    Console.WriteLine(isTrue);
-                }
-                else if (1 != 1)
-                {
-                    Console.WriteLine(isTrue);
-                }
+            for (int x = 0; x <= 2; x++) //проходимось циклом for по кожному значенню з масиву
+            {
+                Console.WriteLine($"Array value {intArray[x]}");
+            }
+
+            List<int> numList = new List<int>(); //створюємо СПИСОК цілих чисел
+
+            numList.Add(2); //додаємо в список елементи
+            numList.Add(21);
+            numList.Add(22);
+            numList.Add(23);
+
+            numList.RemoveAt(2);
+
+            foreach (var iterator in numList) //цикли foreach працює і зі списками
+            {
+                Console.WriteLine($"List value {iterator}");
+            }
 
 
-                isTrue = true;
+            //цикли while і do while
+            var i = 10;
+            while (i >= 1)
+            {                
+                Console.WriteLine($"While Iteration # {i}");
+                i--;
+            };
+
+            Console.WriteLine($"i = {i}");
+
+            do
+            {                
+                Console.WriteLine($"Do while Iteration # {i}");
+                i--;
+            } while (i >= 1);
 
 
-                Console.WriteLine(isTrue ? tryTrinity() : false);
+            //НЕПРИМІТИВНІ типи даних (типи даниз за посиланням)
 
-                /*           
+            //string - строкові дані
+            string stringExample = "Simple string";
+            string stringExample2 = stringExample;
 
-                       //for (int i = 0; i <=2; i++)
-                       //{
-                       //    Console.WriteLine($"Array value {intArray[i]}");
-                       //}
+            stringExample = "Changed" + "string";  //коли ми змінюємо string, то програма не міняє значення в пам'яті,
+                                               //а створює новий об'єкт, який вже і містить змінений текст
+                                               //Тому, хоча string є типом даних "за посиланням", у нашому випадку stringExample != stringExample2
+                                               //оскільки stringExample вже посилається на іншу область пам'яті, яка містить новий текст
+            Console.WriteLine(stringExample2);
+            Console.Write(stringExample);
 
-                       //List<int> numList = new List<int>();
 
-                       //numList.Add(2);
-                       //numList.Add(21);
-                       //numList.Add(22);
-                       //numList.Add(23);
 
-                       //numList.RemoveAt(2);
-
-                       foreach (var iterator in numList)
-                       {
-                           Console.WriteLine($"List value {iterator}");
-                       }
-
-                       var i = 10;
-                       while (i > 1) {
-                           Console.WriteLine($"Iteration # {i}");
-                           i--;
-                       };
-
-                       do
-                       {
-                           Console.WriteLine($"Iteration # {i}");
-                           i--;
-                       } while (i > 1);
-                */
-
-            //Tuples
+            //Tuples - кортежі
             (string, int, double) person = ("Tom", 25, 81.23);
-
             (string, int, double) person1 = person;
 
             person.Item1 = "changed";
 
             Console.WriteLine(person1.Item1);
 
-            //Enums
+
+            //Enums - приклад роботи з перечисленнями
             Console.WriteLine(Days.Monday);
             Console.WriteLine((int)Days.Wednesday);
-
-
-            //    Console.WriteLine($"Press any button to finish program");
-            //   Console.ReadLine();
         }
 
-    
 
-        //Enums
+        //Enums - приклад перечислень
         enum Days
         {
             Monday = 1,
@@ -192,6 +211,5 @@ namespace Lesson1
             Saturday,
             Sunday
         }
-        
     }
 }
