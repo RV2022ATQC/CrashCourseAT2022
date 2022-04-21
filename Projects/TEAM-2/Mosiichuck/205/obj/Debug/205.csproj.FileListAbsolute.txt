@@ -1,0 +1,6 @@
+D:\yura\soft\SoftProjects\205\bin\Debug\205.exe.config
+D:\yura\soft\SoftProjects\205\bin\Debug\205.exe
+D:\yura\soft\SoftProjects\205\bin\Debug\205.pdb
+D:\yura\soft\SoftProjects\205\obj\Debug\205.csproj.CoreCompileInputs.cache
+D:\yura\soft\SoftProjects\205\obj\Debug\205.exe
+D:\yura\soft\SoftProjects\205\obj\Debug\205.pdb

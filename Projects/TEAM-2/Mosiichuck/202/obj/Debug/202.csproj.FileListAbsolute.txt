@@ -1,0 +1,7 @@
+D:\yura\soft\SoftProjects\202\bin\Debug\202.exe.config
+D:\yura\soft\SoftProjects\202\bin\Debug\202.exe
+D:\yura\soft\SoftProjects\202\bin\Debug\202.pdb
+D:\yura\soft\SoftProjects\202\obj\Debug\202.csproj.AssemblyReference.cache
+D:\yura\soft\SoftProjects\202\obj\Debug\202.csproj.CoreCompileInputs.cache
+D:\yura\soft\SoftProjects\202\obj\Debug\202.exe
+D:\yura\soft\SoftProjects\202\obj\Debug\202.pdb
