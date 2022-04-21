@@ -1,0 +1,8 @@
+C:\Users\makci\source\repos\Task209\Task209\bin\Debug\Task209.exe.config
+C:\Users\makci\source\repos\Task209\Task209\bin\Debug\Task209.exe
+C:\Users\makci\source\repos\Task209\Task209\bin\Debug\Task209.pdb
+C:\Users\makci\source\repos\Task209\Task209\obj\Debug\Task209.csproj.AssemblyReference.cache
+C:\Users\makci\source\repos\Task209\Task209\obj\Debug\Task209.csproj.SuggestedBindingRedirects.cache
+C:\Users\makci\source\repos\Task209\Task209\obj\Debug\Task209.csproj.CoreCompileInputs.cache
+C:\Users\makci\source\repos\Task209\Task209\obj\Debug\Task209.exe
+C:\Users\makci\source\repos\Task209\Task209\obj\Debug\Task209.pdb
