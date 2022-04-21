@@ -1,12 +1,11 @@
 ﻿using System;
 
-// 5. Введіть три числа і виведіть на екран значення суми і добуток цих чисел.
+// 206. Напишіть програму, яка перевіряє число, введене з клавіатури на парність.
 
 namespace Tasks
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             int a;
@@ -17,18 +16,14 @@ namespace Tasks
 
             bool result = temp == 0;
 
-            if (result) 
+            if (result)
             {
-              Console.WriteLine("Even number");
+                Console.WriteLine("Even number");
             }
             else
             {
-              Console.WriteLine("Odd number");
+                Console.WriteLine("Odd number");
             }
-
-
-
-
 
         }
     }
