@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Xml.Serialization;
 
 namespace Lesson3
 {
-    [Serializable]
     public class Cat : Animal  // клас Cat наслідується від батьківсього класу Animal - принцип ООП наслідування.
                                  // Клас нащадок успадковує від батьківського класу усі (protected + public) поля і методи.
     {

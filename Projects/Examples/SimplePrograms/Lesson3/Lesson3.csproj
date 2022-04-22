@@ -52,7 +52,7 @@
     <Compile Include="Cat.cs" />
     <Compile Include="Fish.cs" />
     <Compile Include="Food.cs" />
-    <Compile Include="ICook.cs" />
+    <Compile Include="ICookable.cs" />
     <Compile Include="MyCollection.cs" />
     <Compile Include="Plants.cs" />
     <Compile Include="ProgramGeneric.cs" />

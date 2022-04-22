@@ -30,66 +30,8 @@ namespace Lesson3
             }
         }
 
-        #region SerializationExamples
-
-        //серіалізація у XML
-        public static async void XmlSerializationExample(List<Animal> animalsCollection)
-        {
-            Console.WriteLine($"---------------XMLSerializationExample----------------");
 
 
-            //створюємо об'єкт XmlSerializer що приймає типи List<Animal> і List<Cat> 
-            //оскільки List, який ми будемо серіалізувати містить об'єкти обох класів
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Animal>), new[] { typeof(List<Cat>) });
-            Stream fileStream = new FileStream("animalsCollection.xml", FileMode.Create);
-            try
-            {
-                serializer.Serialize(fileStream, animalsCollection);
-                fileStream.Close();
-                Console.WriteLine("Serialization completed");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            Console.WriteLine("You can check serealized XML file.  Press ENTER to continue...");
-            Console.ReadLine();
-        }
-
-        //серіалізація у JSON
-        public static async Task JSONSerializationExample(List<Animal> animalsCollection)
-        {
-            Console.WriteLine($"---------------JSONSerializationExample----------------");
-
-            // збереження данных
-            using (var fileStream = new FileStream("animalsCollection.json", FileMode.OpenOrCreate))
-            {
-                //серіалізація в Json
-                string jsonString = JsonConvert.SerializeObject(animalsCollection);
-                Console.WriteLine(jsonString);
-
-                // конвертуємо в байти і записуємо в файл
-                byte[] array = System.Text.Encoding.Default.GetBytes(jsonString);
-
-                fileStream.Write(array, 0, array.Length);
-                Console.WriteLine("Data has been saved to file");
-            }
-
-            Console.WriteLine("You can check serealized JSON file.  Press ENTER to continue...");
-            Console.ReadLine();
-
-            // зчитування данных
-            using (System.IO.StreamReader sr = File.OpenText("animalsCollection.json"))
-            {
-                var restoredCollection = JsonConvert.DeserializeObject<List<Animal>>(sr.ReadLine());
-                Console.WriteLine("Restored Collection");
-
-                foreach (var animal in restoredCollection)
-                    Console.WriteLine($"Name: {animal.age}  Speed: {animal.speed} Weight: {animal.GetWeight()}");
-            }
-        }
-        #endregion SerializationExamples
 
         #endregion Functions
 
@@ -111,8 +53,6 @@ namespace Lesson3
                 Console.WriteLine(i);
             }
 
-
-
             //----------------- Приведення і підстановка класів --------------
             Animal animal1 = new Animal();
             Animal someAnimal = new Animal();
@@ -125,7 +65,7 @@ namespace Lesson3
             animalsCollection.Add(cat1);
             animalsCollection.Add(cat2);
             animalsCollection.Add(animal1);
-            animalsCollection.Add(new Cat(8, 6, 3));
+            animalsCollection.Add(new Cat(2, 6, 3));
 
             var catsCollection = new List<Cat>();
 
@@ -147,6 +87,7 @@ namespace Lesson3
                     // Створюємо власне виключення
                     if (animal.age < 5) throw new Exception("Age is < 5 ...");
                 }
+
                 // ієрархія класів помилок, відловлюються специфічні і потім загальні
                 catch (SystemException ex)
                 {
@@ -168,46 +109,56 @@ namespace Lesson3
                 }
             }
 
-
-            //-------------------LINQ---------------------------------
-            //Вибірка об'єкту за параметром
-            Cat catNew = catsCollection.First((x) => x.voise == "Meow!");
-            Console.WriteLine($"The cat that have voice  = Meow! is the nex: {catNew.age}, {catNew.speed}, {catNew.voise} \n");
-
-
-            //!!!ВИБІРКА LINQ коротка форма вибірки з animalsCollection лише об'єктів типу Cats і сортування по віку
-            foreach (var cat in animalsCollection.OfType<Cat>().OrderBy(x => x.age).ToList())
-            {
-                Console.WriteLine($"The sorted cat from List = {cat.age}, {cat.speed}, {cat.voise}");
-            }
-
-
             #region Generics
             //----------------------------- Generics узагальнені типи ------------
+
+            MyGenerics<int>.GenericExample(22);
+
+            MyGenerics<string>.GenericExample("string");
+
+            MyGenerics<object>.GenericExample(new object());
+
             //Ініціалізаціє об'єкту з узагальненим типом
             var someRestaurant = new Restaurant<Food>();
 
             //об'єкт класу Restauranr приймає як параметр об'єкт будь-якого класу який реалізував інтерфейс ICook 
-            someRestaurant.MadeFood(new Fish());
+
+            Fish myFish = new Fish();
+
+            myFish.Move(1);
+
+            //в разі потеби ми можемо представити новий об'єкт у вигляді інтерфейсу
+            ICookable<Food> myFish2 = new Fish();
+            //але в такому випадку ми зможемо працювати ЛИШЕ з методами описаними в інтерфейсі
+            //решта методів об'єкта приховується.
+            //myFish2.Move(1);  // - цей код не спрацює вже для myFish2
+
+
+
+            someRestaurant.MadeFood(myFish);
+            //someRestaurant.MadeFood((ICookable<string>)myFish);
             
 
+
+            //Створюємо новий ресторан, АЛЕ.....
             var veganRestaurant = new Restaurant<string>();
             veganRestaurant.MadeFood(new Plants());
-
-            // вже не вийде зробити їжу з риби у веганському ресторані оскільки ми 
+            // ....вже не вийде зробити їжу з риби у веганському ресторані оскільки ми 
             // його типізували викликавши як new Restaurant<string>
-            //      veganRestaurant.MadeFood(new Fish());
+            //veganRestaurant.MadeFood(new Fish());   // - цей код з new Fish() вже не спрацює
+
             #endregion Generics
 
+        }
+    }
 
-            XmlSerializationExample(animalsCollection);
-
-
-            catsCollection.Add(new Cat(1, 2, 3));
-            catsCollection.Add(new Cat(2, 3, 4));
-
-            await JSONSerializationExample(animalsCollection);
-
+    //Generic class
+    static class MyGenerics<TKey>
+    {
+        public static string GenericExample(TKey anyTypeObject)
+        {
+            Console.WriteLine("Some common logic for all types");
+            return anyTypeObject.ToString();
         }
     }
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lesson3
 {
-    class Fish :  Animal, ICook<Food>
+    class Fish :  Animal, ICookable<Food>
     {
         bool IsOceanic { get; set; }
 

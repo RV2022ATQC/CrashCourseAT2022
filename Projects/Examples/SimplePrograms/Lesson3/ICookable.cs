@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lesson3
 {
-    interface ICook<T>
+    interface ICookable<T>
     {
         T GetFood();
 

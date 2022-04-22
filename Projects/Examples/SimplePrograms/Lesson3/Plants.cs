@@ -3,7 +3,7 @@
 namespace Lesson3
 {
 
-    public class Plants : ICook<string>
+    public class Plants : ICookable<string>
     {
 
         public int Age

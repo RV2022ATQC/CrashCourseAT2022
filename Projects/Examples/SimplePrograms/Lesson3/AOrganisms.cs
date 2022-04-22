@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lesson2
+namespace Lesson3
 {
 
     //Абстрактний клас може містити загальні методи для усіх класів нащадків
