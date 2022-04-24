@@ -33,20 +33,27 @@ namespace Task209
 
             Console.WriteLine("\nEnjoy!\n");
 
-            if (LineType == 1)                            
+            switch (LineType)                            // оператор множинного вибору 
             {
+
+                case 1:
                 for (int i = 0; i < amount; i++)          //Для горизонтальних 
                 {
                     Console.Write(symbol);
                 }
                 Console.Write("\n");
-            }
-            else
-            {
+                break;
+              
+                case 2:
+               {
                 for (int i = 0; i < amount; i++)          //Для вертикальних
-                {
-                    Console.WriteLine(symbol);
-                }
+               {
+                   Console.WriteLine(symbol);
+               }
+                break;
+
+           }
+              
             }
         }
     }
