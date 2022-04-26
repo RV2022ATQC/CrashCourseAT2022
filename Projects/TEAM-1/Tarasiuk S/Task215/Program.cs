@@ -10,7 +10,9 @@ namespace Task215
     {
         static void Main(string[] args)
         { // Create programs that display the square figure.
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Hello I am a program for making squares ");
+            Console.ForegroundColor = ConsoleColor.Gray;
             int height = 0, length = 0;
             Console.Write("Enter height: ");        // Вводимо висоту
             height = int.Parse(Console.ReadLine());
@@ -19,7 +21,7 @@ namespace Task215
             length = int.Parse(Console.ReadLine());
 
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("Enjoy!\n");
+            Console.WriteLine("\nEnjoy!\n");
             Console.ForegroundColor = ConsoleColor.Green;   // Робимо верхній контур зелений
             for (int l = 0; l < length; l++)
                 Console.Write("*");
@@ -42,7 +44,7 @@ namespace Task215
                     Console.Write("*");
 
             Console.WriteLine("\n");
-           
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
 
