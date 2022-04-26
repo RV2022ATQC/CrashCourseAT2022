@@ -40,25 +40,21 @@ namespace Task209
             {
 
                 case ConsoleKey.F1:
-                for (int i = 0; i < amount; i++)          //Для горизонтальних 
-                {
+                    for (int i = 0; i < amount; i++)          //Для горизонтальних 
+                    {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write(symbol);
-                }
-                Console.Write("\n");
-                break;
-              
-                case ConsoleKey.F2:
-               {
-                for (int i = 0; i < amount; i++)          //Для вертикальних
-               {
-                      Console.ForegroundColor = ConsoleColor.Magenta;
-                      Console.WriteLine(symbol);
-               }
-                break;
+                    }
+                    Console.Write("\n");
+                    break;
 
-           }
-              
+                case ConsoleKey.F2:
+                    for (int i = 0; i < amount; i++)          //Для вертикальних
+                    {
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine(symbol);
+                    }
+                    break;
             }
         }
     }
