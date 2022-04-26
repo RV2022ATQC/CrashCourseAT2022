@@ -8,22 +8,22 @@ namespace Task_222
     internal class Program
     {
         static void Main(string[] args)
-        {            
+        {
             Program program1 = new Program();
 
-            program1.equation(0, 7);
-            program1.equation(12, 4);
-            program1.equation(-4, 12);
+            program1.Equation(0, 7);
+            program1.Equation(12, 4);
+            program1.Equation(-4, 12);
 
-            program1.equation(0, 6, 9);
-            program1.equation(2, 12, 4);
-            program1.equation(1, 1, 0);
-            program1.equation(1, 1, 1);           
+            program1.Equation(0, 6, 9);
+            program1.Equation(2, 12, 4);
+            program1.Equation(1, 1, 0);
+            program1.Equation(1, 1, 1);
 
         }
 
         // Linear equation
-        void equation (int a , int b)
+        void Equation(int a, int b)
         {
             if (a != 0)
             {
@@ -37,10 +37,10 @@ namespace Task_222
         }
 
         // Quadratic equation
-        void equation (int a, int b, int c)
+        void Equation(int a, int b, int c)
         {
             // If a=0 go to linear equation
-            if (a == 0) equation(b, c);
+            if (a == 0) Equation(b, c);
             else
             {
                 var discriminant = b * b - 4 * a * c;
@@ -56,6 +56,6 @@ namespace Task_222
                 }
             }
         }
-        
+
     }
 }
