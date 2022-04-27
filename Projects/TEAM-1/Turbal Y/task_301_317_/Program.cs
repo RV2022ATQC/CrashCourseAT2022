@@ -379,7 +379,7 @@ namespace task_301_317
     internal class Program
     {
         private static void Main(string[] args)
-        {
+        {start:
             Console.WriteLine("Введіть номер задачі для перевірки( 301-304, 314-317)");
             int k = int.Parse(Console.ReadLine());
             switch (k)
@@ -471,6 +471,9 @@ namespace task_301_317
                     break;
                 default:
                     Console.WriteLine("Введіть вірний номер задачі!");
+                    Console.WriteLine("Put on 'y' for continue");
+                    string step=Console.ReadLine();
+                    if (step == "y") goto start;
                     break;
 
             }
