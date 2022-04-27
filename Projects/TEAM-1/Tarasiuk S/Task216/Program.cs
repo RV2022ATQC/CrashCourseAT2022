@@ -12,7 +12,7 @@ namespace _216
         {   // Create program for array making and reversing it
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Hallo. I am a program rof array reversing.\nEnter lenght of your array:");
+            Console.WriteLine("Hallo. I am a program for array reversing.\nEnter lenght of your array:");
             int lenght = 0; 
             lenght = int.Parse(Console.ReadLine());    // Вводимо довжину масиву
 
