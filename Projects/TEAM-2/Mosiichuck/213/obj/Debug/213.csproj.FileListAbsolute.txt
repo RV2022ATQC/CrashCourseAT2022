@@ -1,0 +1,7 @@
+D:\yura\soft\SoftProjects\213\bin\Debug\213.exe.config
+D:\yura\soft\SoftProjects\213\bin\Debug\213.exe
+D:\yura\soft\SoftProjects\213\bin\Debug\213.pdb
+D:\yura\soft\SoftProjects\213\obj\Debug\213.csproj.CoreCompileInputs.cache
+D:\yura\soft\SoftProjects\213\obj\Debug\213.exe
+D:\yura\soft\SoftProjects\213\obj\Debug\213.pdb
+D:\yura\soft\SoftProjects\213\obj\Debug\213.csproj.AssemblyReference.cache

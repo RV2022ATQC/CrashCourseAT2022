@@ -1,0 +1,7 @@
+D:\yura\soft\SoftProjects\208\obj\Debug\208.csproj.AssemblyReference.cache
+D:\yura\soft\SoftProjects\208\obj\Debug\208.csproj.CoreCompileInputs.cache
+D:\yura\soft\SoftProjects\208\bin\Debug\208.exe.config
+D:\yura\soft\SoftProjects\208\bin\Debug\208.exe
+D:\yura\soft\SoftProjects\208\bin\Debug\208.pdb
+D:\yura\soft\SoftProjects\208\obj\Debug\208.exe
+D:\yura\soft\SoftProjects\208\obj\Debug\208.pdb

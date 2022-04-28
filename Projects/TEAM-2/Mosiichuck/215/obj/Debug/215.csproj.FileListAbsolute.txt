@@ -1,0 +1,6 @@
+D:\yura\soft\SoftProjects\215\bin\Debug\215.exe.config
+D:\yura\soft\SoftProjects\215\bin\Debug\215.exe
+D:\yura\soft\SoftProjects\215\bin\Debug\215.pdb
+D:\yura\soft\SoftProjects\215\obj\Debug\215.csproj.CoreCompileInputs.cache
+D:\yura\soft\SoftProjects\215\obj\Debug\215.exe
+D:\yura\soft\SoftProjects\215\obj\Debug\215.pdb
