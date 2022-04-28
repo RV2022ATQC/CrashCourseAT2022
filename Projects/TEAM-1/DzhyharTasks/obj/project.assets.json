@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\DzhyharTasks.csproj",
+      "projectUniqueName": "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\DzhyharTasks.csproj",
       "projectName": "DzhyharTasks",
-      "projectPath": "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\DzhyharTasks.csproj",
+      "projectPath": "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\DzhyharTasks.csproj",
       "packagesPath": "C:\\Users\\Admin777\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\obj\\",
+      "outputPath": "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin777\\AppData\\Roaming\\NuGet\\NuGet.Config",
