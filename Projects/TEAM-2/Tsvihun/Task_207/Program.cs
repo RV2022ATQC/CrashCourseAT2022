@@ -19,7 +19,7 @@ namespace Task_207
                 summ = summ + (number % 10);
                 number /= 10;
                 digits++;
-                
+
             }
             Console.WriteLine($"Number of digits = {digits}");
             Console.WriteLine($"Summ of digits = {summ}");
