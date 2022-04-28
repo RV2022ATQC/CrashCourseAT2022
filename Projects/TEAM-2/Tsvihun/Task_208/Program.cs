@@ -17,24 +17,20 @@ namespace Task_208
             Console.WriteLine("Choose convertion:\n1 - Inches >> Cm\n2 - Cm >> Inches ");
             string choice = Console.ReadLine();
 
-            switch (choice)
-            {
-                case "1":
-                    {
-                        Console.WriteLine($"{number} Inches = {number * inch} Cm");
-                        break;
-                    }
-                case "2":
-                    {
-                        Console.WriteLine($"{number} Cm = {number / inch} Inches");
-                        break;
-                    }
+            switch (choice) {
+                case "1": {
+                    Console.WriteLine($"{number} Inches = {number * inch} Cm");
+                    break;
+                }
+                case "2": {
+                    Console.WriteLine($"{number} Cm = {number / inch} Inches");
+                    break;
+                }
 
-                default:
-                    {
-                        Console.WriteLine("Choose 1 or 2");
-                        break;
-                    }
+                default: {
+                    Console.WriteLine("Choose 1 or 2");
+                    break;
+                }
 
             }
 

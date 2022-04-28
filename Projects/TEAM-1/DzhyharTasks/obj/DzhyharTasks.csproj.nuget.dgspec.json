@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\DzhyharTasks.csproj": {}
+    "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\DzhyharTasks.csproj": {}
   },
   "projects": {
-    "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\DzhyharTasks.csproj": {
+    "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\DzhyharTasks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\DzhyharTasks.csproj",
+        "projectUniqueName": "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\DzhyharTasks.csproj",
         "projectName": "DzhyharTasks",
-        "projectPath": "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\DzhyharTasks.csproj",
+        "projectPath": "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\DzhyharTasks.csproj",
         "packagesPath": "C:\\Users\\Admin777\\.nuget\\packages\\",
-        "outputPath": "D:\\CC\\CV\\CrashCourseAT2022\\Projects\\TEAM-1\\DzhyharTasks\\obj\\",
+        "outputPath": "C:\\Users\\Admin777\\Source\\Repos\\DzhyharTasks\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin777\\AppData\\Roaming\\NuGet\\NuGet.Config",

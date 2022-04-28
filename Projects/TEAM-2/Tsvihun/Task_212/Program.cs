@@ -13,29 +13,29 @@ namespace Task_212
         {
             Console.WriteLine("Enter number:");
             string number = Console.ReadLine();
-
+            
             int counter = 1;
             bool unique;
 
             for (int i = 1; i < number.Length; i++)
             {
                 unique = true;
-                for (int j = i - 1; j >= 0; j--)
+                for (int j = i-1; j >= 0; j--)
                 {
                     if (number[j] == number[i])
                     {
                         unique = false;
                     }
-
+                   
                 }
                 if (unique)
                 {
                     counter++;
                 }
 
-            }
-
-
+            }        
+                             
+            
             // Console.WriteLine($"Total digits: {number.Length}");
             Console.WriteLine($"Unique digits: {counter}");
         }

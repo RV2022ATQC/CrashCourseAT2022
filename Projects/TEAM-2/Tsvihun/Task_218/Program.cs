@@ -1,8 +1,8 @@
 ﻿// 218
 // Написати програму, яка знаходить в масиві значення, що повторюються два і більше разів, і показує їх на екран.
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Task_218
 {
@@ -24,7 +24,7 @@ namespace Task_218
             // Find repeated numbers and add them to new list
             for (int i = 0; i < input_array.Length; i++)
             {
-                for (int j = i + 1; j < input_array.Length; j++)
+                for (int j = i+1; j < input_array.Length; j++)
                 {
                     if (input_array[i] == input_array[j])
                     {
@@ -32,13 +32,13 @@ namespace Task_218
                         break;
                     }
                 }
-            }
+            }             
 
             Console.WriteLine($"\nRepeated numbers:");
             foreach (int i in desired_array)
             {
                 Console.Write($"{i} ");
-            }
+            }            
         }
     }
 }
