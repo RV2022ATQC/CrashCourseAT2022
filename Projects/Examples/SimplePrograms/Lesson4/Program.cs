@@ -93,7 +93,7 @@ namespace Lesson4
 
         #endregion Functions
 
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             //--------------- Приклади реалізації інтерфейсів---------------------------
 
@@ -209,6 +209,11 @@ namespace Lesson4
             }
 
 
+            //-------------------DATABASE---------------------------------
+            Console.WriteLine("DATABASE");
+            Database.ExecuteQuery("SELECT * FROM `oc_category` WHERE 1; ");
+
+
             //-------------------LINQ---------------------------------
             //Вибірка об'єкту за параметром
             Cat catNew = catsCollection.First((x) => x.voise == "Meow!");
@@ -227,7 +232,7 @@ namespace Lesson4
             catsCollection.Add(new Cat(1, 2, 3));
             catsCollection.Add(new Cat(2, 3, 4));
 
-            await JSONSerializationExample(animalsCollection);
+            JSONSerializationExample(animalsCollection);
 
         }
     }

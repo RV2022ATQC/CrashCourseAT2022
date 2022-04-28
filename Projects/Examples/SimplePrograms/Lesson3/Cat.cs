@@ -28,11 +28,11 @@ namespace Lesson3
 
         //переписали (override) метод move в нащадку 
         //тобто змінили поведінку нащадка - принцип поліморфізму
-        public override int move(int a, int b)
-        {
-            Console.WriteLine("Call overriden method move() from the Cats class");
-            return base.move(a, b) * 2;
-        }
+        //public override int move(int a, int b)
+        //{
+        //    Console.WriteLine("Call overriden method move() from the Cats class");
+        //    return base.move(a, b) * 2;
+        //}
 
         public string move(int a)
         {
