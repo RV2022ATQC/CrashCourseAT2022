@@ -14,7 +14,7 @@ namespace _224
         static void Main(string[] args)
         {
             int[] array = new int[10];
-            Console.WriteLine("Complete the array with 10 integer values from -20 to 20. Entrr \"Stop\" when you want finish: \n");
+            Console.WriteLine("Complete the array with 10 integer values from -20 to 20.\n");
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write($"Enter array[{i}]: ");
