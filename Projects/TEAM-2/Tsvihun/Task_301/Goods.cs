@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Task_301
 {
     internal class Goods
@@ -15,8 +12,6 @@ namespace Task_301
             this.name = name;
             this.price = price;
             this.quantity = quantity;
-        }
-
-        
+        }        
     }
 }
