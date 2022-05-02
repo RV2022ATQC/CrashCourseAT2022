@@ -9,25 +9,25 @@ namespace Task_226
     internal class Arrays
 
     {
-        static int[] default_array = { 7, 17, 19, 44, 15, -4, -3, 50, 12, 10 };
-        static int array_length = default_array.Length; 
+        static int[] defaultArray = { 7, 17, 19, 44, 15, -4, -3, 50, 12, 10 };
+        static int arrayLength = defaultArray.Length;
 
-        static int[] SortArray (int[] input_array, int length, int sort_type = 1)
+        static int[] SortArray(int[] inputArray, int length, bool descendSort = true)
         {
-            Array.Sort(input_array);
+            Array.Sort(inputArray);
 
-            if (sort_type == 0)
+            if (!descendSort)
             {
-                return input_array;                
+                return inputArray;
             }
-            if (sort_type == 1)
+            else
             {
-                Array.Reverse(input_array);
+                Array.Reverse(inputArray);
             }
-            return input_array;
+            return inputArray;
         }
 
-        static void ShowArray (int[] array)
+        static void ShowArray(int[] array)
         {
             foreach (int i in array)
             {
@@ -38,15 +38,15 @@ namespace Task_226
 
         static void Main(string[] args)
         {
-            ShowArray(default_array);
-                       
+            ShowArray(defaultArray);
+
             // Sorting by Ascend
-            SortArray(default_array, array_length, 0);
-            ShowArray(default_array);
+            SortArray(defaultArray, arrayLength, false);
+            ShowArray(defaultArray);
 
             // Default sorting by Descend
-            SortArray(default_array, array_length);
-            ShowArray(default_array);
+            SortArray(defaultArray, arrayLength);
+            ShowArray(defaultArray);
         }
     }
 }
