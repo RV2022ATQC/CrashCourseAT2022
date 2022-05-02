@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.IO;
+using System.Xml.Serialization;
+
 /* Створити колекцію транспорту, додати кілька різних видів транспорту та автомобілів до цієї колекції
 реалізуйте виведення автомобілів старіших ніж 10 років
 відсортуйте інформацію за брендом та моделлю
@@ -66,12 +68,18 @@ namespace final
                 return 0;
         }
     }
-    class Transport
+    [Serializable]
+    public class Transport
     {
+        [XmlElement()]
         public string kind;
+        [XmlElement()]
         public string vehicle;
+        [XmlElement()]
         public string brend;
+        [XmlElement()]
         public string model;
+        [XmlElement()]
         public int year_of_production;
         public Transport(string _kind, string _vehicle, string _brend,string _model,int year)
         {
@@ -82,15 +90,53 @@ namespace final
             year_of_production = year;
 
         }
+        public Transport()
+        { }
         public override string ToString()
         {
             return
-            String.Format("Вид транспорту: {0} Транспортний засіб : {1} Бренд: {2} Модель: {3} Рік випуску: {4} ",
+            String.Format("Kind: {0} Vehicle : {1} Brand: {2} Model: {3} Year: {4} ",
             kind, vehicle, brend, model, year_of_production);
         }
     }
     class Program
     {
+        #region SerializationExamples
+
+        //серіалізація у XML
+        public static async void XmlSerializationExample(List<Transport> tCollection)
+        {
+            Console.WriteLine($"---------------XMLSerializationExample----------------");
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Transport>));
+            Stream fileStream = new FileStream("e:\\tCollection.xml", FileMode.Create);
+            try
+            {
+                serializer.Serialize(fileStream, tCollection);
+                fileStream.Close();
+                Console.WriteLine("Serialization completed");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("You can check serealized XML file.  Press ENTER to continue...");
+            Console.ReadLine();
+        }
+        public static  List<Transport> DeserializeObject(string filename)
+        {
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Transport>));
+            List<Transport> t;
+            using (Stream reader = new FileStream(filename, FileMode.Open))
+            {
+                // Call the Deserialize method to restore the object's state.
+                t = (List<Transport>)serializer.Deserialize(reader);
+            }
+            return t;
+        }
+        #endregion SerializationExamples
         static void Main(string[] args)
         {
             CompInv3 comp3 = new CompInv3();
@@ -143,9 +189,33 @@ namespace final
             finally
             {
                 if (log_out != null) log_out.Close();
+               
+            }
+
+            var standardOutput = new StreamWriter(Console.OpenStandardOutput());
+            standardOutput.AutoFlush = true;
+            Console.SetOut(standardOutput);
+            //серилізація
+            List<Transport> tCollection=new List<Transport>();
+            tCollection.Add(new Transport("land ", "car", "renault", "kadjar", 2022));
+            tCollection.Add(new Transport("land ", "car", "renault", "logan", 2021));
+            tCollection.Add(new Transport("land ", "car", "renault", "duster", 2022));
+            tCollection.Add(new Transport("land ", "car", "renault", "logan", 2006));
+            tCollection.Add(new Transport("land ", "car", "renault", "duster", 2010));
+            tCollection.Add(new Transport("land", "car", "fiat", "tipo", 2000));
+            tCollection.Add(new Transport("water", "ship", "yamaha", "island", 2003));
+            tCollection.Add(new Transport("earth", "airplane", "fighter ", "f-16", 2022));
+            XmlSerializationExample(tCollection);
+            Console.WriteLine("Deserialization");
+           List<Transport> ti=DeserializeObject("e:\\tCollection.xml");
+            foreach (Transport i in ti)
+            {
+                Console.WriteLine(" " + i);
             }
             Console.ReadLine();
+
         }
+        
     }
     
 }
