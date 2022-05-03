@@ -11,7 +11,7 @@ namespace Task_202
         static void Main(string[] args)
         {
             float usd = 0;
-            Console.Write("USD: ");
+            Console.Write("UAH: ");
             usd = Int32.Parse(Console.ReadLine());
 
             Console.Write("In dolar " +Math.Round(usd / 29.6,2 ));
