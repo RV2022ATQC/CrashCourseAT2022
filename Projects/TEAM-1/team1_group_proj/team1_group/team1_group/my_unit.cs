@@ -19,6 +19,7 @@ namespace team1_group
         //функція руху
         public override void move()
         {//вибір напрямку руху по прямій. відстань-speed
+            military_unit.space[x, y] = null;
             Random rnd = new Random();
             //випадковий кут
             double fi, _x, _y;
@@ -31,6 +32,7 @@ namespace team1_group
             while (!(_x >= 0 && _x <= 500 && _y >= 0 && _y <= 500));
             x = (int)_x ;
             y =(int)_y ;
+            military_unit.space[x, y] = this;
         }
         //функція атаки обєкта
         public override void attack(military_unit a)
