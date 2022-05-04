@@ -20,7 +20,7 @@ namespace team1_group
         //рівень палива. Кожна реальна одиниця матиме різні витрати на 1 км
         protected int fuel;
         //до якої армії належить 0,1
-        public byte army_name;
+        public string army_name;
         public int defense
         {
             get { return defense_level; }
@@ -28,7 +28,7 @@ namespace team1_group
         }
         public military_unit()
         { }
-        public military_unit(int _x, int _y, int _ammun, int _defence, int _fuel, byte _army_name)
+        public military_unit(int _x, int _y, int _ammun, int _defence, int _fuel, string _army_name)
         {
             x = _x;
             y = _y;
@@ -40,10 +40,15 @@ namespace team1_group
             //space[x, y] = this;
 
         }
+        public string GetName()
+        {
+            return name;
+        }
         //функція руху
         public abstract void move();
         //функція атаки обєкта
         public abstract void attack(military_unit a);
+        public abstract void step();
         //функція заправки
         public virtual void refuel(int _n)
         {
