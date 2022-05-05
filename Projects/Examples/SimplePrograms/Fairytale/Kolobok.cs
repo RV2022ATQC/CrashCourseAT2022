@@ -11,5 +11,10 @@ namespace Fairytale
         // клас Kolobok
         // колобок вміє співати пісню, утікати = два методи
         // поля - температура, хитрість, швидкість
+
+        public Kolobok()
+        {
+            Console.WriteLine("Hello!I'm Kolobok");
+        }
     }
 }

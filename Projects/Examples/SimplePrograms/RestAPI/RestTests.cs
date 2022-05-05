@@ -44,7 +44,7 @@ namespace RestAPI
         {
             log.Info("Start");
             string url = "http://127.0.0.1/index.php?route=product/category&path=57";
-            
+
             var stackVariable = 33;
             var stackVariable2 = stackVariable;
 
@@ -74,8 +74,8 @@ namespace RestAPI
             var client = new RestClient("http://127.0.0.1/index.php?route=api/login");
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
-           // request.AddHeader("username", "Default");
-          //  request.AddHeader("key", "lqGZVBKPYUKKJBEHPJc8TxQgH2qNsSZNNqJlTHhJY3HsRSz10YsAMw3c5BX6Xaf0xiPFeP2Z5BrMvis73iKQN7gryGvHFlrMHpcanSmfeqd0cAQTsPdXEctjhTGaxEpVXFE0AcjXYiCKuMvBOkIEVfC4icqhkETDzTNjY5nvE2egYTTvKuuVVeFyTeZrgeR5wMlgCaCmTs5lXQjMVUvUPGuIgkjpaGavRJmww5hPTGaFcrgqfRFjwrgrKMhf25yv");
+            // request.AddHeader("username", "Default");
+            //  request.AddHeader("key", "lqGZVBKPYUKKJBEHPJc8TxQgH2qNsSZNNqJlTHhJY3HsRSz10YsAMw3c5BX6Xaf0xiPFeP2Z5BrMvis73iKQN7gryGvHFlrMHpcanSmfeqd0cAQTsPdXEctjhTGaxEpVXFE0AcjXYiCKuMvBOkIEVfC4icqhkETDzTNjY5nvE2egYTTvKuuVVeFyTeZrgeR5wMlgCaCmTs5lXQjMVUvUPGuIgkjpaGavRJmww5hPTGaFcrgqfRFjwrgrKMhf25yv");
             //      request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
             //      request.AddHeader("Cookie", "OCSESSID=bf91ec90aba413c4745cae7240; currency=USD; language=en-gb");
             request.AddParameter("username", "Default");
@@ -143,7 +143,7 @@ namespace RestAPI
                     "Mozilla/4.0 (Compatible; Windows NT 5.1; MSIE 6.0) " +
                     "(compatible; MSIE 6.0; Windows NT 5.1; " +
                     ".NET CLR 1.1.4322; .NET CLR 2.0.50727)";
-                
+
                 // get response
                 var response = webClient.DownloadString(url);
                 Console.WriteLine(response);
@@ -153,7 +153,7 @@ namespace RestAPI
 
 
         [Test, Category("Failed")]
-      //  [Ignore("BDU34556 https://jiraticket")]
+        //  [Ignore("BDU34556 https://jiraticket")]
         [Category("Smoke")]
         public void ReadDatabase()
         {
@@ -168,7 +168,7 @@ namespace RestAPI
 
                 Assert.AreEqual(command, expectedName);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 log.Error(ex.Message);
             }
@@ -177,7 +177,7 @@ namespace RestAPI
 
             }
             //Then
-            
+
         }
     }
 }
