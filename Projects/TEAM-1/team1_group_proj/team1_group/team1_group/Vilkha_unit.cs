@@ -8,14 +8,14 @@ namespace team1_group
 {
     class Vilkha_unit:military_unit
     {
-        static float distance = 720;
+        static float distance = 400;
         static float speed = 10;
-        
+
         public Vilkha_unit() { }
         public Vilkha_unit(int _x, int _y, int _ammun, int _defence, int _fuel, string _army_name, string _name)
             : base(_x, _y, _ammun, _defence, _fuel, _army_name)
         {
-            name = _name + " " + _army_name;
+            name = _name + " " + (_army_name.Equals("1") ? "enemy" : "friend");
             space[_x, _y] = this;
         }
 
@@ -49,8 +49,13 @@ namespace team1_group
             for (int i = -1; i <= 1; i += 2)
                 for (int j = -1; j <= 1; j += 2)
                 {
-                    military_unit.space[a.x + i, a.y + j].defense -= sideDamage;
-                    if (military_unit.space[a.x + i, a.y + j].defense <= 0) military_unit.space[a.x + i, a.y + j] = null;
+                    if(a.x + i<=500 && a.x + i>=0 && a.y + j<=500 && a.y + j >=0)
+                    if (military_unit.space[a.x + i, a.y + j] != null)
+                    {
+                        military_unit.space[a.x + i, a.y + j].defense -= sideDamage;
+                        if (military_unit.space[a.x + i, a.y + j].defense <= 0)
+                            military_unit.space[a.x + i, a.y + j] = null;
+                    }
                 }
             
 
@@ -59,7 +64,6 @@ namespace team1_group
         //аналізує постір в радіусі distanse та шукає можливий об'єкт для атаки
         public military_unit locator()
         {
-
             for (int di = -(int)distance + 1; di < distance; di++)
                 for (int dj = -(int)distance + 1; dj < distance; dj++)
                     if (di * di + dj * dj < distance * distance &&
