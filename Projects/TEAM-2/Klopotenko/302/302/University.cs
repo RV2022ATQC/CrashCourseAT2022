@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _302
 {
@@ -40,85 +41,75 @@ namespace _302
             }
 
         }
-        public void ShowAverageSuccess(int Course, string Subject)
+
+        public void ShowAverageSuccessMathematics(int Course)
         {
-            switch (Subject)
+
+            var CourseList = from s in student
+                             where s.Course == Course
+                             select s.GradeMathematics;
+            if (CourseList.Count() == 0)
             {
-                case "Mathematics":
-                    double AverageMath;
-                    double StudentsMath = 0;
-                    double a = 0;
-                    for (int i = 0; i < student.Count; i++)
-                    {
-                        if (student[i].Course == Course)
-                        {
-                            a += student[i].GradeMathematics;
-                            StudentsMath++;
-                        }
-                    }
-                    if (StudentsMath == 0)
-                    {
-                        Console.WriteLine("No students on this course!");
-                        break;
-                    }
-                    else
-                    {
-                        AverageMath = a / StudentsMath;
-                        Console.WriteLine($"The average success from Mathematics of course #{Course} is {AverageMath}");
-                        break;
-                    }
+                Console.WriteLine("No students on this course!");
+            }
+            else
+            {
+                double SumMath = 0;
+                int a = 0;
+                foreach (int item in CourseList)
+                {
+                    SumMath += item;
+                    a++;
+                }
+                double AverageMath = SumMath / a;
+                Console.WriteLine($"The average success from Math of course #{Course} is {AverageMath}");
+            }
+        }
 
-                    case "Physics":
-                    double AveragePhysics;
-                    double StudentsPhysics = 0;
-                    double b = 0;
-                    for (int i = 0; i < student.Count; i++)
-                    {
-                        if (student[i].Course == Course)
-                        {
-                            b += student[i].GradePhysics;
-                            StudentsPhysics++;
-                        }
-                    }
-                    if (StudentsPhysics == 0)
-                    {
-                        Console.WriteLine("No students on this course!");
-                        break;
-                    }
-                    else
-                    {
-                        AveragePhysics = b / StudentsPhysics;
-                        Console.WriteLine($"The average success from Physics of course #{Course} is {AveragePhysics}");
-                        break;
-                    }
+        public void ShowAverageSuccessPhysics(int Course)
+        {
+            var CourseList = from s in student
+                             where s.Course == Course
+                             select s.GradePhysics;
+            if (CourseList.Count() == 0)
+            {
+                Console.WriteLine("No students on this course!");
+            }
+            else
+            {
+                double SumPhysics = 0;
+                int a = 0;
+                foreach (int item in CourseList)
+                {
+                    SumPhysics += item;
+                    a++;
+                }
+                double AveragePhysics = SumPhysics / a;
+                Console.WriteLine($"The average success from Physics of course #{Course} is {AveragePhysics}");
+            }
+        }
 
-                case "PE":
-                    double AveragePE;
-                    double StudentsPE = 0;
-                    double c = 0;
-                    for (int i = 0; i < student.Count; i++)
-                    {
-                        if (student[i].Course == Course)
-                        {
-                            c += student[i].GradePE;
-                            StudentsPE++;
-                        }
-                    }
-                    if (StudentsPE == 0)
-                    {
-                        Console.WriteLine("No students on this course!");
-                        break;
-                    }
-                    else
-                    {
-                        AveragePE = c / StudentsPE;
-                        Console.WriteLine($"The average success from PE of course #{Course} is {AveragePE}");
-                        break;
-                    }
+        public void ShowAverageSuccessPE(int Course)
+        {
 
-                default:
-                    Console.WriteLine("Not correct input!");
-                    break;
+            var CourseList = from s in student
+                             where s.Course == Course
+                             select s.GradePE;
+            if (CourseList.Count() == 0)
+            {
+                Console.WriteLine("No students on this course!");
+            }
+            else
+            {
+                double SumPE = 0;
+                int a = 0;
+                foreach (int item in CourseList)
+                {
+                    SumPE += item;
+                    a++;
+                }
+                double AveragePE = SumPE / a;
+                Console.WriteLine($"The average success from PE of course #{Course} is {AveragePE}");
             }
         }
     }
