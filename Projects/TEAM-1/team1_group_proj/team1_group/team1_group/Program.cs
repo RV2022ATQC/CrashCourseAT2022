@@ -55,6 +55,30 @@ namespace team1_group
                     i--;
             }
         }
+
+        static void Add_railguns()
+        {
+            //рейлгани приблизно формують другу лінію атаки, від 100 до 200 клітинок
+            Random rnd = new Random();
+            //союзні рейлгани
+            for (int i = 0; i < 4; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && x > 100 && x < 200)
+                    military_unit.space[x, y] = new railgun_unit(x, y, 5, 50, 50, "0", "Railgun");
+                else
+                    i--;
+            }
+            //ворожі рейлгани
+            for (int i = 0; i < 4; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && x < 400 && x > 300)
+                    military_unit.space[x, y] = new railgun_unit(x, y, 5, 50, 50, "1", "Railgun");
+                else
+                    i--;
+            }
+        }
         static void Main(string[] args)
         {
             /*
@@ -74,6 +98,7 @@ namespace team1_group
             //створення одиниць
             Add_abrams();
             Add_vilkhas();
+            Add_railguns();
 
             //загальний ігровий цикл
             for (int i = 0; i < 15; i++)
