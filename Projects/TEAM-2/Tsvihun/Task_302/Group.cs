@@ -9,6 +9,7 @@ namespace Task_302
 
         List<Student> students;
         private string name;
+
         public string Name { get => name; set => name = value; }
 
         public Group (string groupName)
@@ -26,8 +27,7 @@ namespace Task_302
         {
             foreach (Student student in students)
             {
-                Console.WriteLine(student);
-                //student.showInfo();
+                student.showInfo();
             }
         }
 
