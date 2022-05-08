@@ -10,7 +10,8 @@ namespace Task_302
         string lastName;
         int grade;
 
-        public Student() { Console.WriteLine("New student created !"); }
+        // public Student() { Console.WriteLine("New student created !"); }
+        
         public Student(string firstName, string lastName, int grade)
         {
             this.firstName = firstName;
