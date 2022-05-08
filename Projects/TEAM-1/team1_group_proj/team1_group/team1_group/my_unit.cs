@@ -13,7 +13,7 @@ namespace team1_group
         public abrams() { }
         public abrams(int _x, int _y, int _ammun, int _defence, int _fuel, string _army_name, string _name)
             : base(_x, _y, _ammun, _defence, _fuel, _army_name)
-        { name = _name+" "+ _army_name;
+        { name = _name+" " + (_army_name.Equals("1") ? "enemy" : "friend");
             space[_x, _y] = this;
         }
         //функція руху
@@ -40,7 +40,7 @@ namespace team1_group
             Random rnd = new Random();
             //a.defense -= rnd.Next(10) ;
             a.defense -= 10;
-            if (a.defense == 0) military_unit.space[a.x, a.y] = null;
+            if (a.defense <= 0) military_unit.space[a.x, a.y] = null;
         }
         //функція аналізу простору, вибір обєкта для атаки
         //аналізує постір в радіусі distanse та шукає можливий об'єкт для атаки
