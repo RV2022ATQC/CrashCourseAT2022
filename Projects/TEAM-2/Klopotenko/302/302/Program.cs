@@ -33,13 +33,15 @@ namespace _302
             university.ShowCourse(5);
             Console.WriteLine();
 
-            university.ShowAverageSuccessPE(1);
+            university.ShowAverageSuccess(1, "PE");
             Console.WriteLine();
-            university.ShowAverageSuccessMathematics(2);
+            university.ShowAverageSuccess(2, "Mathematics");
             Console.WriteLine();
-            university.ShowAverageSuccessMathematics(3);
+            university.ShowAverageSuccess(3, "Mathematics");
             Console.WriteLine();
-            university.ShowAverageSuccessPhysics(1);
+            university.ShowAverageSuccess(1, "Physics");
+            Console.WriteLine();
+            university.ShowAverageSuccess(1, "111");
             Console.WriteLine();
         }
     }
