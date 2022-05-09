@@ -43,40 +43,61 @@ namespace _302
         }
         public void ShowAverageSuccess(int Course, string Subject)
         {
-            var CourseList = from s in student
-                             where s.Course == Course
+            var CourseMath = from s in student
+                             where s.Course == Course && Subject == "Mathematics"
                              select s.GradeMathematics;
-            if (Subject == "Physics")
-            {
-                CourseList = from s in student
-                             where s.Course == Course
-                             select s.GradePhysics;
-            }
-            else if (Subject == "PE")
-            {
-                CourseList = from s in student
-                             where s.Course == Course
-                             select s.GradePhysics;
-            }
-            else if (Subject != "Mathematics")
+            var CoursePhysics = from s in student
+                                where s.Course == Course && Subject == "Physics"
+                                select s.GradeMathematics;
+            var CoursePE = from s in student
+                           where s.Course == Course && Subject == "PE"
+                           select s.GradeMathematics;
+            if (Subject != "Mathematics" && Subject != "Physics" && Subject != "PE")
             {
                 Console.WriteLine("Not correct subject!");
             }
-            if (CourseList.Count() == 0)
+            else if (CourseMath.Count() == 0 && CoursePhysics.Count() == 0 && CoursePE.Count() == 0)
             {
                 Console.WriteLine("No students on this course!");
             }
-            else if (Subject == "Mathematics" || Subject == "Physics" || Subject == "PE")
+            else
             {
-                double Sum = 0;
-                int a = 0;
-                foreach (int item in CourseList)
+                if (CourseMath.Count() != 0)
                 {
-                    Sum += item;
-                    a++;
+                    double Sum = 0;
+                    double a = 0;
+                    foreach (int item in CourseMath)
+                    {
+                        Sum += item;
+                        a++;
+                    }
+                    double Average = Sum / a;
+                    Console.WriteLine($"The average success from {Subject} of course #{Course} is {Average}"); 
                 }
-                double Average = Sum / a;
-                Console.WriteLine($"The average success from {Subject} of course #{Course} is {Average}");
+                else if (CoursePhysics.Count() != 0)
+                {
+                    double Sum = 0;
+                    double a = 0;
+                    foreach (int item in CoursePhysics)
+                    {
+                        Sum += item;
+                        a++;
+                    }
+                    double Average = Sum / a;
+                    Console.WriteLine($"The average success from {Subject} of course #{Course} is {Average}");
+                }
+                else
+                {
+                    double Sum = 0;
+                    double a = 0;
+                    foreach (int item in CoursePE)
+                    {
+                        Sum += item;
+                        a++;
+                    }
+                    double Average = Sum / a;
+                    Console.WriteLine($"The average success from {Subject} of course #{Course} is {Average}");
+                }
             }
         }
     }
