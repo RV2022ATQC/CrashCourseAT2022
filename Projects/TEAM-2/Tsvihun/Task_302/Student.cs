@@ -8,29 +8,32 @@ namespace Task_302
     {
         string firstName;
         string lastName;
-        int mathMark, engMark, historyMark, psychoMark;
+        public Dictionary<string, int> subjects;
                
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
-        public int MathMark { get => mathMark; set => mathMark = value; }
-        public int EngMark { get => engMark; set => engMark = value; }
-        public int HistoryMark { get => historyMark; set => historyMark = value; }
-        public int PsychoMark { get => psychoMark; set => psychoMark = value; }
+ 
 
         public Student(string firstName, string lastName, int math, int eng, int history, int psychology)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
-            this.MathMark = math;
-            this.EngMark = eng;
-            this.HistoryMark = history;
-            this.PsychoMark = psychology;
-        }
 
+            subjects = new Dictionary<string, int>();
+            subjects.Add("Math", math);
+            subjects.Add("English", eng);
+            subjects.Add("History", history);
+            subjects.Add("Psychology", psychology);
+        }
       
         public void showInfo()
         {
-            Console.WriteLine($"Name: {FirstName} {LastName}\nMarks: Math {MathMark}; Eng {EngMark}; History {HistoryMark}; Pshycho {PsychoMark}");
+            Console.Write($"Name: {FirstName} {LastName}. ");
+            foreach (var subject in subjects)
+            {
+                Console.Write($"{subject.Key} - {subject.Value} ");
+            }
+            Console.WriteLine();
         }
 
     }
