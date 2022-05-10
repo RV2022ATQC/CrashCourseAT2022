@@ -11,37 +11,27 @@ namespace _302
     {
         static void Main(string[] args)
         {
-            University university = new University();
-            university.AddStudent("Klopotenko Vladyslav", 1, 5, 4, 3);
-            university.AddStudent("Ivanov Ivan", 1, 3, 1, 5);
-            university.AddStudent("Briksa Olga", 5, 4, 2, 5);
-            university.AddStudent("Umanow Maksim", 1, 5, 4, 3);
-            university.AddStudent("Sergiev Bodia", 2, 5, 1, 3);
-            university.AddStudent("Velomyr Vladimir", 2, 5, 4, 3);
-            university.AddStudent("Rostemon Yurii", 5, 5, 4, 3);
-            university.AddStudent("Valentinov Ivan", 4, 1, 1, 3);
-            university.AddStudent("Danskii David", 4, 5, 5, 5);
+            Group university = new Group();
+            university.AddStudent("Klopotenko Vladyslav", 5, 4, 3);
+            university.AddStudent("Ivanov Ivan", 3, 1, 5);
+            university.AddStudent("Briksa Olga", 4, 2, 5);
+            university.AddStudent("Umanow Maksim", 5, 4, 3);
+            university.AddStudent("Sergiev Bodia", 5, 1, 3);
+            university.AddStudent("Velomyr Vladimir", 5, 4, 3);
+            university.AddStudent("Rostemon Yurii", 5, 4, 3);
+            university.AddStudent("Valentinov Ivan", 1, 1, 3);
+            university.AddStudent("Danskii David", 5, 5, 5);
 
-            university.ShowCourse(1);
-            Console.WriteLine();
-            university.ShowCourse(2);
-            Console.WriteLine();
-            university.ShowCourse(3);
-            Console.WriteLine();
-            university.ShowCourse(4);
-            Console.WriteLine();
-            university.ShowCourse(5);
+            university.ShowGroup();
             Console.WriteLine();
 
-            university.ShowAverageSuccess(1, "PE");
+            university.ShowAverageSuccess("PE");
             Console.WriteLine();
-            university.ShowAverageSuccess(2, "Mathematics");
+            university.ShowAverageSuccess("Mathematics");
             Console.WriteLine();
-            university.ShowAverageSuccess(3, "Mathematics");
+            university.ShowAverageSuccess("Physics");
             Console.WriteLine();
-            university.ShowAverageSuccess(1, "Physics");
-            Console.WriteLine();
-            university.ShowAverageSuccess(1, "111");
+            university.ShowAverageSuccess("111");
             Console.WriteLine();
         }
     }

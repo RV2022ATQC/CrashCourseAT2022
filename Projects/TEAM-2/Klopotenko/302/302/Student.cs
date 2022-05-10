@@ -9,7 +9,7 @@ namespace _302
         public int GradePhysics;
         public int GradePE;
 
-        public Student(string Name, int Course, int GradeMathematics, int GradePhysics, int GradePE)
+        public Student(string Name, int GradeMathematics, int GradePhysics, int GradePE)
         {
             this.Name = Name;
             this.Course = Course;
