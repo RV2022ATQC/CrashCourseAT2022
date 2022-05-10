@@ -1,6 +1,7 @@
 ﻿// 301
 // Написати клас Товар. Також реалізувати клас магазин. Передбачити можливість отримання товару на баланс і продажу товару.
-//using System;
+
+using System;
 
 namespace Task_301
 {
@@ -16,6 +17,8 @@ namespace Task_301
             //2. Реалізувати клас Магазин - Shop
             // Колекція товарів (List)
             // Методи: ShowItems(), AddItem(), SellItem()
+            // Запобігти продажу неісноючого товару
+            // Врахувати кількість на залишку при продажу
 
             //3. Main
             // Наповнити колекцію товарів
@@ -27,6 +30,7 @@ namespace Task_301
 
             Shop shop = new Shop();
 
+            // Add items to the shop
             shop.AddItem("Cup", 40, 20);
             shop.AddItem("Knife", 65, 10);
             shop.AddItem("Plate", 30, 50);
@@ -37,10 +41,14 @@ namespace Task_301
             shop.AddItem("Tea spoon", 10, 200);
             shop.ShowItems();
 
+            // Sell item
             shop.SellItem("Knife", 6);
 
-            shop.ShowItems();
+            // Try to sell more than balance
+            shop.SellItem("Knife", 26);
+            shop.SellItem("Fork", 2600);
 
+            // Add more items
             shop.AddItem("Tea spoon", 100, 100);
             shop.AddItem("Tea spoon", 100, 100);
             shop.AddItem("Tea spoon", 100, 100);
