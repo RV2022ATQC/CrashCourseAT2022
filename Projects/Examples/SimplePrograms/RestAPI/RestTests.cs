@@ -20,10 +20,13 @@ using System.Xml.Serialization;
 namespace RestAPI
 {
     [TestFixture]
+    [Parallelizable]
     public class RestTest
     {
         public Logger log = LogManager.GetCurrentClassLogger(); // for NLog
         private string JsonToken;
+
+
 
         [Test]
         public void FromPostman()
@@ -35,6 +38,53 @@ namespace RestAPI
             request.AddHeader("Cookie", "OCSESSID=a5a0059be56cde184d5e2d4546; currency=USD; language=en-gb");
             request.AddParameter("username", "Default");
             request.AddParameter("key", "lqGZVBKPYUKKJBEHPJc8TxQgH2qNsSZNNqJlTHhJY3HsRSz10YsAMw3c5BX6Xaf0xiPFeP2Z5BrMvis73iKQN7gryGvHFlrMHpcanSmfeqd0cAQTsPdXEctjhTGaxEpVXFE0AcjXYiCKuMvBOkIEVfC4icqhkETDzTNjY5nvE2egYTTvKuuVVeFyTeZrgeR5wMlgCaCmTs5lXQjMVUvUPGuIgkjpaGavRJmww5hPTGaFcrgqfRFjwrgrKMhf25yv");
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+        }
+
+        [Test]
+        public void FromPostmanPetstor()
+        {
+            var client = new RestClient("https://petstore.swagger.io/v2/pet");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.POST);
+            request.AddHeader("Content-Type", "application/json");
+            var body = @"{
+" + "\n" +
+            @"  ""id"": 111333,
+" + "\n" +
+            @"  ""category"": {
+" + "\n" +
+            @"    ""id"": 0,
+" + "\n" +
+            @"    ""name"": ""Korzhyk""
+" + "\n" +
+            @"  },
+" + "\n" +
+            @"  ""name"": ""doggie"",
+" + "\n" +
+            @"  ""photoUrls"": [
+" + "\n" +
+            @"    ""string""
+" + "\n" +
+            @"  ],
+" + "\n" +
+            @"  ""tags"": [
+" + "\n" +
+            @"    {
+" + "\n" +
+            @"      ""id"": 0,
+" + "\n" +
+            @"      ""name"": ""string""
+" + "\n" +
+            @"    }
+" + "\n" +
+            @"  ],
+" + "\n" +
+            @"  ""status"": ""available""
+" + "\n" +
+            @"}";
+            request.AddParameter("application/json", body, ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
             Console.WriteLine(response.Content);
         }

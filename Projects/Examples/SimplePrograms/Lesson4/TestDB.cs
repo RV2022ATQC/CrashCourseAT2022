@@ -3,6 +3,8 @@ using NUnit.Framework;
 
 namespace Lesson4
 {
+    [TestFixture]//визначення тест-класу
+    [Parallelizable(ParallelScope.All)]
     class TestDB
     {
         [Test]

@@ -5,6 +5,7 @@ using NUnit.Framework;
 namespace Lesson4
 {
     [TestFixture]//визначення тест-класу
+    [Parallelizable(ParallelScope.All)]
     public class TestPlants
     {
         [OneTimeSetUp] //код, що виконується один раз перед усіма тестами
