@@ -15,7 +15,6 @@ namespace Task224
 
         static void Main(string[] args)
         {
-            Random rnd = new Random();
             int[] arr = new int[10] { 19, 4, -8, 0, -19, -17, -15, -8, 12, -15 };
             int minElem = 0, maxElem = 0;
 
