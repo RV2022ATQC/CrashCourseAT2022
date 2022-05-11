@@ -11,28 +11,25 @@ namespace _302
     {
         static void Main(string[] args)
         {
-            Group university = new Group();
-            university.AddStudent("Klopotenko Vladyslav", 5, 4, 3);
-            university.AddStudent("Ivanov Ivan", 3, 1, 5);
-            university.AddStudent("Briksa Olga", 4, 2, 5);
-            university.AddStudent("Umanow Maksim", 5, 4, 3);
-            university.AddStudent("Sergiev Bodia", 5, 1, 3);
-            university.AddStudent("Velomyr Vladimir", 5, 4, 3);
-            university.AddStudent("Rostemon Yurii", 5, 4, 3);
-            university.AddStudent("Valentinov Ivan", 1, 1, 3);
-            university.AddStudent("Danskii David", 5, 5, 5);
+            Student vlad = new Student("Vladyslav Klopotenko", 5, 5, 5);
+            Student illia = new Student("Illia Morozov", 1, 5, 4);
+            Student olga = new Student("Olga Palamarchuk", 4, 2, 2);
+            Student renata = new Student("Renata Olivna", 3, 5, 3);
 
-            university.ShowGroup();
+            Group group_1 = new Group("Group 1");
+            group_1.AddStudent(vlad);
+            group_1.AddStudent(illia);
+            group_1.AddStudent(olga);
+            group_1.AddStudent(renata);
+
+            group_1.ShowStudents();
             Console.WriteLine();
 
-            university.ShowAverageSuccess("PE");
-            Console.WriteLine();
-            university.ShowAverageSuccess("Mathematics");
-            Console.WriteLine();
-            university.ShowAverageSuccess("Physics");
-            Console.WriteLine();
-            university.ShowAverageSuccess("111");
-            Console.WriteLine();
+            group_1.ShowAverageSuccess("Math");
+            group_1.ShowAverageSuccess("Physics");
+            group_1.ShowAverageSuccess("Psychology");
+            group_1.ShowAverageSuccess("PE");
+            group_1.ShowAverageSuccess("English");
         }
     }
 }

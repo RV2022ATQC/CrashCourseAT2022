@@ -6,81 +6,45 @@ namespace _302
 {
     public class Group
     {
-        List<Student> student = new List<Student>();
-        public void AddStudent(string Name, int GradeMathematics, int GradePhysics, int GradePE)
+        List<Student> students;
+        private string Name;
+        public Group(string groupName)
         {
-            bool isExist = true;
-            for (int i = 0; i < student.Count; i++)
+            students = new List<Student>();
+            Name = groupName;
+        }
+        public void AddStudent(Student student)
+        {
+            students.Add(student);
+        }
+        public void ShowStudents()
+        {
+            Console.WriteLine($"Group {Name}: ");
+            foreach (Student student in students)
             {
-                if (Name == student[i].Name)
+                student.showStudent();
+            }
+        }
+        public void ShowAverageSuccess (string subject)
+        {
+            int studentsAmount = 0;
+            double sum = 0;
+            foreach (Student student in students)
+            {
+                if (student.subjects.ContainsKey(subject))
                 {
-                    Console.WriteLine($"Student {Name} is already exist!");
-                    isExist = false;
-                    break;
+                    sum += student.subjects[subject];
+                    studentsAmount++;
                 }
             }
-            if (isExist)
+            if (studentsAmount > 0)
             {
-                student.Add(new Student(Name, GradeMathematics, GradePhysics, GradePE));
+                double AverageSuccess = sum / studentsAmount;
+                Console.WriteLine($"Average mark in {subject} of {Name} = {AverageSuccess}");
             }
-        }
-        public void ShowGroup()
-        {
-            int Students = 0;
-            for (int i = 0; i < student.Count; i++)
+            else
             {
-                Console.WriteLine($"Name: {student[i].Name}, Math: {student[i].GradeMathematics}, Physics: {student[i].GradePhysics}, PE: {student[i].GradePE}");
-                Students++;
-            }
-            if (Students == 0)
-            {
-                Console.WriteLine("No students in this group!");
-            }
-
-        }
-        public void ShowAverageSuccess(string Subject)
-        {
-            switch (Subject)
-            {
-                case "Mathematics":
-                    double a = 0;
-                    double Sum = 0; 
-                    for (int i = 0; i < student.Count; i++)
-                    {
-                        a += student[i].GradeMathematics;
-                        Sum++;
-                    }
-                    double result = a / Sum;
-                    Console.WriteLine($"The average success from Math of group is {result}");
-                    break;
-
-                case "Physics":
-                    double b = 0;
-                    double Sum1 = 0;
-                    for (int i = 0; i < student.Count; i++)
-                    {
-                        b += student[i].GradePhysics;
-                        Sum1++;
-                    }
-                    double result1 = b / Sum1;
-                    Console.WriteLine($"The average success of Physics group is {result1}");
-                    break;
-
-                case "PE":
-                    double c = 0;
-                    double Sum2 = 0;
-                    for (int i = 0; i < student.Count; i++)
-                    {
-                        c += student[i].GradeMathematics;
-                        Sum2++;
-                    }
-                    double result2 = c / Sum2;
-                    Console.WriteLine($"The average success from PE of group is {result2}");
-                    break;
-
-                default:
-                    Console.WriteLine("Not correct subject!");
-                    break;
+                Console.WriteLine($"No subject {subject} in {Name}");
             }
         }
     }
