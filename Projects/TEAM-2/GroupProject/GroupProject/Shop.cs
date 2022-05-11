@@ -7,14 +7,14 @@ namespace TeamTask
 {
     public class Shop
     {
-        List<Item> items = new List<Item>;
+        List<Item> items = new List<Item>();
 
-        public void AddItem(int id, string name, int amount, decimal price)
+        public void AddItem(string name, double price, string creator, uint quantity)
         {
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
-                if (id == items[i].id || name == items[i].name)
+                if (name == items[i].name)
                 {
                     items[i].amount++;
                     Console.WriteLine($"This item has already exist whith ID: {items[i].id}. Now amount is {items[i].amount}");
@@ -24,7 +24,7 @@ namespace TeamTask
             }
             if (noExist)
             {
-                items.Add(new Item(id, name, amount, price));
+                items.Add(new Item(name, price, creator, quantity));
             }
         }
 
@@ -66,7 +66,7 @@ namespace TeamTask
             }
         }
 
-        public void ChangeItem(int id, string name, int amount, decimal price) // Changing by id. You enter id to find item and you can't change the id. You enter new name, amount and price to change them.
+        public void ChangeItem(int id, string name, double price, string creator, uint quantity) // Changing by id. You enter id to find item and you can't change the id. You enter new name, amount and price to change them.
         {
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
@@ -74,8 +74,9 @@ namespace TeamTask
                 if (items[i].id == id)
                 {
                     items[i].name = name;
-                    items[i].amount = amount;
                     items[i].price = price;
+                    items[i].creator = creator;
+                    items[i].quantity = quantity;
                     noExist = false;
                     Console.WriteLine($"Item with ID: {items[i].id} was changed. Now it looks {items[i].ToString()}");
                     break;
@@ -90,9 +91,9 @@ namespace TeamTask
         public void ShowItems()
         {
             bool noExist = true;
+            Console.WriteLine("====Avalible items====");
             for (int i = 0; i < items.Count; i++)
             {
-                Console.WriteLine("====Avalible items====");
                 Console.WriteLine(items[i].ToString());
                 noExist = false;
             }
