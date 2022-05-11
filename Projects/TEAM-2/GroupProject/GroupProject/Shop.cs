@@ -16,7 +16,7 @@ namespace TeamTask
             {
                 if (name == items[i].name)
                 {
-                    items[i].amount++;
+                    items[i].quantity++;
                     Console.WriteLine($"This item has already exist whith ID: {items[i].id}. Now amount is {items[i].amount}");
                     noExist = false;
                     break;
