@@ -77,7 +77,7 @@ namespace TeamTask
                     items[i].amount = amount;
                     items[i].price = price;
                     noExist = false;
-                    Console.WriteLine($"Item with ID: {items[i].id} was changed. Now it looks {items[i].ShowItem()}");
+                    Console.WriteLine($"Item with ID: {items[i].id} was changed. Now it looks {items[i].ToString()}");
                     break;
                 }
             }
@@ -93,7 +93,7 @@ namespace TeamTask
             for (int i = 0; i < items.Count; i++)
             {
                 Console.WriteLine("====Avalible items====");
-                Console.WriteLine(items[i].ShowItem());
+                Console.WriteLine(items[i].ToString());
                 noExist = false;
             }
             if (noExist)
@@ -109,7 +109,7 @@ namespace TeamTask
             {
                 if (items[i].id == id)
                 {                   
-                    Console.WriteLine(items[i].ShowItem());
+                    Console.WriteLine(items[i].ToString());
                     noExist = false;
                     break;
                 }
@@ -127,7 +127,7 @@ namespace TeamTask
             {
                 if (items[i].name == name)
                 {
-                    Console.WriteLine(items[i].ShowItem());
+                    Console.WriteLine(items[i].ToString());
                     noExist = false;
                     break;
                 }
