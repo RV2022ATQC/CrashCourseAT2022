@@ -6,45 +6,56 @@
 // Клас повинен містити методи для введення рядків з клавіатури і виведення рядків на екран.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Task_304
 {
-    class StringRow
+    public class StringRow
     {
         public string Line { get; set; }
+        StringBuilder sb = new StringBuilder();
 
         // Default constructor for 80 symbols line
         public StringRow()
         {
-            StringBuilder sb = new StringBuilder(80);
+            sb.Length = 80;
+            Console.WriteLine($"Default constructor with {sb.Length} symbols.");
+
+            // Check the length of line adding text to the end of it
+            sb.Append("some text");
+
+            this.Line = sb.ToString();
         }
 
         // Constructor for any-lenght line
         public StringRow(int rowLength)
         {
-            StringBuilder sb = new StringBuilder(rowLength);
+            sb.Length = rowLength;
+            Console.WriteLine($"Constructor with {sb.Length} symbols.");
+
+            // Check the length of line adding text to the end of it
+            sb.Append("some text");
+
+            this.Line = sb.ToString();
         }
 
-        // Consructor
-        public StringRow(ref string ReadRow)
+        // Consructor with user's text
+        public StringRow(string read)
         {
-
+            Console.WriteLine($"Constructor with user's text.");
+            this.Line = read;
         }
 
         public void ShowRow()
         {
-            Console.WriteLine("");
+            Console.WriteLine(this.Line);
         }
 
-        public string ReadRow()
+        public static string ReadRow()
         {
-            Console.WriteLine("Enter line:")
-            string inputLine = Console.ReadLine();
-            return inputLine;
+            Console.WriteLine("Enter line:");
+            string read = Console.ReadLine();
+            return read;
         }
 
     }
@@ -53,6 +64,13 @@ namespace Task_304
         static void Main(string[] args)
         {
             StringRow row = new StringRow();
+            row.ShowRow();
+
+            StringRow row2 = new StringRow(15);
+            row2.ShowRow();
+
+            StringRow row3 = new StringRow(StringRow.ReadRow());
+            row3.ShowRow();
         }
     }
 }
