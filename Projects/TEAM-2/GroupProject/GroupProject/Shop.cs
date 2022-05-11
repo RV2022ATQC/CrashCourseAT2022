@@ -1,5 +1,5 @@
 ﻿// Влад Клопотенко
-// Not finised yet. I need to add showing items in ascending order id to void ShowItems()
+
 using System;
 using System.Collections.Generic;
 
@@ -30,19 +30,26 @@ namespace TeamTask
 
         public void RemoveItem(int id) // removing item by id
         {
+            bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
                 if (id == items[i].id)
                 {
                     items.RemoveAt(i);
                     Console.WriteLine($"Item with ID: {items[i].id} has been removed");
+                    noExist = false;
                     break;
                 }
+            }
+            if (noExist)
+            {
+                Console.WriteLine($"Item with ID: {id} isn't exist!");
             }
         }
 
         public void RemoveItem(string name) // removing item by name
         {
+            bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
                 if (name == items[i].name)
@@ -51,6 +58,10 @@ namespace TeamTask
                     Console.WriteLine($"Item with name: {items[i].name} has been removed");
                     break;
                 }
+            }
+            if (noExist)
+            {
+                Console.WriteLine($"Item with name: {name} isn't exist!");
             }
         }
 
