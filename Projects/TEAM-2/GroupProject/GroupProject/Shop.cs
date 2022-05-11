@@ -56,6 +56,7 @@ namespace TeamTask
                 {
                     items.RemoveAt(i);
                     Console.WriteLine($"Item with name: {items[i].name} has been removed");
+                    noExist = false;
                     break;
                 }
             }
@@ -88,34 +89,52 @@ namespace TeamTask
 
         public void ShowItems()
         {
+            bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
                 Console.WriteLine("====Avalible items====");
                 Console.WriteLine(items[i].ShowItem());
+                noExist = false;
+            }
+            if (noExist)
+            {
+                Console.WriteLine("No avalible items!");
             }
         }
 
         public void FindItem(int id) // finding item (showing it) by id
         {
+            bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
                 if (items[i].id == id)
                 {                   
                     Console.WriteLine(items[i].ShowItem());
+                    noExist = false;
                     break;
                 }
+            }
+            if (noExist)
+            {
+                Console.WriteLine($"Item with ID: {id} isn't exist!");
             }
         }
 
         public void FindItem(string name) // finding item (showing it) by name
         {
+            bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
                 if (items[i].name == name)
                 {
                     Console.WriteLine(items[i].ShowItem());
+                    noExist = false;
                     break;
                 }
+            }
+            if (noExist)
+            {
+                Console.WriteLine($"Item with name: {name} isn't exist!");
             }
         }
     }
