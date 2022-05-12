@@ -14,7 +14,6 @@ namespace Task301.Classes
         {
             return products.Count;
         }
-
         public List<Product> GetList()
         {
             return products;
