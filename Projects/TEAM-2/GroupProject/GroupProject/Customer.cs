@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GroupProject
 {
-    internal class Customer
+    public class Customer
     {
     }
 }
