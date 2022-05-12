@@ -20,9 +20,10 @@ namespace Task_315
 
             coleague1.ShowInfo();
             
-            Passport coleague2Foreign = new ForeignPassport(1234, "E15142011", "International", "Yulia", "Mykhalska", "Bukovynska str. 8/14, Rivne, Ukraine", new DateOnly(1988,11,04));
+            ForeignPassport coleague1Foreign = new (
+                84175526, "E15142011", "International", "Yulia", "Mykhalska", "Bukovynska str. 8/14, Rivne, Ukraine", new DateOnly(1988,11,04), "Visa1... Visa2... Visa3...");
 
-            coleague2Foreign.ShowInfo();
+            coleague1Foreign.ShowInfo();
 
         }
     }
