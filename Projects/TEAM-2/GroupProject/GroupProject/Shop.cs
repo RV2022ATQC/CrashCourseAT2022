@@ -3,7 +3,8 @@
 using System;
 using System.Collections.Generic;
 
-namespace TeamTask
+namespace GroupProject
+
 {
     public class Shop
     {
@@ -14,10 +15,10 @@ namespace TeamTask
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
-                if (name == items[i].name)
+                if (name == items[i].Name)
                 {
-                    items[i].quantity++;
-                    Console.WriteLine($"This item has already exist whith ID: {items[i].id}. Now amount is {items[i].amount}");
+                    items[i].Quantity++;
+                    Console.WriteLine($"This item has already exist whith ID: {items[i].ID}. Now amount is {items[i].Quantity}");
                     noExist = false;
                     break;
                 }
@@ -28,15 +29,16 @@ namespace TeamTask
             }
         }
 
-        public void RemoveItem(int id) // removing item by id
+        // removing item by id
+        public void RemoveItem(int id)
         {
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
-                if (id == items[i].id)
+                if (id == items[i].ID)
                 {
                     items.RemoveAt(i);
-                    Console.WriteLine($"Item with ID: {items[i].id} has been removed");
+                    Console.WriteLine($"Item with ID: {items[i].ID} has been removed");
                     noExist = false;
                     break;
                 }
@@ -47,15 +49,16 @@ namespace TeamTask
             }
         }
 
-        public void RemoveItem(string name) // removing item by name
+        // removing item by name
+        public void RemoveItem(string name) 
         {
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
-                if (name == items[i].name)
+                if (name == items[i].Name)
                 {
                     items.RemoveAt(i);
-                    Console.WriteLine($"Item with name: {items[i].name} has been removed");
+                    Console.WriteLine($"Item with name: {items[i].Name} has been removed");
                     noExist = false;
                     break;
                 }
@@ -66,19 +69,20 @@ namespace TeamTask
             }
         }
 
-        public void ChangeItem(int id, string name, double price, string creator, uint quantity) // Changing by id. You enter id to find item and you can't change the id. You enter new name, amount and price to change them.
+        // Changing by id. You enter id to find item and you can't change the id. You enter new name, amount and price to change them.
+        public void ChangeItem(int id, string name, double price, string creator, uint quantity)
         {
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
-                if (items[i].id == id)
+                if (items[i].ID == id)
                 {
-                    items[i].name = name;
-                    items[i].price = price;
-                    items[i].creator = creator;
-                    items[i].quantity = quantity;
+                    items[i].Name = name;
+                    items[i].Price = price;
+                    items[i].Creator = creator;
+                    items[i].Quantity = quantity;
                     noExist = false;
-                    Console.WriteLine($"Item with ID: {items[i].id} was changed. Now it looks {items[i].ToString()}");
+                    Console.WriteLine($"Item with ID: {items[i].ID} was changed. Now it looks {items[i].ToString()}");
                     break;
                 }
             }
@@ -88,6 +92,7 @@ namespace TeamTask
             }
         }
 
+        // showing all items list
         public void ShowItems()
         {
             bool noExist = true;
@@ -103,12 +108,13 @@ namespace TeamTask
             }
         }
 
-        public void FindItem(int id) // finding item (showing it) by id
+        // finding item (showing it) by id
+        public void FindItem(int id)
         {
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
-                if (items[i].id == id)
+                if (items[i].ID == id)
                 {                   
                     Console.WriteLine(items[i].ToString());
                     noExist = false;
@@ -121,12 +127,13 @@ namespace TeamTask
             }
         }
 
-        public void FindItem(string name) // finding item (showing it) by name
+        // finding item (showing it) by name
+        public void FindItem(string name)
         {
             bool noExist = true;
             for (int i = 0; i < items.Count; i++)
             {
-                if (items[i].name == name)
+                if (items[i].Name == name)
                 {
                     Console.WriteLine(items[i].ToString());
                     noExist = false;
