@@ -49,6 +49,7 @@
     <Compile Include="military.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Speka_unit.cs" />
     <Compile Include="Vilkha_unit.cs" />
   </ItemGroup>
   <ItemGroup>

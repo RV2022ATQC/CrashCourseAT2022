@@ -41,7 +41,7 @@ namespace team1_group
             {
                 int x = rnd.Next(500), y = rnd.Next(500);
                 if (military_unit.space[x, y] == null && x < 100)
-                    military_unit.space[x, y] = new Vilkha_unit(x, y, 50, 20, 50,"0", "Vilkha");
+                    military_unit.space[x, y] = new Vilkha_unit(x, y, 50, 20, 50, "0", "Vilkha");
                 else
                     i--;
             }
@@ -49,7 +49,7 @@ namespace team1_group
             for (int i = 0; i < 8; i++)
             {
                 int x = rnd.Next(500), y = rnd.Next(500);
-                if (military_unit.space[x, y] == null && x >400)
+                if (military_unit.space[x, y] == null && x > 400)
                     military_unit.space[x, y] = new Vilkha_unit(x, y, 50, 20, 50, "1", "Vilkha");
                 else
                     i--;
@@ -79,6 +79,37 @@ namespace team1_group
                     i--;
             }
         }
+
+        static void Add_spekas()
+        {
+            //спеки з'являються на відстані 200 одиниць від країв
+            Random rnd = new Random();
+            //союзні спеки
+            for (int i = 0; i < 6; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && x < 200)
+                {
+                    military_unit.space[x, y] = new Speka_unit(x, y, 30, 60, 100, "0", "Speka");
+                }
+
+                else
+                    i--;
+            }
+            //ворожі спеки
+            for (int i = 0; i < 6; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && x > 200)
+                {
+                    military_unit.space[x, y] = new Speka_unit(x, y, 30, 60, 100, "1", "Speka");
+                }
+
+                else
+                    i--;
+            }
+        }
+
         static void Main(string[] args)
         {
             /*
@@ -99,6 +130,7 @@ namespace team1_group
             Add_abrams();
             Add_vilkhas();
             Add_railguns();
+            Add_spekas();
 
             //загальний ігровий цикл
             for (int i = 0; i < 15; i++)
@@ -123,10 +155,10 @@ namespace team1_group
             if (counterOfEnemies > counterOfFriends)
                 Console.WriteLine("\nWE LOSE");
             else
-            Console.WriteLine("\nWE WIN");
-            
+                Console.WriteLine("\nWE WIN");
+
             Console.ReadLine();
         }
-        
+
     }
 }
