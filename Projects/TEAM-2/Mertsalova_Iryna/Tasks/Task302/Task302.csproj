@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88729519-5144-4510-A33D-B256CB65D128}</ProjectGuid>
+    <ProjectGuid>{FB87C556-4575-4E0A-95DC-537770305B07}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task_304</RootNamespace>
-    <AssemblyName>Task_304</AssemblyName>
+    <RootNamespace>Task302</RootNamespace>
+    <AssemblyName>Task302</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Classroom.cs" />
+    <Compile Include="Classes\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
