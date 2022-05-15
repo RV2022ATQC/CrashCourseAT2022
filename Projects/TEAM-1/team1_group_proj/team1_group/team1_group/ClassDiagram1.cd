@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="team1_group.military_unit" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAgAAGAAAQAIAAAIAAmAACAAABgCAAABAI=</HashCode>
+      <FileName>military.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="team1_group.abrams" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAGAAAAAAAAAAEAgAQCAAAAAAAAABAA=</HashCode>
+      <FileName>my_unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="team1_group.railgun_unit" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAGAAAAAAAAAAEAgAQCAAAAAAAAABAA=</HashCode>
+      <FileName>railgun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="team1_group.Vilkha_unit" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAGAAAAAAAAAAEAgAQCAAAAAAAAABAA=</HashCode>
+      <FileName>Vilkha_unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
