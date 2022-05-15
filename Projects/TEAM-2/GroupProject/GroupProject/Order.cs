@@ -9,26 +9,39 @@ namespace GroupProject
 {
     public class Order
     {
-        private int id;
-        private DateTime date;
-        private bool status;
+        public int Id { get; set; }
+        public string Customer { get; set; }
+        public DateTime Date { get; set; }
+        public string DeclarationNumber { get; set; }
+        public bool IsCompeleted { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
+        private static int counter = 0;
 
-        public int Id 
+        public Order(string declarationNumber, DateTime date, string customer, List<OrderItem> orderItems)
         {
-            get { return id; }
-            set { id = value; } 
+            Id = counter;
+            counter++;
+            IsCompeleted = false;
+            DeclarationNumber = declarationNumber;
+            Date = date;
+            Customer = customer;
+            OrderItems = orderItems;
         }
 
-        public DateTime Date
+        public void ChangeStaus(bool status)
         {
-            get { return date; }
-            set { date = value; }
+            IsCompeleted = status;
         }
 
-        public bool Status
+        public override string ToString()
         {
-            get { return status; }
-            set { status = value; }
+            string items = "";
+            foreach (var item in OrderItems)
+            {
+                items += "\nItem: " + item.ItemName + "\tAmount: " + item.Amount + "\tPrice: " + item.Price;
+            }
+            return ("Id: " + Id + "\tDeclaration number" + DeclarationNumber + "\tIs compeleted: " + IsCompeleted + "\tCustomer: " + Customer + "\tDate: " + Date + items);
         }
+
     }
 }
