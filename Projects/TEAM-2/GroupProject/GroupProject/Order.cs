@@ -28,6 +28,23 @@ namespace GroupProject
             OrderItems = orderItems;
         }
 
+        public void AddOrderItem(OrderItem newItem)
+        {
+            OrderItems.Add(newItem);
+        }
+
+        // removing by name
+        public void RemoveOrderItem(string name)
+        {
+            OrderItems.Remove(OrderItems.FirstOrDefault(x => x.ItemName == name));
+        }
+
+        // removing by id
+        public void RemoveOrderItem(int id)
+        {
+            OrderItems.Remove(OrderItems.FirstOrDefault(x => x.Id == id));
+        }
+
         public void ChangeStaus(bool status)
         {
             IsCompeleted = status;
