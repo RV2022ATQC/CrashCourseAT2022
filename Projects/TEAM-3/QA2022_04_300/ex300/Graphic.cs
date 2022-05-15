@@ -24,19 +24,19 @@ namespace ex300
 
             double pers1 = 100 / _max * _curr;
             
-            if(pers1 <= 20)
+            if(pers1 <= 25)
             {
                 Console.WriteLine(line1);
             }
-            if (pers1 > 20 && pers1 <= 40)
+            if (pers1 > 25 && pers1 <= 50)
             {
                 Console.WriteLine(line2);
             }
-            if (pers1 > 40 && pers1 <= 60)
+            if (pers1 > 50 && pers1 <= 75)
             {
                 Console.WriteLine(line3);
             }
-            if (pers1 > 60 && pers1 < 100)
+            if (pers1 > 75 && pers1 < 100)
             {
                 Console.WriteLine(line4);
             }

@@ -63,22 +63,28 @@ namespace ex300
             return tmp;
         }
 
+        void ShowMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Слово загадане, в якому {0} букв {1}\n", word.Length, Show_wordX());
+            Console.WriteLine("1. Загадати нове слово");
+            Console.WriteLine("2. Змiнити рiвень складностi. Рiвень : {0}", level);
+            Console.WriteLine("3. Ввести букву");
+            Console.WriteLine("4. Ввести слово");
+            Console.WriteLine("0. Вийти з гри\n");
+            c3.Show(count_step, count);
+            Console.WriteLine("\nВи викорристали {0} з {1} спроб", count_step, count);
+        }
         void Menu()
         {
             int ask = 0;
             string str_ask;
+            bool flag_end_game = false;
             do
             {
-                Console.Clear();
-                Console.WriteLine("Слово загадане, в якому {0} букв {1}\n", word.Length, Show_wordX());
-                Console.WriteLine("1. Загадати нове слово");
-                Console.WriteLine("2. Змiнити рiвень складностi. Рiвень : {0}",level);
-                Console.WriteLine("3. Ввести букву");
-                Console.WriteLine("4. Ввести слово");
-                Console.WriteLine("0. Вийти з гри\n");
-                c3.Show(count_step, count);
-                Console.WriteLine("\nВи викорристали {0} з {1} спроб", count_step, count);
-                str_ask = Console.ReadLine();
+                ShowMenu();
+                if (!flag_end_game) str_ask = Console.ReadLine();
+                else str_ask = "0";
                 try { ask = int.Parse(str_ask); }
                 catch (Exception ex) { ask = 100; }
                 finally
@@ -118,7 +124,7 @@ namespace ex300
                                     Console.WriteLine("Така буква є в цьому словi : {0}", Show_wordX());
                                 }
                                 else { Console.WriteLine("Такої букви немає є в цьому словi : {0}", Show_wordX()); }
-                                if (word == Show_wordX() || count_step == count) ask = 0;
+                                if (word == Show_wordX() || count_step == count) { ask = 0; ShowMenu(); }
                                 break;
                             }
 
@@ -138,7 +144,7 @@ namespace ex300
                                     Console.WriteLine("Ви не вгадали слово");
                                     Console.ReadKey();
                                 }
-                                if (word == Show_wordX() || count_step == count) { ask = 0; }
+                                if (word == Show_wordX() || count_step == count) { ask = 0; ShowMenu(); }
                                 break;
                             }
                         default: break;
