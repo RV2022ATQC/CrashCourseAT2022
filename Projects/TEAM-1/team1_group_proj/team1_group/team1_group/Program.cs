@@ -41,7 +41,7 @@ namespace team1_group
             {
                 int x = rnd.Next(500), y = rnd.Next(500);
                 if (military_unit.space[x, y] == null && x < 100)
-                    military_unit.space[x, y] = new Vilkha_unit(x, y, 50, 20, 50,"0", "Vilkha");
+                    military_unit.space[x, y] = new Vilkha_unit(x, y, 50, 20, 50, "0", "Vilkha");
                 else
                     i--;
             }
@@ -49,13 +49,12 @@ namespace team1_group
             for (int i = 0; i < 8; i++)
             {
                 int x = rnd.Next(500), y = rnd.Next(500);
-                if (military_unit.space[x, y] == null && x >400)
+                if (military_unit.space[x, y] == null && x > 400)
                     military_unit.space[x, y] = new Vilkha_unit(x, y, 50, 20, 50, "1", "Vilkha");
                 else
                     i--;
             }
         }
-
         static void Add_railguns()
         {
             //рейлгани приблизно формують другу лінію атаки, від 100 до 200 клітинок
@@ -75,6 +74,29 @@ namespace team1_group
                 int x = rnd.Next(500), y = rnd.Next(500);
                 if (military_unit.space[x, y] == null && x < 400 && x > 300)
                     military_unit.space[x, y] = new railgun_unit(x, y, 5, 50, 50, "1", "Railgun");
+                else
+                    i--;
+            }
+        }
+        static void Add_javelins()
+        {
+            //абрамси спавняться своїй половині дошки відстані 250 одиниць від краю
+            Random rnd = new Random();
+            //наша армія
+            for (int i = 0; i < 7; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && (x > 175 || x < 225))
+                    military_unit.space[x, y] = new javelin(x, y, 1, 10, 500, "0", "javelin");
+                else
+                    i--;
+            }
+            //ворожа армія
+            for (int i = 0; i < 7; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && (x > 275 || x < 325))
+                    military_unit.space[x, y] = new javelin(x, y, 1, 10, 500, "1", "javelin");
                 else
                     i--;
             }
@@ -99,7 +121,7 @@ namespace team1_group
             Add_abrams();
             Add_vilkhas();
             Add_railguns();
-
+            Add_javelins();
             //загальний ігровий цикл
             for (int i = 0; i < 15; i++)
             {
@@ -123,10 +145,10 @@ namespace team1_group
             if (counterOfEnemies > counterOfFriends)
                 Console.WriteLine("\nWE LOSE");
             else
-            Console.WriteLine("\nWE WIN");
-            
+                Console.WriteLine("\nWE WIN");
+
             Console.ReadLine();
         }
-        
+
     }
 }
