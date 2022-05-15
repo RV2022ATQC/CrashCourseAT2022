@@ -53,13 +53,13 @@ namespace team1_group
                         {
                             military_unit.space[a.x + i, a.y + j].defense -= sideDamage;
                             if (military_unit.space[a.x + i, a.y + j].defense <= 0)
-                            military_unit.space[a.x + i, a.y + j] = null;
+                                military_unit.space[a.x + i, a.y + j] = null;
                         }
                 }
             if (a.defense <= 0) military_unit.space[a.x, a.y] = null;
-            military_unit.space[x,y] = null;
+            military_unit.space[x, y] = null;
         }
-        
+
         //функція аналізу простору, вибір обєкта для атаки
         //аналізує постір в радіусі distanse та шукає можливий об'єкт для атаки
         public military_unit locator()
