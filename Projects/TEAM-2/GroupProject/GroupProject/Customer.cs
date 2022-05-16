@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace GroupProject
 {
-    public class Customers
+    public class Customer
     {
        public string Name;
        public float money;
 
-       public Customers(string Name, float money)
+       public Customer(string Name, float money)
         {
             this.Name = Name;
             this.money = money;
