@@ -17,32 +17,19 @@ namespace GroupProject
         static void Main(string[] args)
         {
             Shop ourShop = new Shop();
-            Order privateOrder1 = new Order("ABC_001", new DateTime(2022, 05, 10), "Ivanka Boghun", new List<OrderItem>(1));
 
+            //Order privateOrder1 = new Order("ABC_001", new DateTime(2022, 05, 11), "Roman Levadnyk", new List<OrderItem>(1));
+
+            // Add items to the shop
             ourShop.AddItem("iPhone", 700, "Antonio", 3);
-            ourShop.AddItem("iPhone", 700, "Antonio", 3);
-
-            ourShop.ShowItems();
-
             ourShop.AddItem("Samsung Galaxy A20", 300, "Resailer", 4);
             ourShop.AddItem("iPhone 12", 800, "Apple store Kyiv", 10);
 
             ourShop.ShowItems();
 
+            // Find items it the shop (by id and by name)
             ourShop.FindItem(2);
             ourShop.FindItem("iPhone");
-
-            Console.WriteLine("---------------------");
-            Console.WriteLine("");
-            
-            
-            
-            Console.WriteLine(privateOrder1.ToString());
-
-            
-
-
-
 
 
 

@@ -28,9 +28,9 @@ namespace GroupProject
             OrderItems = orderItems;
         }
 
-        public void AddOrderItem(OrderItem newItem)
+        public void AddOrderItem(string name, int amount, float price)
         {
-            OrderItems.Add(newItem);
+            OrderItems.Add(new OrderItem(name, amount, price));
         }
 
         // removing by name
@@ -58,6 +58,14 @@ namespace GroupProject
                 items += "\nItem: " + item.ItemName + "\tAmount: " + item.Amount + "\tPrice: " + item.Price;
             }
             return ("Id: " + Id + "\tDeclaration number" + DeclarationNumber + "\tIs compeleted: " + IsCompeleted + "\tCustomer: " + Customer + "\tDate: " + Date + items);
+        }
+
+        public void ShowItemsInOrder()
+        {
+            foreach (var item in OrderItems)
+            {
+                Console.WriteLine($"{item.Id}. {item.ItemName} - {item.Amount}");
+            }
         }
 
     }

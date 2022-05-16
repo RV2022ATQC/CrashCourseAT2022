@@ -106,6 +106,7 @@ namespace GroupProject
             {
                 Console.WriteLine("No avalible items!");
             }
+            Console.WriteLine();
         }
 
         // finding item (showing it) by id
