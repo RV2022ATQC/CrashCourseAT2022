@@ -9,26 +9,56 @@ namespace GroupProject
 {
     public class Order
     {
-        private int id;
-        private DateTime date;
-        private bool status;
+        public int Id { get; set; }
+        public string Customer { get; set; }
+        public DateTime Date { get; set; }
+        public string DeclarationNumber { get; set; }
+        public bool IsCompeleted { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
+        private static int counter = 0;
 
-        public int Id 
+        public Order(string declarationNumber, DateTime date, string customer, List<OrderItem> orderItems)
         {
-            get { return id; }
-            set { id = value; } 
+            Id = counter;
+            counter++;
+            IsCompeleted = false;
+            DeclarationNumber = declarationNumber;
+            Date = date;
+            Customer = customer;
+            OrderItems = orderItems;
         }
 
-        public DateTime Date
+        public void AddOrderItem(OrderItem newItem)
         {
-            get { return date; }
-            set { date = value; }
+            OrderItems.Add(newItem);
         }
 
-        public bool Status
+        // removing by name
+        public void RemoveOrderItem(string name)
         {
-            get { return status; }
-            set { status = value; }
+            OrderItems.Remove(OrderItems.FirstOrDefault(x => x.ItemName == name));
         }
+
+        // removing by id
+        public void RemoveOrderItem(int id)
+        {
+            OrderItems.Remove(OrderItems.FirstOrDefault(x => x.Id == id));
+        }
+
+        public void ChangeStaus(bool status)
+        {
+            IsCompeleted = status;
+        }
+
+        public override string ToString()
+        {
+            string items = "";
+            foreach (var item in OrderItems)
+            {
+                items += "\nItem: " + item.ItemName + "\tAmount: " + item.Amount + "\tPrice: " + item.Price;
+            }
+            return ("Id: " + Id + "\tDeclaration number" + DeclarationNumber + "\tIs compeleted: " + IsCompeleted + "\tCustomer: " + Customer + "\tDate: " + Date + items);
+        }
+
     }
 }
