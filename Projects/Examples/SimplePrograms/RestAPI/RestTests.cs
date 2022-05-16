@@ -20,10 +20,13 @@ using System.Xml.Serialization;
 namespace RestAPI
 {
     [TestFixture]
+    [Parallelizable]
     public class RestTest
     {
         public Logger log = LogManager.GetCurrentClassLogger(); // for NLog
         private string JsonToken;
+
+
 
         [Test]
         public void FromPostman()
@@ -40,11 +43,58 @@ namespace RestAPI
         }
 
         [Test]
+        public void FromPostmanPetstor()
+        {
+            var client = new RestClient("https://petstore.swagger.io/v2/pet");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.POST);
+            request.AddHeader("Content-Type", "application/json");
+            var body = @"{
+" + "\n" +
+            @"  ""id"": 111333,
+" + "\n" +
+            @"  ""category"": {
+" + "\n" +
+            @"    ""id"": 0,
+" + "\n" +
+            @"    ""name"": ""Korzhyk""
+" + "\n" +
+            @"  },
+" + "\n" +
+            @"  ""name"": ""doggie"",
+" + "\n" +
+            @"  ""photoUrls"": [
+" + "\n" +
+            @"    ""string""
+" + "\n" +
+            @"  ],
+" + "\n" +
+            @"  ""tags"": [
+" + "\n" +
+            @"    {
+" + "\n" +
+            @"      ""id"": 0,
+" + "\n" +
+            @"      ""name"": ""string""
+" + "\n" +
+            @"    }
+" + "\n" +
+            @"  ],
+" + "\n" +
+            @"  ""status"": ""available""
+" + "\n" +
+            @"}";
+            request.AddParameter("application/json", body, ParameterType.RequestBody);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
+        }
+
+        [Test]
         public void VerifyItems()
         {
             log.Info("Start");
             string url = "http://127.0.0.1/index.php?route=product/category&path=57";
-            
+
             var stackVariable = 33;
             var stackVariable2 = stackVariable;
 
@@ -74,8 +124,8 @@ namespace RestAPI
             var client = new RestClient("http://127.0.0.1/index.php?route=api/login");
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
-           // request.AddHeader("username", "Default");
-          //  request.AddHeader("key", "lqGZVBKPYUKKJBEHPJc8TxQgH2qNsSZNNqJlTHhJY3HsRSz10YsAMw3c5BX6Xaf0xiPFeP2Z5BrMvis73iKQN7gryGvHFlrMHpcanSmfeqd0cAQTsPdXEctjhTGaxEpVXFE0AcjXYiCKuMvBOkIEVfC4icqhkETDzTNjY5nvE2egYTTvKuuVVeFyTeZrgeR5wMlgCaCmTs5lXQjMVUvUPGuIgkjpaGavRJmww5hPTGaFcrgqfRFjwrgrKMhf25yv");
+            // request.AddHeader("username", "Default");
+            //  request.AddHeader("key", "lqGZVBKPYUKKJBEHPJc8TxQgH2qNsSZNNqJlTHhJY3HsRSz10YsAMw3c5BX6Xaf0xiPFeP2Z5BrMvis73iKQN7gryGvHFlrMHpcanSmfeqd0cAQTsPdXEctjhTGaxEpVXFE0AcjXYiCKuMvBOkIEVfC4icqhkETDzTNjY5nvE2egYTTvKuuVVeFyTeZrgeR5wMlgCaCmTs5lXQjMVUvUPGuIgkjpaGavRJmww5hPTGaFcrgqfRFjwrgrKMhf25yv");
             //      request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
             //      request.AddHeader("Cookie", "OCSESSID=bf91ec90aba413c4745cae7240; currency=USD; language=en-gb");
             request.AddParameter("username", "Default");
@@ -143,7 +193,7 @@ namespace RestAPI
                     "Mozilla/4.0 (Compatible; Windows NT 5.1; MSIE 6.0) " +
                     "(compatible; MSIE 6.0; Windows NT 5.1; " +
                     ".NET CLR 1.1.4322; .NET CLR 2.0.50727)";
-                
+
                 // get response
                 var response = webClient.DownloadString(url);
                 Console.WriteLine(response);
@@ -153,7 +203,7 @@ namespace RestAPI
 
 
         [Test, Category("Failed")]
-      //  [Ignore("BDU34556 https://jiraticket")]
+        //  [Ignore("BDU34556 https://jiraticket")]
         [Category("Smoke")]
         public void ReadDatabase()
         {
@@ -168,7 +218,7 @@ namespace RestAPI
 
                 Assert.AreEqual(command, expectedName);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 log.Error(ex.Message);
             }
@@ -177,7 +227,7 @@ namespace RestAPI
 
             }
             //Then
-            
+
         }
     }
 }

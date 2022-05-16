@@ -8,12 +8,12 @@ namespace Fairytale
 {
     class Person { 
 
-        //a) потрібен клас Persons - породить два об'єкти дід і баба
+        //клас Persons - породить два об'єкти дід і баба
                 //дід вміє говорити і їсти колобка
                 // = string Speak(); void Eat(Kolobok myKolobok)
                 //баба вміє пекти колобка і їсти колобка
                 // = Kolobok CookKolobok(); void Eat(Kolobok myKolobok)
-
     public Kolobok CookKolobok() => new Kolobok();
+
     }
 }

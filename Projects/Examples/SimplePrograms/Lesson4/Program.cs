@@ -40,7 +40,9 @@ namespace Lesson4
 
             //створюємо об'єкт XmlSerializer що приймає типи List<Animal> і List<Cat> 
             //оскільки List, який ми будемо серіалізувати містить об'єкти обох класів
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Animal>), new[] { typeof(List<Cat>) });
+
+            var arraySecondParametr = new[] { typeof(List<Cat>) };
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Animal>), arraySecondParametr);
             Stream fileStream = new FileStream("animalsCollection.xml", FileMode.Create);
             try
             {
@@ -211,7 +213,7 @@ namespace Lesson4
 
             //-------------------DATABASE---------------------------------
             Console.WriteLine("DATABASE");
-            Database.ExecuteQuery("SELECT * FROM `oc_category` WHERE 1; ");
+            Console.WriteLine($"SortOrder value = {Database.GetSortOrderByOCCategory(17)}");
 
 
             //-------------------LINQ---------------------------------
@@ -221,7 +223,9 @@ namespace Lesson4
 
 
             //!!!ВИБІРКА LINQ коротка форма вибірки з animalsCollection лише об'єктів типу Cats і сортування по віку
-            foreach (var cat in animalsCollection.OfType<Cat>().OrderBy(x => x.age).ToList())
+            var newList = animalsCollection.OfType<Cat>().OrderBy(x => x.age).ToList();
+
+            foreach (var cat in newList)
             {
                 Console.WriteLine($"The sorted cat from List = {cat.age}, {cat.speed}, {cat.voise}");
             }
