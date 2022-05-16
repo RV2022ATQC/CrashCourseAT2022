@@ -32,6 +32,6 @@ namespace GroupProject
             return money.ToString();
         }
 
-     Customers new_customer = new Customers();
+     
     }
 }
