@@ -7,21 +7,7 @@ namespace RestAPI
     public static class Database
     {
 
-        private static readonly string _connectionString = "datasource=127.0.0.1;port=3306;username=bn_opencart;password=;database= bitnami_opencart;";
-
-        //public static void ExecuteQueryOld(string queryString, string message = "", bool isTenantsDB = false)
-        //{
-
-        //    using (var connection = new SqlConnection(_connectionString))
-        //    {
-        //        var command = new SqlCommand(queryString, connection);
-        //        command.Connection.Open();
-        //        command.ExecuteNonQuery();
-
-        //        Console.WriteLine(message);
-        //    }
-        //} 
-
+        private static readonly string _connectionString = "server=localhost; userid=root; password=123456; database=bitnami_opencart";
 
         public static string ExecuteQuery(string queryString)
         {
@@ -37,7 +23,7 @@ namespace RestAPI
                 // Execute the query
                 var result = command.ExecuteScalar().ToString();
                 Console.WriteLine($"Result = {result}");
-                throw new Exception("Test exception");
+              //  throw new Exception("Test exception");
                 return result;
             }
             catch (Exception ex)
@@ -49,8 +35,8 @@ namespace RestAPI
         }
         public static string GetFirstnameById(string userId)
         {
+            // var queryString = "SELECT `firstname` FROM `oc_customer` WHERE `customer_id` = 2";
             var queryString = $@"SELECT `firstname` FROM `oc_customer` WHERE `customer_id` = {userId}";
-           // var queryString = "SELECT `firstname` FROM `oc_customer` WHERE `customer_id` = 2";
 
             return ExecuteQuery(queryString);
         }

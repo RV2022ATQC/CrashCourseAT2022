@@ -17,39 +17,80 @@ namespace SeleniumTests
     {
         [Test]
         public void FirstTest()
-        {
-            Console.WriteLine("FirstTest1() ThreadID= " + Thread.CurrentThread.ManagedThreadId);
+        {            
+            ChromeOptions options = new ChromeOptions();
+
+            options.AddArguments("--start-maximized");
+            options.AddArguments("--no-proxy-server");
+            //options.AddArguments("--no-sandbox");
+            //options.AddArguments("--disable-web-security");
+            options.AddArguments("--ignore-certificate-errors");
+            //options.AddArguments("--disable-extensions");
+            //options.AddArguments("--headless");
+           
+
+            //ініціалізація драйвера
+           //IWebDriver driver = new ChromeDriver();
+            IWebDriver driver = new ChromeDriver(options);
 
             //можемо ініціалізувати різні браузери
-            //IWebDriver driver = new FirefoxDriver();
-            IWebDriver driver = new ChromeDriver();
 
+            //встановлення параметрів для Firefox
+            var firefoxoptions = new FirefoxOptions();
+            //   firefoxoptions.AddAdditionalCapability("screenResTimeSpan.FromSeconds(10)olution", "1920x1080x24", true);
+            //   firefoxoptions.AddAdditionalCapability("name", runName, true);
+            //   firefoxoptions.AddAdditionalCapability("enableLog", true, true);
+
+          //  IWebDriver driver = new FirefoxDriver(firefoxoptions);
+          
+            //конфігурація вебдрайверу
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            //відкриваємо сайт за вказаним URL
             driver.Navigate().GoToUrl("http://demo.opencart.com/");
-         
-            driver.FindElement(By.CssSelector("#search > input")).Click();
+
+            //пошук елементів за різними селекторами
+            driver.FindElement(By.XPath("/html/body/header/div/div/div[2]/div/input")).Click();
+            driver.FindElement(By.XPath("//*[@id='search']/input")).Click();
+            driver.FindElement(By.Id("search")).Click();
+
+
+            driver.FindElement(By.CssSelector("#search > input")).Clear();
+            driver.FindElement(By.CssSelector("#search > input")).SendKeys("Nokia");
+
+
+       //     driver.FindElement(By.ClassName("input-group")).FindElement(By.CssSelector("input")).Click();
+
+       //     driver.FindElement(By.CssSelector("#search > input")).Click();
 
             #region Lasyinitialisation
-            // ---- Lasy initialisation -----
-            //var SearchField = driver.FindElement(By.CssSelector("#search > input"));
+            var SearchField = driver.FindElement(By.CssSelector("#search > input"));
 
-            //driver.Navigate().Refresh();
+            SearchField.SendKeys("Nokia");
+            SearchField.Clear();
 
+            driver.Navigate().Refresh();
+
+            //з лінівою ініціалізацією потрібно бути обережними
             //SearchField.Clear();
             //SearchField.SendKeys("iPhone" + Keys.Enter);
 
             #endregion Lasyinitialisation
 
-            driver.FindElement(By.CssSelector("#search > input")).Clear();
 
+            //введення тексту
+            driver.FindElement(By.CssSelector("#search > input")).Clear();
             driver.FindElement(By.CssSelector("#search > input")).SendKeys("iPhone" + Keys.Enter);
+
+
 
             //driver.FindElement(By.Id("lst-ib")).SendKeys("selenium ide" + Keys.Enter);
             //driver.FindElement(By.CssSelector("#search > input")).SendKeys("iPhone");
-            //driver.FindElement(By.CssSelector("#search > input")).Submit();
+           // driver.FindElement(By.CssSelector("#search > input")).Submit();
+
             Thread.Sleep(2000);
 
-            #region JavaScriptExecutor
+            #region JavaScriptExecutor 
             //-----------------------JavaScriptExecutor--------------------------------------------
             IJavaScriptExecutor javaScript = (IJavaScriptExecutor)driver;
             javaScript.ExecuteScript("alert('Hello!');");
@@ -62,16 +103,20 @@ namespace SeleniumTests
             IWebElement actual = (IWebElement)javaScript
                 .ExecuteScript("return document.getElementsByClassName('caption')[0];", new object[1] { "" });
 
-
+            /*
             //----Goto Position By JavaScript.
             //IJavaScriptExecutor javaScript = (IJavaScriptExecutor)driver;
-            //IWebElement position = driver.FindElement(By.CssSelector("body > footer > div > p > a"));
-            //javaScript.ExecuteScript("arguments[0].scrollIntoView(true);", position);
+            IWebElement position = driver.FindElement(By.CssSelector("body > footer > div > p > a"));
+            javaScript.ExecuteScript("arguments[0].scrollIntoView(true);", position);
 
-            //Thread.Sleep(4000);
+            Thread.Sleep(3000);
+            */
+
             #endregion JavaScriptExecutor
+            
 
-            // Goto Position. Use Actions class
+            
+            // -----------Goto Position. Use Actions class
             Actions action = new Actions(driver);
 
             IWebElement position = driver.FindElement(By.CssSelector("body > footer > div > p > a"));
@@ -80,13 +125,19 @@ namespace SeleniumTests
             action.ClickAndHold().MoveToElement(position).Perform();
 
             //Thread.Sleep(4000);
+            
 
+            //Перевіряємо текст знайденого IWebElement
             Assert.True(actual.Text.Contains("iPhone"));
 
+
+            //Є можливість робити скріншоти
             ITakesScreenshot takesScreenshot = driver as ITakesScreenshot;
             Screenshot screenshot = takesScreenshot.GetScreenshot();
             screenshot.SaveAsFile("c:/Screenshot1.png", ScreenshotImageFormat.Png);
-         
+
+
+            // !!!driver.Quit() потрібно виносити у teardown
             driver.Quit();
         }
 
@@ -123,10 +174,13 @@ namespace SeleniumTests
         }
 
 
-      //  [Test]
+        [Test]
         public void TestDragDrop2()
         {
+
+            //параметри для Chrome
             ChromeOptions options = new ChromeOptions();
+                        
             options.AddArguments("--start-maximized");
             options.AddArguments("--no-proxy-server");
             //options.AddArguments("--no-sandbox");
@@ -145,21 +199,26 @@ namespace SeleniumTests
             WebElement source = (WebElement)driver.FindElement(By.Id("column-a"));
             WebElement target = (WebElement)driver.FindElement(By.Id("column-b"));
 
-            Assert.True(source.Text == "A");
+
 
             Actions builder = new Actions(driver);
+            builder.DragAndDrop(source, target).Perform();
 
-            //     builder.ClickAndHold(source).MoveToElement(target).Click(target).Release(target).Build().Perform();
-
-            //builder.ClickAndHold(source).Build().Perform();
-            //Thread.Sleep(2000);
-            //builder.Click(target).Build().Perform();
-            //builder.Release(target).Build().Perform();
+            Assert.True(source.Text == "A");
 
 
-            builder.DragAndDropToOffset(source, 200, 400).Perform();
 
-            //     builder.ClickAndHold(source).Release(target).Build().Perform();
+           // builder.ClickAndHold(source).MoveToElement(target).Click(target).Release(target).Build().Perform();
+
+            builder.ClickAndHold(source).Build().Perform();
+            Thread.Sleep(1000);
+            builder.Click(target).Build().Perform();
+            builder.Release(target).Build().Perform();
+
+
+            builder.DragAndDropToOffset(source, 100, 300).Perform();
+
+           builder.ClickAndHold(target).Release(source).Build().Perform();
 
             target.Click();
 
