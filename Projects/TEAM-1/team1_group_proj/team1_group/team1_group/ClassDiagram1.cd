@@ -28,5 +28,12 @@
       <FileName>Vilkha_unit.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="team1_group.Speka_unit" Collapsed="true">
+    <Position X="1.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAGAAAAAAAAAAEAgAQCAAAAAAAAABAA=</HashCode>
+      <FileName>Speka_unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
