@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Javelin_unit.cs" />
     <Compile Include="railgun.cs" />
     <Compile Include="my_unit.cs" />
     <Compile Include="military.cs" />

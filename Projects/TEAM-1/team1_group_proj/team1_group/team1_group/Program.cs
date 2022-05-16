@@ -109,6 +109,29 @@ namespace team1_group
                     i--;
             }
         }
+        static void Add_javelins()
+        {
+            //джавеліни спавняться своїй половині дошки відстані 175-225 одиниць від краю за абрамсами
+            Random rnd = new Random();
+            //наша армія
+            for (int i = 0; i < 7; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && (x > 175 || x < 225))
+                    military_unit.space[x, y] = new javelin(x, y, 1, 10, 500, "0", "javelin");
+                else
+                    i--;
+            }
+            //ворожа армія
+            for (int i = 0; i < 7; i++)
+            {
+                int x = rnd.Next(500), y = rnd.Next(500);
+                if (military_unit.space[x, y] == null && (x > 275 || x < 325))
+                    military_unit.space[x, y] = new javelin(x, y, 1, 10, 500, "1", "javelin");
+                else
+                    i--;
+            }
+        }
 
         static void Main(string[] args)
         {
