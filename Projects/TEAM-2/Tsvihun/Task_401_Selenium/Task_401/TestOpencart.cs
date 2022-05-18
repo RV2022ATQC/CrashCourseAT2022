@@ -26,7 +26,28 @@ namespace Task_401_Selenium
         [Test]
         public void TestLoginToOpencart()
         {
+            // 1.Fill in e-mail address
+            // 2.Fill in password
+            // 3.Press "Login" button
+            // 4.Check redirection 
+
+            string userEmail = "antront@ukr.net";
+            string userPassword = "ront";
+            string accountUrl = "http://localhost/shop/index.php?route=account/account";
+
             driver.Navigate().GoToUrl(_urlLocal);
+
+            // Fill in email & password
+            driver.FindElement(By.Id("input-email")).SendKeys(userEmail);
+            driver.FindElement(By.Id("input-password")).SendKeys(userPassword);
+
+            // Press "Login"
+            driver.FindElement(By.CssSelector("#content > div > div:nth-child(2) > div > form > input")).Click();
+
+            string currentUrl = driver.Url;
+
+            // Check if redirected
+            Assert.AreEqual(accountUrl, currentUrl);
         }
 
         [OneTimeTearDown]
