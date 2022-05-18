@@ -4,6 +4,9 @@ namespace final_task
 {
     [Serializable()]
     [System.Xml.Serialization.XmlInclude(typeof(Vehicle))]
+    [System.Xml.Serialization.XmlInclude(typeof(Car))]
+    [System.Xml.Serialization.XmlInclude(typeof(Bus))]
+    [System.Xml.Serialization.XmlInclude(typeof(Bike))]
     public abstract class Vehicle : IComparable<Vehicle>
     {
         public Vehicle() { }
