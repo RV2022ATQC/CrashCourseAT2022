@@ -1,0 +1,19 @@
+url login
+http://localhost/shop/index.php?route=account/login
+url account
+http://localhost/shop/index.php?route=account/account
+
+Login
+user email: antront@ukr.net
+password: ront
+
+Email
+Id: input-email
+Selector: #input-email
+
+Password
+Id: input-password
+Selector: #input-password
+
+Login
+Selector: #content > div > div:nth-child(2) > div > form > input
