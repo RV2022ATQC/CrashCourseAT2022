@@ -43,6 +43,7 @@ namespace Task_401_Selenium
             driver.FindElement(By.Id("input-email")).SendKeys(userEmail);
             driver.FindElement(By.Id("input-password")).SendKeys(userPassword);
             driver.FindElement(By.CssSelector("#content > div > div:nth-child(2) > div > form > input")).Click();
+            
 
             // Assert
             string currentUrl = driver.Url;
@@ -52,18 +53,42 @@ namespace Task_401_Selenium
         [Test]
         public void TestSearchProductInOpencart()
         {
+            // 1.Fill in search field + Enter
+            // 2.Check redirection & finding product
+
             // Arrange
+            string searchUrl = "http://localhost/shop/index.php?route=product/search";
 
             // Act
             driver.Navigate().GoToUrl(_url);
-            driver.FindElement(By.XPath("/html/body/header/div/div/div[2]/div")).Click();
-            Thread.Sleep(3000);
-            driver.FindElement(By.XPath("/html/body/header/div/div/div[2]/div")).SendKeys("iphone");
-            Thread.Sleep(3000);
+            driver.FindElement(By.XPath("//*[@id='search']/input")).SendKeys("iphone" + Keys.Enter);
 
             // Assert
-
+            string currentUrl = driver.Url;
+            Assert.IsTrue(currentUrl.Contains(searchUrl));
         }
+
+        [Test]
+        public void TestAddProductToCart()
+        {
+            // Arrange
+            string searchIphoneUrl = "http://localhost/shop/index.php?route=product/search&search=iphone";
+            string buyButtonSelector = "#content > div:nth-child(8) > div > div > div:nth-child(2) > div.button-group > button:nth-child(1)";
+            string messsageSelector = "#product-search > div.alert.alert-success.alert-dismissible";
+            string cartButton = "#cart > button";
+
+            // Act
+            driver.Navigate().GoToUrl(searchIphoneUrl);
+            driver.FindElement(By.CssSelector(buyButtonSelector)).Click();
+            Thread.Sleep(1000);
+            var message = driver.FindElement(By.CssSelector(messsageSelector));
+            var button = driver.FindElement(By.CssSelector(cartButton));
+                        
+            // Assert
+            Assert.IsTrue(message.Displayed);
+            Assert.IsTrue(button.Text.Contains("1"));
+        }        
+
 
         [OneTimeTearDown]
         public void AfterAllTests()
