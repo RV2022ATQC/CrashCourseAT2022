@@ -23,7 +23,7 @@ namespace _220
 
             Console.WriteLine("Methods with parameters");
             Console.WriteLine(Add(a, b));
-            Console.WriteLine(Add(c,d));
+            Console.WriteLine(Add(c, d));
         }
 
         private static int Add(int a = 1, int b = 2)
