@@ -57,7 +57,7 @@ namespace final_task
 
         public bool Older_then_10()
         {
-            return ((DateTime.Now.Year - this.Year_of_production) >= 10);
+            return ((DateTime.Now.Year - this.Year_of_production) >= 10 && this is Car);
         }
 
         public abstract override bool Equals(object? obj);

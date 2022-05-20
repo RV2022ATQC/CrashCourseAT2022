@@ -83,7 +83,7 @@ namespace Test_Vehicles
             List<Vehicle> older_then_10 = new List<Vehicle>();
 
             //Act
-            older_then_10 = vehicles.FindAll(el => el.Older_then_10());
+            older_then_10 = vehicles.FindAll(el => el.Older_then_10() && el is Car);
 
             //Assert
             bool check = true;
