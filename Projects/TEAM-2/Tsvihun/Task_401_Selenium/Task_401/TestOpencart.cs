@@ -32,7 +32,6 @@ namespace Task_401_Selenium
             // 3.Press "Login" button
             // 4.Check redirection 
 
-
             // Arrange
             string userEmail = "antront@ukr.net";
             string userPassword = "ront";
@@ -43,11 +42,12 @@ namespace Task_401_Selenium
             driver.FindElement(By.Id("input-email")).SendKeys(userEmail);
             driver.FindElement(By.Id("input-password")).SendKeys(userPassword);
             driver.FindElement(By.CssSelector("#content > div > div:nth-child(2) > div > form > input")).Click();
-            
 
             // Assert
             string currentUrl = driver.Url;
             Assert.AreEqual(accountUrl, currentUrl);
+
+            Console.WriteLine($"Redirected to {currentUrl}");
         }
 
         [Test]
@@ -66,6 +66,8 @@ namespace Task_401_Selenium
             // Assert
             string currentUrl = driver.Url;
             Assert.IsTrue(currentUrl.Contains(searchUrl));
+
+            Console.WriteLine($"Redirected to page {currentUrl}");
         }
 
         [Test]
@@ -87,7 +89,28 @@ namespace Task_401_Selenium
             // Assert
             Assert.IsTrue(message.Displayed);
             Assert.IsTrue(button.Text.Contains("1"));
-        }        
+            
+            Console.WriteLine($"Message is shown: \"{message.Text}\"");
+            Console.WriteLine($"Text on cart button: \"{button.Text}\"");
+
+        }
+
+        [Test]
+        public void TestShoppingCartAvailability()
+        {
+            // Arrange
+            string shopCartButtonSelector = "#top-links > ul > li:nth-child(4)";
+            string cartUrl = "http://localhost/shop/index.php?route=checkout/cart";
+
+            // Act
+            driver.Navigate().GoToUrl(_url);
+            driver.FindElement(By.CssSelector(shopCartButtonSelector)).Click();
+
+            // Assert
+            Assert.AreEqual(cartUrl, driver.Url);
+            
+            Console.WriteLine($"Redirected to shopping cart {driver.Url}");
+        }
 
 
         [OneTimeTearDown]
