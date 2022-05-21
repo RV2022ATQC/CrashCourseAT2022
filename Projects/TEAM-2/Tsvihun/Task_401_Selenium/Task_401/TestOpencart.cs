@@ -12,8 +12,8 @@ namespace Task_401_Selenium
 
     class TestOpencart
     {
-        //private static readonly string _url = "http://localhost/shop/";
-        private static readonly string _url = "https://demo.opencart.com/";
+        private static readonly string _url = "http://localhost/shop/";
+        //private static readonly string _url = "https://demo.opencart.com/";
         
         IWebDriver driver;
 
@@ -83,14 +83,13 @@ namespace Task_401_Selenium
             Thread.Sleep(1000);
             var message = driver.FindElement(By.CssSelector(messsageSelector));
             var button = driver.FindElement(By.CssSelector(cartButton));
-                        
-            // Assert
-            Assert.IsTrue(message.Displayed);
-            Assert.IsTrue(button.Text.Contains("1"));
-            
+
             Console.WriteLine($"Message is shown: \"{message.Text}\"");
             Console.WriteLine($"Text on cart button: \"{button.Text}\"");
 
+            // Assert
+            Assert.IsTrue(message.Displayed);
+            Assert.IsTrue(!button.Text.Contains("$0.00"));
         }
 
         [Test]
