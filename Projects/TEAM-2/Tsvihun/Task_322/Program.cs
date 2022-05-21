@@ -10,8 +10,12 @@ namespace Task_322
     {
         static void Main(string[] args)
         {
-            Goods goods = new Goods("Cup", 40, new DateTime(2021,09,10), 20);
-            Console.WriteLine(goods.ToString());
+            Goods cup = new Goods("Cup", 40, new DateTime(2021,09,10), 20);
+            Console.WriteLine(cup.ToString());
+            Console.WriteLine();
+
+            cup.SetQuantity();
+            Console.WriteLine(cup.ToString());
         }
     }
 }
