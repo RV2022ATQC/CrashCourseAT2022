@@ -41,6 +41,10 @@ Selector #cart > button
 ShopCart TopButton
 Selector #top-links > ul > li:nth-child(4)
 
+ShopCart content
+Selector #content > form > div > table > tbody > tr
+
+
 - - - - -
 Login
 user email: antront@ukr.net

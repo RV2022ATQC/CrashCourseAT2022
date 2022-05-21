@@ -12,9 +12,8 @@ namespace Task_401_Selenium
 
     class TestOpencart
     {
-        private static readonly string _url = "http://localhost/shop/index.php";
-        private static readonly string _urlLogin = "http://localhost/shop/index.php?route=account/login";
-        //private static readonly string _urlExternal = "https://demo.opencart.com/index.php?route=account/login";
+        //private static readonly string _url = "http://localhost/shop/";
+        private static readonly string _url = "https://demo.opencart.com/";
         
         IWebDriver driver;
 
@@ -33,9 +32,10 @@ namespace Task_401_Selenium
             // 4.Check redirection 
 
             // Arrange
+            string _urlLogin = _url + "index.php?route=account/login";
             string userEmail = "antront@ukr.net";
             string userPassword = "ront";
-            string accountUrl = "http://localhost/shop/index.php?route=account/account";
+            string accountUrl = _url + "index.php?route=account/account";
 
             // Act
             driver.Navigate().GoToUrl(_urlLogin);
@@ -45,9 +45,8 @@ namespace Task_401_Selenium
 
             // Assert
             string currentUrl = driver.Url;
-            Assert.AreEqual(accountUrl, currentUrl);
-
             Console.WriteLine($"Redirected to {currentUrl}");
+            Assert.AreEqual(accountUrl, currentUrl);
         }
 
         [Test]
@@ -57,7 +56,7 @@ namespace Task_401_Selenium
             // 2.Check redirection & finding product
 
             // Arrange
-            string searchUrl = "http://localhost/shop/index.php?route=product/search";
+            string searchUrl = _url + "index.php?route=product/search";
 
             // Act
             driver.Navigate().GoToUrl(_url);
@@ -65,16 +64,15 @@ namespace Task_401_Selenium
 
             // Assert
             string currentUrl = driver.Url;
-            Assert.IsTrue(currentUrl.Contains(searchUrl));
-
             Console.WriteLine($"Redirected to page {currentUrl}");
+            Assert.IsTrue(currentUrl.Contains(searchUrl));
         }
 
         [Test]
         public void TestAddProductToCart()
         {
             // Arrange
-            string searchIphoneUrl = "http://localhost/shop/index.php?route=product/search&search=iphone";
+            string searchIphoneUrl = _url + "index.php?route=product/search&search=iphone";
             string buyButtonSelector = "#content > div:nth-child(8) > div > div > div:nth-child(2) > div.button-group > button:nth-child(1)";
             string messsageSelector = "#product-search > div.alert.alert-success.alert-dismissible";
             string cartButton = "#cart > button";
@@ -100,23 +98,41 @@ namespace Task_401_Selenium
         {
             // Arrange
             string shopCartButtonSelector = "#top-links > ul > li:nth-child(4)";
-            string cartUrl = "http://localhost/shop/index.php?route=checkout/cart";
+            string cartUrl = _url + "index.php?route=checkout/cart";
 
             // Act
             driver.Navigate().GoToUrl(_url);
             driver.FindElement(By.CssSelector(shopCartButtonSelector)).Click();
 
             // Assert
-            Assert.AreEqual(cartUrl, driver.Url);
-            
             Console.WriteLine($"Redirected to shopping cart {driver.Url}");
+            Assert.AreEqual(cartUrl, driver.Url);
         }
 
+        [Test]
+        public void TestShoppingCart()
+        {
+            // Arrange
+            string searchIphoneUrl = _url + "index.php?route=product/search&search=iphone";
+            string buyButtonSelector = "#content > div:nth-child(8) > div > div > div:nth-child(2) > div.button-group > button:nth-child(1)";
+            string shopCartButtonSelector = "#top-links > ul > li:nth-child(4)";
+            string elementSelector = "#content > form > div > table > tbody > tr";
+
+            // Act
+            driver.Navigate().GoToUrl(searchIphoneUrl);
+            driver.FindElement(By.CssSelector(buyButtonSelector)).Click();
+            driver.FindElement(By.CssSelector(shopCartButtonSelector)).Click();
+            var cartContent = driver.FindElement(By.CssSelector(elementSelector));
+
+            // Assert
+            Console.WriteLine($"Text in the list: \"{cartContent.Text}\"");
+            Assert.IsTrue(cartContent.Text.Contains("iPhone"));
+        }
 
         [OneTimeTearDown]
         public void AfterAllTests()
         {
-            Thread.Sleep(2000);
+            // Thread.Sleep(2000);
             driver.Quit();
         }
     }
