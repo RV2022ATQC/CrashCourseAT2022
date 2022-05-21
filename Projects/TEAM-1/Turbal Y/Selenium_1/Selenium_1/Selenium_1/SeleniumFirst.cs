@@ -17,51 +17,51 @@ namespace Selenium_1
     {
         [Test]
         public void FirstTest()
-        {            
-           // ChromeOptions options = new ChromeOptions();
+        {
+            ChromeOptions options = new ChromeOptions();
 
-           // options.AddArguments("--start-maximized");
+            options.AddArguments("--start-maximized");
            // options.AddArguments("--no-proxy-server");
             //options.AddArguments("--no-sandbox");
             //options.AddArguments("--disable-web-security");
-           // options.AddArguments("--ignore-certificate-errors");
+            options.AddArguments("--ignore-certificate-errors");
             //options.AddArguments("--disable-extensions");
             //options.AddArguments("--headless");
-           
+
 
             //ініціалізація драйвера
-           //IWebDriver driver = new ChromeDriver();
-            //IWebDriver driver = new ChromeDriver(options);
+            //IWebDriver driver = new ChromeDriver();
+            IWebDriver driver = new ChromeDriver(options);
 
             //можемо ініціалізувати різні браузери
 
             //встановлення параметрів для Firefox
-            var firefoxoptions = new FirefoxOptions();
-           //   firefoxoptions.AddAdditionalCapability("screenResTimeSpan.FromSeconds(10)olution", "1920x1080x24", true);
-          // firefoxoptions.AddAdditionalCapability("name", runName, true);
-           // firefoxoptions.AddAdditionalCapability("enableLog", true, true);
+           // var firefoxoptions = new FirefoxOptions();
+            //   firefoxoptions.AddAdditionalCapability("screenResTimeSpan.FromSeconds(10)olution", "1920x1080x24", true);
+            //firefoxoptions.AddAdditionalCapability("name", runName, true);
+            // firefoxoptions.AddAdditionalCapability("enableLog", true, true);
 
-            IWebDriver driver = new FirefoxDriver(firefoxoptions);
-          
+           // IWebDriver driver = new FirefoxDriver(firefoxoptions);
+            //IWebDriver driver = new FirefoxDriver();
+
             //конфігурація вебдрайверу
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(40);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             //відкриваємо сайт за вказаним URL
             driver.Navigate().GoToUrl("http://demo.opencart.com/");
-
-            //пошук елементів за різними селекторами
-            driver.FindElement(By.XPath("/html/body/header/div/div/div[2]/div/input")).Click();
-            driver.FindElement(By.XPath("//*[@id='search']/input")).Click();
-            driver.FindElement(By.Id("search")).Click();
-
-
-            driver.FindElement(By.CssSelector("#search > input")).Clear();
-            driver.FindElement(By.CssSelector("#search > input")).SendKeys("Nokia");
+                        //пошук елементів за різними селекторами
+            //driver.FindElement(By.XPath("/html/body/header/div/div/div[2]/div/input")).Click();
+            //driver.FindElement(By.XPath("//*[@id='search']/input")).Click();
+           // driver.FindElement(By.Id("search")).Click();
 
 
-       //     driver.FindElement(By.ClassName("input-group")).FindElement(By.CssSelector("input")).Click();
+            //driver.FindElement(By.CssSelector("#search > input")).Clear();
+           // driver.FindElement(By.CssSelector("#search > input")).SendKeys("Nokia");
 
-       //     driver.FindElement(By.CssSelector("#search > input")).Click();
+
+         //driver.FindElement(By.ClassName("input-group")).FindElement(By.CssSelector("input")).Click();
+
+         //driver.FindElement(By.CssSelector("#search > input")).Click();
 
             #region Lasyinitialisation
             var SearchField = driver.FindElement(By.CssSelector("#search > input"));
@@ -79,16 +79,16 @@ namespace Selenium_1
 
 
             //введення тексту
-            driver.FindElement(By.CssSelector("#search > input")).Clear();
-            driver.FindElement(By.CssSelector("#search > input")).SendKeys("iPhone" + Keys.Enter);
+           driver.FindElement(By.CssSelector("#search > input")).Clear();
+           driver.FindElement(By.CssSelector("#search > input")).SendKeys("iPhone" + Keys.Enter);
 
 
 
-            //driver.FindElement(By.Id("lst-ib")).SendKeys("selenium ide" + Keys.Enter);
-            //driver.FindElement(By.CssSelector("#search > input")).SendKeys("iPhone");
-           // driver.FindElement(By.CssSelector("#search > input")).Submit();
+           // driver.FindElement(By.Id("lst-ib")).SendKeys("selenium ide" + Keys.Enter);
+           // driver.FindElement(By.CssSelector("#search > input")).SendKeys("iPhone");
+            //driver.FindElement(By.CssSelector("#search > input")).Submit();
 
-            Thread.Sleep(2000);
+           //Thread.Sleep(2000);
 
             #region JavaScriptExecutor 
             //-----------------------JavaScriptExecutor--------------------------------------------
@@ -117,12 +117,12 @@ namespace Selenium_1
 
             
             // -----------Goto Position. Use Actions class
-            Actions action = new Actions(driver);
+           // Actions action = new Actions(driver);
 
-            IWebElement position = driver.FindElement(By.CssSelector("body > footer > div > p > a"));
+           // IWebElement position = driver.FindElement(By.CssSelector("body > footer > div > p > a"));
 
-            action.MoveToElement(position).Perform();
-            action.ClickAndHold().MoveToElement(position).Perform();
+           // action.MoveToElement(position).Perform();
+          //  action.ClickAndHold().MoveToElement(position).Perform();
 
             //Thread.Sleep(4000);
             
@@ -132,9 +132,9 @@ namespace Selenium_1
 
 
             //Є можливість робити скріншоти
-            ITakesScreenshot takesScreenshot = driver as ITakesScreenshot;
-            Screenshot screenshot = takesScreenshot.GetScreenshot();
-            screenshot.SaveAsFile("c:/Screenshot1.png", ScreenshotImageFormat.Png);
+          //  ITakesScreenshot takesScreenshot = driver as ITakesScreenshot;
+          //  Screenshot screenshot = takesScreenshot.GetScreenshot();
+          //  screenshot.SaveAsFile("c:/Screenshot1.png", ScreenshotImageFormat.Png);
 
 
             // !!!driver.Quit() потрібно виносити у teardown
