@@ -19,14 +19,15 @@ namespace Selenium_1
         [Test]
         public void TestBitnamiLogin()
         {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArguments("--start-maximized");
-            options.AddArguments("--disable-web-security");
-            IWebDriver driver = new ChromeDriver(options);
-            driver.Navigate().GoToUrl("http://localhost/opencart/");
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.FindElement(By.CssSelector("#search > input")).Clear();
-            driver.FindElement(By.CssSelector("#search > input")).SendKeys("Nokia" + Keys.Enter);
+             ChromeOptions options = new ChromeOptions();
+           // options.AddArguments("--start-maximized");
+           //  options.AddArguments("--disable-web-security");
+            IWebDriver driver = new ChromeDriver();
+            //IWebDriver driver = new FirefoxDriver();
+            driver.Navigate().GoToUrl("http://demo.guru99.com/test/guru99home");
+           // driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+           // driver.FindElement(By.CssSelector("#search > input")).Clear();
+           // driver.FindElement(By.CssSelector("#search > input")).SendKeys("Nokia" + Keys.Enter);
             // driver.FindElement(By.CssSelector("#search > My Account"));
             //driver.FindElement(By.CssSelector("#search > login")).SendKeys(Keys.Enter);
             // driver.FindElement(By.CssSelector("#search > E-Mail Address")).SendKeys("marianta1");
@@ -36,7 +37,7 @@ namespace Selenium_1
             driver.Quit();
 
         }
-        
+        /*
                 [Test]
                 public void selectDemo()
 
@@ -53,7 +54,7 @@ namespace Selenium_1
                     m_driver.Quit();
 
 
-                }
+                } */
         /*
         [Test]
         public void FirstTest()
