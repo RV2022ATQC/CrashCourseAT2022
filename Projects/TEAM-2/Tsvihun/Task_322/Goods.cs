@@ -9,6 +9,7 @@ namespace Task_322
     internal class Goods
     {
         #region Fields
+        public const string TYPE = "General product";
         public string Name { get; set; }
         public decimal EntryPrice { get; set; }
         public DateTime EntryDate { get; set; }
@@ -24,12 +25,12 @@ namespace Task_322
         }
 
         #region Input Fields
-        public void SetName()
+        public virtual void SetName()
         {
             Console.WriteLine("Enter item name:");
             Name = Console.ReadLine();
         }
-        public void SetEntryPrice()
+        public virtual void SetEntryPrice()
         {
             decimal price;
             Console.WriteLine("Enter item entry price:");
@@ -38,7 +39,7 @@ namespace Task_322
             EntryPrice = price;
         }
 
-        public void SetEntryDate()
+        public virtual void SetEntryDate()
         {
             DateTime date;
             Console.WriteLine("Enter entry date (mm/dd/yy):");
@@ -47,7 +48,7 @@ namespace Task_322
             EntryDate = date;
         }
 
-        public void SetQuantity()
+        public virtual void SetQuantity()
         {
             int count;
             Console.WriteLine("Enter amount of items:");
@@ -58,15 +59,15 @@ namespace Task_322
         #endregion
 
         #region Output Fields
-        public void ShowName() { Console.WriteLine($"Item name: {Name}"); }
-        public void ShowEntryPrice() { Console.WriteLine($"Item entry price: {EntryPrice}"); }
-        public void ShowEntryDate() { Console.WriteLine($"Entry date: {EntryDate}"); }
-        public void ShowAmount() { Console.WriteLine($"Item balance: {Count}"); }
+        public virtual void ShowName() { Console.WriteLine($"{TYPE}. {Name}"); }
+        public virtual void ShowEntryPrice() { Console.WriteLine($"Entry price: {EntryPrice}"); }
+        public virtual void ShowEntryDate() { Console.WriteLine($"Entry date: {EntryDate}"); }
+        public  virtual void ShowAmount() { Console.WriteLine($"Balance: {Count}"); }
         #endregion
 
         public override string ToString()
         {
-            return $"{Name}\nQuantity: {Count}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}";
+            return $"{TYPE}. {Name}\nQuantity: {Count}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}";
         }
     }
 }
