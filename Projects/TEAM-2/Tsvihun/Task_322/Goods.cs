@@ -67,7 +67,7 @@ namespace Task_322
 
         public override string ToString()
         {
-            return $"{TYPE}. {Name}\nQuantity: {Count}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}";
+            return $"- - - - - {TYPE}. {Name}\nQuantity: {Count}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}";
         }
 
         

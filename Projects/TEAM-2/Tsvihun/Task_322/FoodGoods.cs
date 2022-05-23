@@ -13,6 +13,7 @@ namespace Task_322
         public string Units { get; set; }
         public DateTime ProductionDate { get; set; }
         public TimeSpan ShelfLife { get; set; }
+        
         #endregion
 
         public FoodGoods(string name, decimal price, DateTime date, int amount, string units, DateTime productionDate, string shelfLifeDays) 
@@ -83,7 +84,7 @@ namespace Task_322
 
         public override string ToString()
         {
-            return $"{TYPE}.{Name}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}\nUnits: {Units}\nQuantity: {Count}\nMade: {ProductionDate}\nShelf life: {ShelfLife.Days} days";
+            return $"- - - - - {TYPE}.{Name}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}\nUnits: {Units}\nQuantity: {Count}\nMade: {ProductionDate}\nShelf life: {ShelfLife.Days} days";
         }
 
         public int GetExpirationDays()
@@ -98,5 +99,7 @@ namespace Task_322
             else Console.Write($"Days edible: ");
             return edibleDays;
         }
+      
+
     }
 }
