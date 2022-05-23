@@ -69,5 +69,7 @@ namespace Task_322
         {
             return $"{TYPE}. {Name}\nQuantity: {Count}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}";
         }
+
+        
     }
 }
