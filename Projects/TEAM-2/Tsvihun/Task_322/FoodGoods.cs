@@ -13,15 +13,17 @@ namespace Task_322
         public string Units { get; set; }
         public DateTime ProductionDate { get; set; }
         public TimeSpan ShelfLife { get; set; }
-        
+
+
         #endregion
 
-        public FoodGoods(string name, decimal price, DateTime date, int amount, string units, DateTime productionDate, string shelfLifeDays) 
+        public FoodGoods(string name, decimal price, DateTime date, int amount, string units, DateTime productionDate, string shelfLifeDays)
             : base(name, price, date, amount)
         {
             Units = units;
             ProductionDate = productionDate;
             ShelfLife = TimeSpan.Parse(shelfLifeDays);
+            BestBefore = ProductionDate.Add(ShelfLife);
         }
 
         #region Input Fields
@@ -84,22 +86,24 @@ namespace Task_322
 
         public override string ToString()
         {
-            return $"- - - - - {TYPE}.{Name}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}\nUnits: {Units}\nQuantity: {Count}\nMade: {ProductionDate}\nShelf life: {ShelfLife.Days} days";
+            return $"- - - - - {TYPE}.{Name}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}\nUnits: {Units}\nQuantity: {Count}\nMade: {ProductionDate}\nBest before: {BestBefore}";
         }
 
         public int GetExpirationDays()
         {
             var now = DateTime.Now;
-            var bestBefore = ProductionDate.Add(ShelfLife);
-            var edibleDays = (bestBefore - now).Days;
-            if ( edibleDays < 0)
+            var edibleDays = (BestBefore - now).Days;
+            if (edibleDays < 0)
             {
                 Console.Write("Expired product! Days: ");
             }
             else Console.Write($"Days edible: ");
             return edibleDays;
         }
-      
+
+
+
+
 
     }
 }

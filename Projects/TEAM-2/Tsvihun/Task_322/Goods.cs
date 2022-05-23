@@ -14,6 +14,7 @@ namespace Task_322
         public decimal EntryPrice { get; set; }
         public DateTime EntryDate { get; set; }
         public int Count { get; set; }
+        public DateTime BestBefore { get; set; }
         #endregion
 
         public Goods(string name, decimal price, DateTime date, int amount)

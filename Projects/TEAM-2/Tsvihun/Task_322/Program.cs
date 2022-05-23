@@ -29,14 +29,13 @@ namespace Task_322
         // Show food products sorted by shelf life
         public static void ShowSortedFoodGoods()
         {
-
             Console.WriteLine("--- Food roducts by shelf life ---");
             var selectedGoods = from element in goods
-                                where element.GetType().Name == "FoodGoods"
-/////////                                orderby element.
+                                where element.GetType().Name == "FoodGoods"     // better to check if element is of class FoodGoods
+                                orderby element.BestBefore
                                 select element;
-
             foreach (var good in selectedGoods) { Console.WriteLine(good.ToString()); }
+
         }
         static void Main(string[] args)
         {
