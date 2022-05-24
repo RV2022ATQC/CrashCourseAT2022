@@ -43,13 +43,14 @@ namespace Task_322
         public static void SaveGoodsToFile()
         {
             Console.WriteLine($"***** Saving goods list to file... *****");
-
-            Stream fileStream = new FileStream("goodsCollection.xml", FileMode.Create);
+            
             XmlSerializer serializer = new XmlSerializer(typeof(List<Goods>), new[] { typeof(List<FoodGoods>) });
             try
             {
-                serializer.Serialize(fileStream, goods);
-                fileStream.Close();
+                using (var fileStream = new FileStream("goodsCollection.xml", FileMode.Create))
+                {
+                    serializer.Serialize(fileStream, goods);
+                }
                 Console.WriteLine("*** Saved. ***");
             }
             catch (Exception ex)
