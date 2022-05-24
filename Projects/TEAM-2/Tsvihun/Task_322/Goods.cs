@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task_322
 {
-    internal class Goods
+    [Serializable]
+    public class Goods
     {
         #region Fields
         public const string TYPE = "General product";
@@ -17,6 +18,7 @@ namespace Task_322
         public DateTime BestBefore { get; set; }
         #endregion
 
+        public Goods() { }
         public Goods(string name, decimal price, DateTime date, int amount)
         {
             Name = name;

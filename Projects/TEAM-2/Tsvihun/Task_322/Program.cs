@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Task_322
 {
@@ -36,6 +38,28 @@ namespace Task_322
                                 select element;
             foreach (var good in selectedGoods) { Console.WriteLine(good.ToString()); }
 
+        }
+
+        public static void SaveGoodsToFile()
+        {
+            Console.WriteLine($"***** Saving goods list to file... *****");
+
+            Stream fileStream = new FileStream("goodsCollection.xml", FileMode.Create);
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Goods>), new[] { typeof(List<FoodGoods>) });
+            try
+            {
+                serializer.Serialize(fileStream, goods);
+                fileStream.Close();
+                Console.WriteLine("*** Saved. ***");
+            }
+            catch (Exception ex)
+            {
+                Console.Write("*** Error! Not saved. *** ");
+                Console.WriteLine(ex.Message);
+            }
+            
+
+            
         }
         static void Main(string[] args)
         {
@@ -72,7 +96,7 @@ namespace Task_322
         */
             #endregion
 
-            Console.WriteLine(sugar.ToString());
+            // Console.WriteLine(sugar.ToString());
             Console.WriteLine(sugar.GetExpirationDays());
 
             #region Filling collection
@@ -89,11 +113,14 @@ namespace Task_322
             goods.Add(bread);
             goods.Add(egg);
             goods.Add(oil);
+            goods.Add(new Goods("Napkin", 0.5m, new DateTime(2022, 03, 29), 10000));
             #endregion
 
-            //        ShowGoods();
-
+            ShowGoods();
+            ShowGoodsOfPreviousYear();
             ShowSortedFoodGoods();
+
+            SaveGoodsToFile();
             
           
         }

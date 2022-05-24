@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task_322
 {
-    internal class FoodGoods : Goods
+    [Serializable]
+    public class FoodGoods : Goods
     {
         #region Fields
         public const string TYPE = "Food product";
@@ -17,6 +18,7 @@ namespace Task_322
 
         #endregion
 
+        public FoodGoods() { }
         public FoodGoods(string name, decimal price, DateTime date, int amount, string units, DateTime productionDate, string shelfLifeDays)
             : base(name, price, date, amount)
         {
