@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
@@ -62,6 +63,22 @@ namespace Task_322
 
             
         }
+
+        public static async Task SerializeGoodsToJson()
+        {
+            Console.WriteLine($"***** Serializing goods list to json... *****");
+
+            using (var fileStream = new FileStream("goodsCollection.json", FileMode.OpenOrCreate))
+            {
+                string jsonString = JsonConvert.SerializeObject(goods);
+                //Console.WriteLine(jsonString);
+                byte[] jsonByteArray = System.Text.Encoding.Default.GetBytes(jsonString);
+                fileStream.Write(jsonByteArray, 0, jsonByteArray.Length);
+                Console.WriteLine("*** Saved. ***");
+            }
+            
+
+        }
         static void Main(string[] args)
         {
             #region Create products
@@ -98,7 +115,7 @@ namespace Task_322
             #endregion
 
             // Console.WriteLine(sugar.ToString());
-            Console.WriteLine(sugar.GetExpirationDays());
+            // Console.WriteLine(sugar.GetExpirationDays());
 
             #region Filling collection
             goods.Add(cup);
@@ -117,12 +134,12 @@ namespace Task_322
             goods.Add(new Goods("Napkin", 0.5m, new DateTime(2022, 03, 29), 10000));
             #endregion
 
-            ShowGoods();
+        /*    ShowGoods();
             ShowGoodsOfPreviousYear();
             ShowSortedFoodGoods();
-
             SaveGoodsToFile();
-            
+        */    
+            SerializeGoodsToJson();
           
         }
     }
