@@ -1,16 +1,23 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using System;
-
+using Task_322;
 
 namespace Task_322_Tests
 {
     [TestFixture]
-    public class TestsFoodGoods
+    public class Tests
     {
-        [Test]
-        public void TestMethod1()
+        [SetUp]
+        public void Setup()
         {
-            Console.WriteLine("Start test.");
+        }
+
+        [Test]
+        public void TestGetExpirationDays()
+        {
+            Console.WriteLine("Testing \"Get expiration days\" method...");
+            var food = new FoodGoods();
+            Assert.Pass();
         }
     }
 }
