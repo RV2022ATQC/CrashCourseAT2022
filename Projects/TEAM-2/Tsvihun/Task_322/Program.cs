@@ -41,6 +41,7 @@ namespace Task_322
 
         }
 
+        // Serialization goods collection to xml file
         public static void SaveGoodsToFile()
         {
             Console.WriteLine($"***** Saving goods list to file... *****");
@@ -64,6 +65,7 @@ namespace Task_322
             
         }
 
+        // Serialization goods collection to json file
         public static async Task SerializeGoodsToJson()
         {
             Console.WriteLine($"***** Serializing goods list to json... *****");
@@ -79,6 +81,27 @@ namespace Task_322
             
 
         }
+
+        // Load goods collection from json file
+        public static void LoadGoodsFromJson(string fileName)
+        {
+            Console.WriteLine($"***** Loading goods from json file {fileName} *****");
+            try
+            {
+                using (StreamReader reader = new StreamReader(fileName))
+                {
+                    var collection = JsonConvert.DeserializeObject<List<Goods>>(reader.ReadLine());
+                    Console.WriteLine("*** Loaded. ***");
+                    //foreach (var good in collection) { Console.WriteLine(good.Name); }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write("*** Error! Not loaded. *** ");
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         static void Main(string[] args)
         {
             #region Create products
@@ -134,13 +157,14 @@ namespace Task_322
             goods.Add(new Goods("Napkin", 0.5m, new DateTime(2022, 03, 29), 10000));
             #endregion
 
-        /*    ShowGoods();
-            ShowGoodsOfPreviousYear();
-            ShowSortedFoodGoods();
-            SaveGoodsToFile();
-        */    
+            /*      ShowGoods();
+                    ShowGoodsOfPreviousYear();
+                    ShowSortedFoodGoods();
+                    SaveGoodsToFile();
+            */        
             SerializeGoodsToJson();
-          
+            
+            LoadGoodsFromJson("goodsCollection.json");
         }
     }
 }
