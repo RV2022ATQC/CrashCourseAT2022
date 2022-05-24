@@ -1,31 +1,29 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-
+using ex402.Utils;
 
 namespace ex402.Pages
 {
-    internal class LoginPage : MainPage
+    internal class LoginPage
     {
 
-        public void LoginUser(string _url, string _email, string _pass)
+        public string LoginUser(string _url, string _email, string _pass)
         {
-            driver.Url = _url;
-            IWebElement my_acc = driver.FindElement(By.ClassName("dropdown"));
+            Values v = new Values();
+            v.driver.Url = _url;
+            IWebElement my_acc = v.driver.FindElement(By.ClassName("dropdown"));
             my_acc.Click();
-            IWebElement login = driver.FindElement(By.LinkText("Login"));
+            IWebElement login = v.driver.FindElement(By.LinkText("Login"));
             login.Click();
-            IWebElement user = driver.FindElement(By.Name("email"));
-            IWebElement pass = driver.FindElement(By.Name("password"));
-            IWebElement btn = driver.FindElement(By.XPath("//*[@id=\"content\"]/div/div[2]/div/form/input"));
+            IWebElement user = v.driver.FindElement(By.Name("email"));
+            IWebElement pass = v.driver.FindElement(By.Name("password"));
+            IWebElement btn = v.driver.FindElement(By.XPath("//*[@id=\"content\"]/div/div[2]/div/form/input"));
             user.Clear();
             user.SendKeys(_email);
             pass.Clear();
             pass.SendKeys(_pass);
             btn.Click();
-        }
-        public void CheckThatRoute(string _exp_route)
-        {
-            Assert.That(driver.Url, Does.Contain(_exp_route));
+            return v.driver.Url;
         }
     }
 }
