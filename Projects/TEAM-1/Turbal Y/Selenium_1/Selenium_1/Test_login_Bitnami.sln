@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1927
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_1", "Selenium_1\Selenium_1.csproj", "{815B4C68-E034-47FB-8D83-77DA281544EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_login_Bitnami", "Selenium_1\Test_login_Bitnami.csproj", "{815B4C68-E034-47FB-8D83-77DA281544EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
