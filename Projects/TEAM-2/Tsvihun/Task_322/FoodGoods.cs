@@ -103,9 +103,5 @@ namespace Task_322
             return edibleDays;
         }
 
-
-
-
-
     }
 }

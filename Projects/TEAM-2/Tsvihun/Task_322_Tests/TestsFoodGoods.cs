@@ -13,11 +13,35 @@ namespace Task_322_Tests
         }
 
         [Test]
-        public void TestGetExpirationDays()
+        public void TestGoodsSetGetName()
         {
-            Console.WriteLine("Testing \"Get expiration days\" method...");
+            // Arrange
+            var good = new Goods();
+            var expected = "Changed name";
+
+            // Act
+            good.Name = "Changed name";
+            var actual = good.Name;
+            
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+            Console.WriteLine($"Successfully set name \"{actual}\"");
+        }
+
+        [Test]
+        public void TestFoodGoodsSetGetName()
+        {
+            // Arrange
             var food = new FoodGoods();
-            Assert.Pass();
+            var expected = "Changed food name";
+
+            // Act
+            food.Name = "Changed food name";
+            var actual = food.Name;
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+            Console.WriteLine($"Successfully set name \"{actual}\"");
         }
     }
 }

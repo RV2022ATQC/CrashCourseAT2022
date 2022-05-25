@@ -157,14 +157,15 @@ namespace Task_322
             goods.Add(new Goods("Napkin", 0.5m, new DateTime(2022, 03, 29), 10000));
             #endregion
 
-            /*      ShowGoods();
-                    ShowGoodsOfPreviousYear();
-                    ShowSortedFoodGoods();
-                    SaveGoodsToFile();
-            */        
+            ShowGoods();
+        /*  ShowGoodsOfPreviousYear();
+            ShowSortedFoodGoods();
+            SaveGoodsToFile();
+                    
             SerializeGoodsToJson();
-            
             LoadGoodsFromJson("goodsCollection.json");
+        */
+
         }
     }
 }
