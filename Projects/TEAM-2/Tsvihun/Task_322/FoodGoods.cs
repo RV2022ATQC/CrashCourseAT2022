@@ -34,6 +34,7 @@ namespace Task_322
             Console.WriteLine("Enter food name:");
             Name = Console.ReadLine();
         }
+
         public override void SetEntryPrice()
         {
             decimal price;
@@ -41,6 +42,8 @@ namespace Task_322
             while (!decimal.TryParse(Console.ReadLine(), out price))
                 Console.WriteLine("Incorrent number!");
             EntryPrice = price;
+            // EntryPrice = ReadFromConsole("Enter food entry price: ", true); // ReadFromConsole 2шт створити
+
         }
 
         public override void SetEntryDate()
@@ -60,6 +63,7 @@ namespace Task_322
                 Console.WriteLine("Incorrent number!");
             Count = count;
         }
+
         public void SetPruductionDate()
         {
             DateTime date;
@@ -68,13 +72,13 @@ namespace Task_322
                 Console.WriteLine("Incorrent date!");
             ProductionDate = date;
         }
+
         public void SetShelfLife()
         {
             Console.WriteLine("Enter food shelflife (in days):");
             ShelfLife = TimeSpan.Parse(Console.ReadLine());
         }
         #endregion
-
 
         #region Output Fields
         public override void ShowName() { Console.WriteLine($"Category: {TYPE}. {Name}."); }
@@ -93,8 +97,8 @@ namespace Task_322
 
         public int GetExpirationDays()
         {
-            var now = DateTime.Now;
-            var edibleDays = (BestBefore - now).Days;
+            var today = DateTime.Today;
+            var edibleDays = (BestBefore - today).Days;
             if (edibleDays < 0)
             {
                 Console.Write("Expired product! Days: ");

@@ -18,7 +18,10 @@ namespace Task_322
         public DateTime BestBefore { get; set; }
         #endregion
 
-        public Goods() { }
+        public Goods() { 
+
+        
+        }
         public Goods(string name, decimal price, DateTime date, int amount)
         {
             Name = name;
@@ -33,6 +36,7 @@ namespace Task_322
             Console.WriteLine("Enter item name:");
             Name = Console.ReadLine();
         }
+
         public virtual void SetEntryPrice()
         {
             decimal price;
@@ -73,6 +77,5 @@ namespace Task_322
             return $"- - - - - {TYPE}. {Name}\nQuantity: {Count}\nPrice: {EntryPrice}\nEntryDate: {EntryDate}";
         }
 
-        
     }
 }

@@ -121,7 +121,7 @@ namespace Task_322
             #endregion
 
             #region Input-Output methods
-            /*  sugar.ShowName();
+        /*  sugar.ShowName();
             sugar.ShowEntryPrice();
             sugar.ShowEntryDate();
             sugar.ShowAmount();
@@ -134,11 +134,7 @@ namespace Task_322
             sugar.SetQuantity();
             sugar.SetPruductionDate();
             sugar.SetShelfLife();
-        */
-            #endregion
-
-            // Console.WriteLine(sugar.ToString());
-            // Console.WriteLine(sugar.GetExpirationDays());
+        */  #endregion
 
             #region Filling collection
             goods.Add(cup);
@@ -157,14 +153,16 @@ namespace Task_322
             goods.Add(new Goods("Napkin", 0.5m, new DateTime(2022, 03, 29), 10000));
             #endregion
 
+            Console.WriteLine(sugar.ToString());
+            Console.WriteLine(sugar.GetExpirationDays());
+
             ShowGoods();
-        /*  ShowGoodsOfPreviousYear();
+            ShowGoodsOfPreviousYear();
             ShowSortedFoodGoods();
             SaveGoodsToFile();
                     
             SerializeGoodsToJson();
             LoadGoodsFromJson("goodsCollection.json");
-        */
 
         }
     }
