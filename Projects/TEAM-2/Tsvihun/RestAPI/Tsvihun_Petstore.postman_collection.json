@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "8b416a95-3b18-4cf8-aa17-1c3406ecf744",
+		"name": "Tsvihun_Petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19029294"
+	},
+	"item": [
+		{
+			"name": "Add_pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2001,\r\n    \"category\": {\r\n        \"id\": 1,\r\n        \"name\": \"Dog Middle breed\"\r\n    },\r\n    \"name\": \"Lola\",\r\n    \"photoUrls\": [\r\n        \"https://d2bki4h0nxsiqd.cloudfront.net/resized/720x720/animal-photos/691996/3bd609c0-e8a7-439b-8722-9dbead175d81.png\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 1000,\r\n            \"name\": \"My home pet\"\r\n        }\r\n    ],\r\n    \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_petstore}}/pet",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_pet_for_remove_later",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 666,\r\n    \"category\": {\r\n        \"id\": 1,\r\n        \"name\": \"Dead animal cathegory\"\r\n    },\r\n    \"name\": \"Old friend\",\r\n    \"photoUrls\": [\r\n        \"No image\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 1000,\r\n            \"name\": \"My home pet\"\r\n        }\r\n    ],\r\n    \"status\": \"dead\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_petstore}}/pet",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_pet_by_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url_petstore}}/pet/2001",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"pet",
+						"2001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_pets_by_status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/pet/findByStatus?status=dead",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "dead"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_pet_with_PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1986,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"antonio_dead_dog\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"dead\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_petstore}}/pet",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_pet_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/pet/666",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"pet",
+						"666"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order_pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"petId\": 0,\r\n  \"quantity\": 0,\r\n  \"shipDate\": \"2022-05-27T11:54:36.505Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_petstore}}/store/order",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"store",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inventory_of_pets_by_status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/store/inventory",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"store",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find_order_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/store/order/9",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"store",
+						"order",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 17111986,\r\n  \"username\": \"LoveMyDaughter\",\r\n  \"firstName\": \"Anton\",\r\n  \"lastName\": \"Tsvihun\",\r\n  \"email\": \"1@1.ua\",\r\n  \"password\": \"myPass\",\r\n  \"phone\": \"+380971234567\",\r\n  \"userStatus\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_petstore}}/user",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_user_by_username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/user/LoveMyDaughter",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"user",
+						"LoveMyDaughter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login_user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/user/login?username=LoveMyDaughter&password=myPass",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "LoveMyDaughter"
+						},
+						{
+							"key": "password",
+							"value": "myPass"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/user/LoveMyDaughter",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"user",
+						"LoveMyDaughter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url_petstore}}/user/antonio",
+					"host": [
+						"{{url_petstore}}"
+					],
+					"path": [
+						"user",
+						"antonio"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
