@@ -90,10 +90,38 @@ namespace RestAPI_Tests
             
             Console.WriteLine($"{response.Content}\nCartId = {cartId}");
 
-            //Assert.That(response.Content.Contains("Success"));
+            Assert.That(response.Content.Contains("Success"));
         }
 
+        [Test,Order(5)]
+        public void Opencart_RemoveFromCart()
+        {
+            var client = new RestClient($"{baseUrl}index.php?route=api/cart/remove&api_token={JsonToken}");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.POST);
+            request.AddHeader("Cookie", $"OCSESSID={JsonToken}; currency=USD; language=en-gb");
+            request.AlwaysMultipartFormData = true;
+            request.AddParameter("key", cartId);
+            IRestResponse response = client.Execute(request);
 
+            Console.WriteLine($"{response.Content}\nCartId = {cartId}");
+
+            Assert.That(response.Content.Contains("Success"));
+        }
+
+        [Test, Order(6)]
+        public void Opencart_CheckIfEmptyCart()
+        {
+            var client = new RestClient($"{baseUrl}index.php?route=api/cart/products/&api_token={JsonToken}");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("Cookie", $"OCSESSID={JsonToken}; currency=USD; language=en-gb");
+            IRestResponse response = client.Execute(request);
+
+            Console.WriteLine($"Cart #{cartId} content:\n{response.Content}");
+
+            //Assert.That(!source.Contains("Warning: You do not have permission to access the API!"));
+        }
 
 
 
