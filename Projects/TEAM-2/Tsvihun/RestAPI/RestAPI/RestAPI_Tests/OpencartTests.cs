@@ -127,10 +127,10 @@ namespace RestAPI_Tests
 
 
 
-        // [Test]
-        public void Test1()
+        [Test]
+        public void TestDB()
         {
-            Assert.Pass();
+            Database.ExecuteQuery();
         }
     }
 }
