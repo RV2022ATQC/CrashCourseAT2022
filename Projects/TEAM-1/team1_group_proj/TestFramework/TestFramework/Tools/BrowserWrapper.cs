@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using crashCourse2022.Data.Application;
 using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Opera;
+//using OpenQA.Selenium.Opera;
 
 namespace crashCourse2021.Tools
 {

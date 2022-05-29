@@ -9,7 +9,7 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2021.Data.Users;
+using crashCourse2022.Data.Users;
 using NLog;
 
 
