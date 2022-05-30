@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace crashCourse2021.Data.Application
+namespace TestFramework.Data.Application
 {
     public sealed class ApplicationSourceRepository
     {
@@ -15,7 +15,6 @@ namespace crashCourse2021.Data.Application
         public const string SELENOID_CHROME = "SelenoidChrome";
         public const string SELENOID_FIREFOX = "SelenoidFirefox";
         public const string SELENOID_OPERA = "SelenoidOpera";
-
 
         private ApplicationSourceRepository() { }
 
@@ -58,7 +57,19 @@ namespace crashCourse2021.Data.Application
                 "http://regres.herokuapp.com/login",
                 "http://regres.herokuapp.com/logout");
         }
-
+        
+        public static ApplicationSource SelenoidFirefox()
+        {
+            return new ApplicationSource(SELENOID_FIREFOX, 10L, 10L,
+                "http://regres.herokuapp.com/login",
+                "http://regres.herokuapp.com/logout");
+        }        
+        
+        public static ApplicationSource OpencartSelenoidFirefox()
+        {
+            return new ApplicationSource(SELENOID_FIREFOX, 10L, 10L,
+                "http://regres.herokuapp.com/login",
+                "http://regres.herokuapp.com/logout");
+        }
     }
-
 }

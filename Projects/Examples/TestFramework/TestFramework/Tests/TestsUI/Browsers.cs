@@ -18,6 +18,7 @@ namespace RvCrashCourse2021
     [TestFixture]
     class Browsers
     {
+        //Клас тестів  , що відображає можливості конфігурації різних браузерів
 
         [Test]
         public void Firefox1()
@@ -74,11 +75,12 @@ namespace RvCrashCourse2021
             driver.Quit();
         }
 
-        [Test]
+       // [Test]
+       // Приклад запуску плагінів у Firefox
         public void Firefox4()
         {
             FirefoxProfile profile = new FirefoxProfile();
-            profile.AddExtension("D:\\selenium_ide.xpi");
+            profile.AddExtension("C:\\selenium_ide.xpi");
             profile.SetPreference("extensions.firebug.currentVersion", "2.0.19");
             //
             FirefoxOptions options = new FirefoxOptions();
@@ -94,7 +96,7 @@ namespace RvCrashCourse2021
             driver.Quit();
         }
 
-        //[Test]
+        [Test]
         public void Firefox5()
         {
             FirefoxOptions options = new FirefoxOptions();
@@ -108,7 +110,7 @@ namespace RvCrashCourse2021
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Navigate().GoToUrl("https://www.google.com.ua/");
             //
-            driver.FindElement(By.Name("q")).SendKeys("Cheese");
+            driver.FindElement(By.Name("q")).SendKeys("Cheese" + Keys.Enter);
             Thread.Sleep(1000);
             //
             ITakesScreenshot takesScreenshot = driver as ITakesScreenshot;
