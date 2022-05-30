@@ -1,0 +1,52 @@
+url
+http://localhost/shop/index.php
+url login
+http://localhost/shop/index.php?route=account/login
+url account
+http://localhost/shop/index.php?route=account/account
+
+Email field
+Id input-email
+Selector #input-email
+
+Password field
+Id input-password
+Selector #input-password
+
+Login btn
+Selector #content > div > div:nth-child(2) > div > form > input
+
+Search field
+XPath //*[@id="search"]
+
+Search btn
+XPath //*[@id="search"]/span/button
+
+Search content
+XPath //*[@id="content"]/div[3]
+
+Buy button
+XPath //*[@id="content"]/div[3]/div/div/div[2]/div[2]/button[1]
+#content > div:nth-child(8) > div > div > div:nth-child(2) > div.button-group > button:nth-child(1)
+
+AddProductToCart Message
+Selector #product-search > div.alert.alert-success.alert-dismissible
+
+MessageCloseButton
+Selector #product-search > div.alert.alert-success.alert-dismissible > button
+
+Shopping cart button
+Selector #cart > button
+
+ShopCart TopButton
+Selector #top-links > ul > li:nth-child(4)
+
+ShopCart content
+Selector #content > form > div > table > tbody > tr
+
+
+- - - - -
+Login
+user email: antront@ukr.net
+password: ront
+- - - - -
