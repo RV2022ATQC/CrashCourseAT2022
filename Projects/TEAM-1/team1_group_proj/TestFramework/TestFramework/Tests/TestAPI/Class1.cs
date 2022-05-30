@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace ConsoleApp1
+namespace RvcrashCourse2022
 {
     class DBMySQLUtils
     {

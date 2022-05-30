@@ -17,7 +17,7 @@ using System.IO;
 
 using System.Xml.Serialization;
 
-namespace MyRestAPI
+namespace crashCourse2022.TestAPI1
 {
     [TestFixture]
     [Parallelizable]

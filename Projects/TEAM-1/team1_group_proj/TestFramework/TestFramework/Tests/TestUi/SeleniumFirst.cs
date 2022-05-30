@@ -11,7 +11,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Interactions;
  using OpenQA.Selenium.Support.UI;
 
-namespace Selenium_1
+namespace RvcrashCourse2022
 {
     [TestFixture]
     class SeleniumFirst

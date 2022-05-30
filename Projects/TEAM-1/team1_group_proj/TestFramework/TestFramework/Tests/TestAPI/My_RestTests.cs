@@ -18,7 +18,9 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Data.Common;
 using MySql.Data.MySqlClient;
-namespace ConsoleApp1
+using crashCourse2022.Tools;
+//using NUnit.Allure.Core;
+namespace RvcrashCourse2022
 {
     [TestFixture]
     [Parallelizable]
@@ -33,6 +35,7 @@ namespace ConsoleApp1
         {
             log.Info("Start VerifyLogin test");
             var client = new RestClient("http://127.0.0.1/opencart/index.php?route=api/login");
+            //client.
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
             // request.AddHeader("username", "Default");
@@ -50,8 +53,7 @@ namespace ConsoleApp1
             JsonToken = data.api_token;
             Console.WriteLine("api_token = " + data.api_token);
         }
-
-
+        
         [Test]
         public void ExampleFromPostman_checkOpencartLogin()
         {
