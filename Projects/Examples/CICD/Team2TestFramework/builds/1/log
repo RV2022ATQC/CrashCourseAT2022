@@ -1,0 +1,58 @@
+Started by user [8mha:////4OuY7d4ue8pAXtEDr+0KI5fvqhv3xiY6BX2+b5k8SI64AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Team2
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/RV2021ATQC/CrashCourseAT.git
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe init C:\Team2 # timeout=10
+Fetching upstream changes from https://github.com/RV2021ATQC/CrashCourseAT.git
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.29.2.windows.3'
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe fetch --tags --force --progress -- https://github.com/RV2021ATQC/CrashCourseAT.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/RV2021ATQC/CrashCourseAT.git # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe rev-parse "origin/main^{commit}" # timeout=10
+Checking out Revision e3e66875da942c6662b2ca593b125226749dc394 (origin/main)
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe checkout -f e3e66875da942c6662b2ca593b125226749dc394 # timeout=10
+Commit message: "Merge pull request #111 from taniamos09/testframeworkbranch1"
+First time build. Skipping changelog.
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln " && exit %%ERRORLEVEL%% from C:\Team2
+[Team2] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 16.8.3+39993bd9d for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+Build started 3/11/2021 11:31:25 AM.
+Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln" (1) is building "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\RvCrashCourse2021.csproj" (2) on node 1 (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyFilesMarkedCopyLocal:
+  Touching "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\obj\Debug\RvCrashCourse2021.csproj.CopyComplete".
+_CopyOutOfDateSourceItemsToOutputDirectory:
+Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectoryAlways:
+  Copying file from "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\allureConfig.json" to "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\bin\Debug\allureConfig.json".
+  Copying file from "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\NLog.config" to "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\bin\Debug\NLog.config".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  RvCrashCourse2021 -> C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\bin\Debug\RvCrashCourse2021.dll
+Done Building Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\RvCrashCourse2021.csproj" (default targets).
+Done Building Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.54
+Finished: SUCCESS

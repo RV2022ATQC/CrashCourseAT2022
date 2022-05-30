@@ -1,0 +1,55 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace C:\Team2
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/RV2021ATQC/CrashCourseAT.git # timeout=10
+Fetching upstream changes from https://github.com/RV2021ATQC/CrashCourseAT.git
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.29.2.windows.4'
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe fetch --tags --force --progress -- https://github.com/RV2021ATQC/CrashCourseAT.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe rev-parse "origin/main^{commit}" # timeout=10
+Checking out Revision 6e14ccbde960a3d4b3bed5ecc304fbcbf46b3dea (origin/main)
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe checkout -f 6e14ccbde960a3d4b3bed5ecc304fbcbf46b3dea # timeout=10
+Commit message: "Merge pull request #120 from RV2021ATQC/SvitlanaLN-patch-1"
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe rev-list --no-walk b45bc0bb945a32cf4a1fecbffbdfbbb0ad75290f # timeout=10
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Team2\Projects\Team2\FrameworkV2\Framework.sln " && exit %%ERRORLEVEL%% from C:\Team2
+[Team2] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Team2\Projects\Team2\FrameworkV2\Framework.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 16.8.3+39993bd9d for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+Build started 5/17/2021 1:47:55 AM.
+Project "C:\Team2\Projects\Team2\FrameworkV2\Framework.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Team2\Projects\Team2\FrameworkV2\Framework.sln" (1) is building "C:\Team2\Projects\Team2\FrameworkV2\Framework\Framework.csproj" (2) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Team2\Projects\Team2\FrameworkV2\Framework\Framework.csproj(210,5): error : ?????? ?????? ????????? ?? ?????? NuGet, ????????????? ?? ???? ??????????. ??????????? ?????????????? ??????? NuGet, ????? ??????? ??.  ?????????????? ?????????? ??. ?? ??????: http://go.microsoft.com/fwlink/?LinkID=322105. ??????????? ????????? ????: ..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props.
+Done Building Project "C:\Team2\Projects\Team2\FrameworkV2\Framework\Framework.csproj" (default targets) -- FAILED.
+Done Building Project "C:\Team2\Projects\Team2\FrameworkV2\Framework.sln" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\Team2\Projects\Team2\FrameworkV2\Framework.sln" (default target) (1) ->
+"C:\Team2\Projects\Team2\FrameworkV2\Framework\Framework.csproj" (default target) (2) ->
+(EnsureNuGetPackageBuildImports target) -> 
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Team2\Projects\Team2\FrameworkV2\Framework\Framework.csproj(210,5): error : ?????? ?????? ????????? ?? ?????? NuGet, ????????????? ?? ???? ??????????. ??????????? ?????????????? ??????? NuGet, ????? ??????? ??.  ?????????????? ?????????? ??. ?? ??????: http://go.microsoft.com/fwlink/?LinkID=322105. ??????????? ????????? ????: ..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props.
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.37
+Build step 'Build a Visual Studio project or solution using MSBuild' marked build as failure
+Skipping installation of https://bintray.com/qameta/generic/download_file?file_path=io%2Fqameta%2Fallure%2Fallure%2F2.7.0%2Fallure-2.7.0.zip to C:\Users\aromanuk\scoop\apps\allure\2.13.8\bin due to server error: 404 Not Found
+[Team2] $ C:\Users\aromanuk\scoop\apps\allure\2.13.8\bin\allure-2.7.0\bin\allure.bat generate -c -o C:\Team2\allure-report
+allure-results does not exists
+Report successfully generated to C:\Team2\allure-report
+Allure report was successfully generated.
+Creating artifact for the build.
+Artifact was added to the build.
+Finished: FAILURE

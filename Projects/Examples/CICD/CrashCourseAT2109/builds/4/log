@@ -1,0 +1,216 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace C:\Jenkins
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/RV2109ATQC/CrashCourseAT2109.git # timeout=10
+Fetching upstream changes from https://github.com/RV2109ATQC/CrashCourseAT2109.git
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.32.0.windows.2'
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe fetch --tags --force --progress -- https://github.com/RV2109ATQC/CrashCourseAT2109.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe rev-parse "origin/main^{commit}" # timeout=10
+Checking out Revision a30fb5d035b825e5fd678630329bbf738c5a5408 (origin/main)
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe checkout -f a30fb5d035b825e5fd678630329bbf738c5a5408 # timeout=10
+Commit message: "add example framework"
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe rev-list --no-walk a6e3347134618a1f677011ba38319dfbb14c130a # timeout=10
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln " && exit %%ERRORLEVEL%% from C:\Jenkins
+[Jenkins] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 16.10.2+857e5a733 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+Build started 11/5/2021 9:52:02 AM.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson1\Lesson1.csproj" (2) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\Lesson1\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson1\Lesson1.csproj]
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson1\Lesson1.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson2\Lesson2.csproj" (3) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\Lesson2\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson2\Lesson2.csproj]
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson2\Lesson2.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests\SeleniumTests.csproj" (4) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests\SeleniumTests.csproj]
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests\SeleniumTests.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\RestAPI\RestAPI.csproj" (5) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\RestAPI\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\RestAPI\RestAPI.csproj]
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\RestAPI\RestAPI.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj" (6) on node 1 (default targets).
+ResolveAssemblyReferences:
+  Primary reference "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+[8mha:////4FM0PuCM/6dV4IQHVdcntGFhk6X1LwF1wAyDtFM451djAAAAZx+LCAAAAAAAAP9b85aBtbiIQTOjNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUSHJxblZeal++WXpP65vH32HJ1TQkwMDBVFDFJQfcn5ecX5Oal6zhAapJABAhhBCgsAtVBXn2cAAAA=[0mC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2202,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj]
+          For SearchPath "{HintPathFromItem}".
+          Considered "C:\Jenkins\Projects\Examples\SimplePrograms\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll", but it didn't exist.
+          For SearchPath "{TargetFrameworkDirectory}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Facades\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Facades\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Facades\Newtonsoft.Json.exe", but it didn't exist.
+          For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.8}".
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v2.0\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v2.0\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v2.0\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.exe", but it didn't exist.
+          For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.8,AssemblyFoldersEx}".
+          Considered AssemblyFoldersEx locations.
+          Considered "C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\Newtonsoft.Json.dll",
+  			but its name "Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed"
+  			didn't match the expected name "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+          For SearchPath "{AssemblyFolders}".
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.exe", but it didn't exist.
+          Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.dll",
+  			but its name "Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed"
+  			didn't match the expected name "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+          Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.exe", but it didn't exist.
+          For SearchPath "{GAC}".
+          Considered "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL", which was not found in the GAC.
+          For SearchPath "{RawFileName}".
+          Considered treating "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" as a file name, but it didn't exist.
+          For SearchPath "bin\Debug\".
+          Considered "bin\Debug\Newtonsoft.Json.winmd", but it didn't exist.
+          Considered "bin\Debug\Newtonsoft.Json.dll", but it didn't exist.
+          Considered "bin\Debug\Newtonsoft.Json.exe", but it didn't exist.
+  AssemblyFoldersEx location: "{Registry:Software\Microsoft\.NETFramework,v4.8,AssemblyFoldersEx}"
+          C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\
+          
+          C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\
+          C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref\Caching\
+          C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref
+          C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\\PublicAssemblies
+          C:\Program Files (x86)\Microsoft Chart Controls\Assemblies
+GenerateBindingRedirects:
+  No suggested binding redirects from ResolveAssemblyReferences.
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /fullpaths /nostdlib+ /platform:anycpu32bitpreferred /errorreport:prompt /warn:4 /define:DEBUG;TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.Linq.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\Lesson3.exe /subsystemversion:6.00 /target:exe /utf8output /deterministic+ /langversion:7.3 Animal.cs Cat.cs Fish.cs Food.cs ICook.cs MyCollection.cs Plants.cs ProgramGeneric.cs Properties\AssemblyInfo.cs Restaurant.cs "obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs"
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mCSC : error CS2001: Source file 'C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Properties\AssemblyInfo.cs' could not be found. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj]
+  CompilerServer: server - server processed compilation - 8cc5772e-3043-43eb-ad31-d58f0e36b784
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson4\Lesson4.csproj" (7) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Jenkins\Projects\Examples\SimplePrograms\Lesson4\Lesson4.csproj(81,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.13.2\build\NUnit.props.
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\Lesson4\Lesson4.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests2\SeleniumTests2.csproj" (8) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests2\SeleniumTests2.csproj(79,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.13.2\build\NUnit.props.
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests2\SeleniumTests2.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests3\SeleniumTests3.csproj" (9) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests3\SeleniumTests3.csproj(164,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.13.2\build\NUnit.props.
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests3\SeleniumTests3.csproj" (default targets) -- FAILED.
+Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (1) is building "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests5\SeleniumTests4.csproj" (10) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests5\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests5\SeleniumTests4.csproj]
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests5\SeleniumTests4.csproj" (default targets) -- FAILED.
+Done Building Project "C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj" (default target) (6) ->
+(ResolveAssemblyReferences target) -> 
+[8mha:////4FM0PuCM/6dV4IQHVdcntGFhk6X1LwF1wAyDtFM451djAAAAZx+LCAAAAAAAAP9b85aBtbiIQTOjNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUSHJxblZeal++WXpP65vH32HJ1TQkwMDBVFDFJQfcn5ecX5Oal6zhAapJABAhhBCgsAtVBXn2cAAAA=[0m  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2202,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj]
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\Lesson1\Lesson1.csproj" (default target) (2) ->
+(ResolvePackageAssets target) -> 
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\Lesson1\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson1\Lesson1.csproj]
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\Lesson2\Lesson2.csproj" (default target) (3) ->
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\Lesson2\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson2\Lesson2.csproj]
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests\SeleniumTests.csproj" (default target) (4) ->
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests\SeleniumTests.csproj]
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\RestAPI\RestAPI.csproj" (default target) (5) ->
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\RestAPI\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\RestAPI\RestAPI.csproj]
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj" (default target) (6) ->
+(CoreCompile target) -> 
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  CSC : error CS2001: Source file 'C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Properties\AssemblyInfo.cs' could not be found. [C:\Jenkins\Projects\Examples\SimplePrograms\Lesson3\Lesson3.csproj]
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\Lesson4\Lesson4.csproj" (default target) (7) ->
+(EnsureNuGetPackageBuildImports target) -> 
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Jenkins\Projects\Examples\SimplePrograms\Lesson4\Lesson4.csproj(81,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.13.2\build\NUnit.props.
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests2\SeleniumTests2.csproj" (default target) (8) ->
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests2\SeleniumTests2.csproj(79,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.13.2\build\NUnit.props.
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests3\SeleniumTests3.csproj" (default target) (9) ->
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests3\SeleniumTests3.csproj(164,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.13.2\build\NUnit.props.
+
+
+"C:\Jenkins\Projects\Examples\SimplePrograms\SimplePrograms.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests5\SeleniumTests4.csproj" (default target) (10) ->
+(ResolvePackageAssets target) -> 
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Program Files\dotnet\sdk\5.0.303\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(241,5): error NETSDK1004: Assets file 'C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests5\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [C:\Jenkins\Projects\Examples\SimplePrograms\SeleniumTests5\SeleniumTests4.csproj]
+
+    1 Warning(s)
+    9 Error(s)
+
+Time Elapsed 00:00:01.45
+Build step 'Build a Visual Studio project or solution using MSBuild' marked build as failure
+Skipping installation of https://bintray.com/qameta/generic/download_file?file_path=io%2Fqameta%2Fallure%2Fallure%2F2.7.0%2Fallure-2.7.0.zip to C:\Users\aromanuk\scoop\apps\allure\2.13.8\bin due to server error: 403 Forbidden
+[Jenkins] $ C:\Users\aromanuk\scoop\apps\allure\2.13.8\bin\allure-2.7.0\bin\allure.bat generate -c -o C:\Jenkins\allure-report
+Report successfully generated to C:\Jenkins\allure-report
+Allure report was successfully generated.
+Creating artifact for the build.
+Artifact was added to the build.
+Finished: FAILURE
