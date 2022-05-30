@@ -13,7 +13,7 @@ using crashCourse2022.Data.Application;
 using OpenQA.Selenium.Remote;
 //using OpenQA.Selenium.Opera;
 
-namespace crashCourse2021.Tools
+namespace crashCourse2022.Tools
 {
     public interface IBrowser
     {

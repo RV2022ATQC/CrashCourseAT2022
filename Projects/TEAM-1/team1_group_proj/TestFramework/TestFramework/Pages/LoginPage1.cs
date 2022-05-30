@@ -9,7 +9,7 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2022.Data.Users;
+//using crashCourse2022.Data.Users;
 using NLog;
 
 
@@ -24,17 +24,9 @@ namespace crashCourse2022.Pages
 
     public class LoginPageL10nRepository
     {
-        public static Dictionary<LoginPageL10nFields, Dictionary<ChangeLanguageFields, string>> LoginPageLanguages { get; private set; }
+       // public static Dictionary<LoginPageL10nFields, Dictionary<ChangeLanguageFields, string>> LoginPageLanguages { get; private set; }
 
-        static LoginPageL10nRepository()
-        {
-            LoginPageLanguages = new Dictionary<LoginPageL10nFields, Dictionary<ChangeLanguageFields, string>>();
-            initLoginLabel();
-            initPasswordLabel();
-            initSigninButton();
-        }
-
-       
+              
        
 
       
@@ -185,12 +177,7 @@ namespace crashCourse2022.Pages
 
         // Business Logic
         //public LoginPage ChangeLanguage(string language) // Invalid Solution
-        public new LoginPage ChangeLanguage(ChangeLanguageFields languageFields)
-        {
-            SetChangeLanguage(languageFields);
-            //return new LoginPage(driver);
-            return new LoginPage();
-        }
+       
 
         private void SetLoginData(IUser user)
         //private void SetLoginData(string login, string password)
