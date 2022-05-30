@@ -34,41 +34,10 @@ namespace crashCourse2022.Pages
             initSigninButton();
         }
 
-        private static void initLoginLabel()
-        {
-            LoginPageLanguages.Add(LoginPageL10nFields.LOGIN_LABEL,
-                    new Dictionary<ChangeLanguageFields, string>()
-                    {
-                        { ChangeLanguageFields.UKRAINIAN, "Логін" },
-                        { ChangeLanguageFields.RUSSIAN, "Логин" },
-                        { ChangeLanguageFields.ENGLISH, "Login" }
-                    }
-                );
-        }
+       
+       
 
-        private static void initPasswordLabel()
-        {
-            LoginPageLanguages.Add(LoginPageL10nFields.PASSWORD_LABEL,
-                    new Dictionary<ChangeLanguageFields, string>()
-                    {
-                        { ChangeLanguageFields.UKRAINIAN, "Пароль" },
-                        { ChangeLanguageFields.RUSSIAN, "Пароль" },
-                        { ChangeLanguageFields.ENGLISH, "Password" }
-                    }
-                );
-        }
-
-        private static void initSigninButton()
-        {
-            LoginPageLanguages.Add(LoginPageL10nFields.SIGNIN_BUTTON,
-                    new Dictionary<ChangeLanguageFields, string>()
-                    {
-                        { ChangeLanguageFields.UKRAINIAN, "Увійти" },
-                        { ChangeLanguageFields.RUSSIAN, "Войти" },
-                        { ChangeLanguageFields.ENGLISH, "Sign in" }
-                    }
-                );
-        }
+      
     }
 
     public partial class LoginPage : ATopComponent
