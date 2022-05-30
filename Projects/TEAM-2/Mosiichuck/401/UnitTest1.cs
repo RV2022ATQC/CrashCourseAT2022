@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -38,6 +39,18 @@ namespace _401
         public void Close()
         {
             driver.Quit();
+=======
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace _401
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+>>>>>>> Stashed changes
         }
     }
 }
