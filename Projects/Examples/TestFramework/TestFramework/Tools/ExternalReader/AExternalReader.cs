@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace crashCourse2021.Tools
+namespace TestFramework.Tools
 {
     public abstract class AExternalReader
     {

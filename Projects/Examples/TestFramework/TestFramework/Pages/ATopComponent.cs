@@ -8,10 +8,10 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using crashCourse2021.Tools;
-using crashCourse2021.Tools.Find;
+using TestFramework.Tools;
+using TestFramework.Tools.Find;
 
-namespace crashCourse2021.Pages
+namespace TestFramework.Pages
 {
     public enum ChangeLanguageFields
     {

@@ -7,7 +7,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
 using System.Reflection;
 
-namespace crashCourse2021.Tools
+namespace TestFramework.Tools
 {
     class ExcelReader : AExternalReader
     {

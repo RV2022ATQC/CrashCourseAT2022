@@ -137,7 +137,8 @@ namespace SeleniumTests
                 driver.FindElement(By.CssSelector(".btn.btn-primary.btn-sm:not(.dropdown-toggle)")).Text);
         }
 
-        //Спрощуємо далі - виносимо у клас LoginPage методи 
+        //Спрощуємо далі - виносимо у клас LoginPage методи для маніпуляції основими полями
+        // ПАТТЕРН FluentInterface - методи класу змінюють об'єкт класу і повертають його ж
         [Test]
         public void LoginTest5()
         {            
@@ -152,6 +153,9 @@ namespace SeleniumTests
             Assert.AreEqual("work", loginPage.UserNameButton.Text);
         }
 
+        //Наступне спрощення - в класі LoginPage створюємо єдиний метод, який може залогінити користувача
+        //даний метод зможемо перевикористовувати у наступних тестах, або у Setup методах,
+        //якщо нам для логіки тестів попередньо потрібно залогінитись
         [Test]
         public void LoginTest6()
         {

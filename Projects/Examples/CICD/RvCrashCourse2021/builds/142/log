@@ -1,0 +1,55 @@
+Started by user unknown or anonymous
+Running as SYSTEM
+Building in workspace C:\Jenkins
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/RV2021ATQC/CrashCourseAT.git # timeout=10
+Fetching upstream changes from https://github.com/RV2021ATQC/CrashCourseAT.git
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.32.0.windows.2'
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe fetch --tags --force --progress -- https://github.com/RV2021ATQC/CrashCourseAT.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe rev-parse "origin/main^{commit}" # timeout=10
+Checking out Revision dbeb6dddf691141b5e7a72b5561fda70518ef0c8 (origin/main)
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe checkout -f dbeb6dddf691141b5e7a72b5561fda70518ef0c8 # timeout=10
+Commit message: "Merge pull request #122 from RV2021ATQC/SvitlanaLN-patch-1"
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.9.4\resources\app\git\cmd\git.exe rev-list --no-walk dbeb6dddf691141b5e7a72b5561fda70518ef0c8 # timeout=10
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln " && exit %%ERRORLEVEL%% from C:\Jenkins
+[Jenkins] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 16.10.2+857e5a733 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+Build started 11/3/2021 12:55:27 AM.
+Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln" (1) is building "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\RvCrashCourse2021.csproj" (2) on node 1 (default targets).
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0mC:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\RvCrashCourse2021.csproj(232,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.10.1\build\NUnit.props.
+Done Building Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\RvCrashCourse2021.csproj" (default targets) -- FAILED.
+Done Building Project "C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln" (default target) (1) ->
+"C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\RvCrashCourse2021.csproj" (default target) (2) ->
+(EnsureNuGetPackageBuildImports target) -> 
+[8mha:////4Mpz4oTqyEPjtQbJ7vX9Gl/DzX/58dwSz3DXwXhYZUIYAAAAZR+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+3OKk0MydFzzfYCUS7FhXlF/nll6RqTW873+akuJiJgaGiiEEKqis5P684PydVzxlCgxQyQAAjSGEBAFZoBDtlAAAA[0m  C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021\RvCrashCourse2021.csproj(232,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\NUnit.3.10.1\build\NUnit.props.
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.25
+Build step 'Build a Visual Studio project or solution using MSBuild' marked build as failure
+Skipping installation of https://bintray.com/qameta/generic/download_file?file_path=io%2Fqameta%2Fallure%2Fallure%2F2.7.0%2Fallure-2.7.0.zip to C:\Users\aromanuk\scoop\apps\allure\2.13.8\bin due to server error: 403 Forbidden
+[Jenkins] $ C:\Users\aromanuk\scoop\apps\allure\2.13.8\bin\allure-2.7.0\bin\allure.bat generate -c -o C:\Jenkins\allure-report
+allure-results does not exists
+Report successfully generated to C:\Jenkins\allure-report
+Allure report was successfully generated.
+Creating artifact for the build.
+Artifact was added to the build.
+Finished: FAILURE

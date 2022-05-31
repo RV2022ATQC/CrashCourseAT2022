@@ -10,7 +10,7 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Interactions;
 
-namespace RvCrashCourse2021
+namespace TestFramework
 {
     //[TestFixture]
     //[Parallelizable(ParallelScope.All)]
