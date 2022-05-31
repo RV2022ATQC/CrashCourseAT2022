@@ -8,13 +8,34 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using crashCourse2022.Tools;
-using crashCourse2022.Tools.Find;
+using crashCourse2021.Tools;
+using crashCourse2021.Tools.Find;
 
-namespace crashCourse2022.Pages
+namespace crashCourse2021.Pages
 {
-    
-        public abstract class ATopComponent
+    public enum ChangeLanguageFields
+    {
+        UKRAINIAN,
+        RUSSIAN,
+        ENGLISH
+    }
+
+    public class ChangeLanguageRepository
+    {
+        public static Dictionary<ChangeLanguageFields, string> LanguageNames { get; private set; }
+
+        static ChangeLanguageRepository()
+        {
+            LanguageNames = new Dictionary<ChangeLanguageFields, string>()
+            {
+                { ChangeLanguageFields.UKRAINIAN, "українська" },
+                { ChangeLanguageFields.RUSSIAN, "русский" },
+                { ChangeLanguageFields.ENGLISH, "english" }
+            };
+        }
+    }
+
+    public abstract class ATopComponent
     {
         public const string SRC_ATTRIBUTE = "src";
         public const string VALUE_ATTRIBUTE = "value";
@@ -62,7 +83,21 @@ namespace crashCourse2022.Pages
         }
 
         // ChangeLanguage
-        
+        public IWebElement GetChangeLanguageWebElement()
+        {
+            return ChangeLanguage.AllSelectedOptions[0];
+        }
+
+        public string GetChangeLanguageText()
+        {
+            return GetChangeLanguageWebElement().Text;
+        }
+
+        //public void SetChangeLanguage(string language) // Invalid Solution
+        public void SetChangeLanguage(ChangeLanguageFields languageFields)
+        {
+            ChangeLanguage.SelectByText(ChangeLanguageRepository.LanguageNames[languageFields]);
+        }
 
         // Business Logic
     }

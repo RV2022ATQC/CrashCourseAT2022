@@ -8,10 +8,10 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using crashCourse2022.Tools;
-using crashCourse2022.Tools.Find;
+using crashCourse2021.Tools;
+using crashCourse2021.Tools.Find;
 
-namespace crashCourse2022.Pages
+namespace crashCourse2021.Pages
 {
     class UserDropDownMenu
     {

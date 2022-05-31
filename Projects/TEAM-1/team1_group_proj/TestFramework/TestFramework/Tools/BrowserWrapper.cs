@@ -9,11 +9,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using crashCourse2022.Data.Application;
+using crashCourse2021.Data.Application;
 using OpenQA.Selenium.Remote;
-//using OpenQA.Selenium.Opera;
+using OpenQA.Selenium.Opera;
 
-namespace crashCourse2022.Tools
+namespace crashCourse2021.Tools
 {
     public interface IBrowser
     {

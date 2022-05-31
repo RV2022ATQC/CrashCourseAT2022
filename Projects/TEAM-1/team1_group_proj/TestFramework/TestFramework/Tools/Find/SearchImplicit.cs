@@ -10,7 +10,7 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace crashCourse2022.Tools.Find
+namespace crashCourse2021.Tools.Find
 {
     //public class SearchImplicit : ASearch, ISearch
     public class SearchImplicit : ASearch
