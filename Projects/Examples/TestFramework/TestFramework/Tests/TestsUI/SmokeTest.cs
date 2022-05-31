@@ -9,11 +9,11 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2021.Pages;
-using crashCourse2021.Data.Users;
-using crashCourse2021.Tools;
+using TestFramework.Pages;
+using TestFramework.Data.Users;
+using TestFramework.Tools;
 
-namespace RvCrashCourse2021
+namespace TestFramework
 {
     [TestFixture]
     //[Parallelizable(ParallelScope.All)]
@@ -31,19 +31,22 @@ namespace RvCrashCourse2021
             //ListUtils.ToMultiArray(UserRepository.Get().FromCsv());
             ListUtils.ToMultiArray(UserRepository.Get().FromExcel());
 
-        //[Test, TestCaseSource(nameof(ValidUsers))]
+        [Test, TestCaseSource(nameof(ValidUsers))]
         ////[Test, TestCaseSource("ValidUsers")]
         [Category("Smoke")]
-        [Test, TestCaseSource("ExternalValidUsers")]
+      //  [Test, TestCaseSource("ExternalValidUsers")]
         public void LoginTest9(IUser validRegistrator)
         {
             //Console.WriteLine("ThreadID= " + Thread.CurrentThread.ManagedThreadId);
             log.Info("Test Start: ThreadID= " + Thread.CurrentThread.ManagedThreadId);
-            //
+
+
+            var loginPage1 = GetPage<LoginPage>("http:\\127.0.0.1\\");
+
             // Steps
             RegistratorHomePage registratorHomePage = StartApplication()
                 .successRegistratorLogin(validRegistrator);
-            //
+          
             // Check
             log.Info("Check Invalid User Login");
             Assert.AreEqual(validRegistrator.GetLogin(), registratorHomePage.GetLoginNameText(),

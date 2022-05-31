@@ -9,17 +9,17 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2021.Pages;
-using crashCourse2021.Data.Users;
-using crashCourse2021.Tools;
-using crashCourse2021.Data.Application;
+using TestFramework.Pages;
+using TestFramework.Data.Users;
+using TestFramework.Tools;
+using TestFramework.Data.Application;
 using NUnit.Framework.Interfaces;
 using NUnit.Allure.Attributes;
 using NLog;
 using System.IO;
 using NUnit.Allure.Core;
 
-namespace crashCourse2021.Tools
+namespace TestFramework.Tools
 {
     [AllureNUnit]
     [TestFixture]
@@ -27,7 +27,7 @@ namespace crashCourse2021.Tools
     {
         public static Logger log = LogManager.GetCurrentClassLogger(); // for NLog
         //
-        protected readonly double DOUBLE_PRECISE = 0.01;
+      //  protected readonly double DOUBLE_PRECISE = 0.01;
         //
         //protected bool isTestSuccess = false;
 
@@ -38,6 +38,7 @@ namespace crashCourse2021.Tools
             Environment.CurrentDirectory = Path.GetDirectoryName(GetType().Assembly.Location);
             
 
+         //   Application.Get(ApplicationSourceRepository.SelenoidFirefox());
             Application.Get(ApplicationSourceRepository.SelenoidChrome());
            // Application.Get(ApplicationSourceRepository.ChromeTemporaryHeroku());
            // Application.Get(ApplicationSourceRepository.ChromeWithoutUIHeroku());

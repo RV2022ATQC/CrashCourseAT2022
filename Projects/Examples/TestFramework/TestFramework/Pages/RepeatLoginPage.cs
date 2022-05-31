@@ -9,7 +9,7 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
-namespace crashCourse2021.Pages
+namespace TestFramework.Pages
 {
     public class RepeatLoginPage : LoginPage
     {

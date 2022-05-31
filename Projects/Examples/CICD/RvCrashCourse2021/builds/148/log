@@ -1,0 +1,43 @@
+Started by user [8mha:////4Bv8lJtphoNBMaN1x90KQvrpGkr/+wCBh7u/TiTASV8qAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Jenkins
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\Jenkins\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/RV2021ATQC/CrashCourseAT.git # timeout=10
+Fetching upstream changes from https://github.com/RV2021ATQC/CrashCourseAT.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.35.1.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/RV2021ATQC/CrashCourseAT.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "origin/main^{commit}" # timeout=10
+Checking out Revision dbeb6dddf691141b5e7a72b5561fda70518ef0c8 (origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f dbeb6dddf691141b5e7a72b5561fda70518ef0c8 # timeout=10
+Commit message: "Merge pull request #122 from RV2021ATQC/SvitlanaLN-patch-1"
+ > git.exe rev-list --no-walk dbeb6dddf691141b5e7a72b5561fda70518ef0c8 # timeout=10
+Path To MSBuild.exe: msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & msbuild.exe C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln " && exit %%ERRORLEVEL%% from C:\Jenkins
+[Jenkins] $ cmd.exe /C " chcp 1252 & msbuild.exe C:\Jenkins\Projects\Romanukha\RvCrashCourse2021\RvCrashCourse2021.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+'msbuild.exe' is not recognized as an internal or external command,
+operable program or batch file.
+Build step 'Build a Visual Studio project or solution using MSBuild' marked build as failure
+ERROR: Build step failed with exception
+ru.yandex.qatools.allure.jenkins.exception.AllurePluginException: Can not find any allure commandline installation.
+	at ru.yandex.qatools.allure.jenkins.AllureReportPublisher.getCommandline(AllureReportPublisher.java:349)
+	at ru.yandex.qatools.allure.jenkins.AllureReportPublisher.generateReport(AllureReportPublisher.java:303)
+	at ru.yandex.qatools.allure.jenkins.AllureReportPublisher.perform(AllureReportPublisher.java:231)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:79)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:814)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:763)
+	at hudson.model.Build$BuildExecution.post2(Build.java:179)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:707)
+	at hudson.model.Run.execute(Run.java:1921)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Build step 'Allure Report' marked build as failure
+Finished: FAILURE

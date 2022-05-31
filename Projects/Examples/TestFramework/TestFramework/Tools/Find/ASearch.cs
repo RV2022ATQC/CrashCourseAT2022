@@ -9,7 +9,7 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace crashCourse2021.Tools.Find
+namespace TestFramework.Tools.Find
 {
     public abstract class ASearch : ISearch
     {

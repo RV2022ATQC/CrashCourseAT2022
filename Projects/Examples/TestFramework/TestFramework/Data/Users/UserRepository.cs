@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using crashCourse2021.Tools;
+using TestFramework.Tools;
 
-namespace crashCourse2021.Data.Users
+namespace TestFramework.Data.Users
 {
     public sealed class UserRepository
     {
         // Singleton
+        //реалізовуємо даний паттерн для того, щоб забезпечити
+        //наявність ЛИШЕ одного об'єкту даного класу під час виконання програми
+
         // Static Method
 
         private volatile static UserRepository instance;

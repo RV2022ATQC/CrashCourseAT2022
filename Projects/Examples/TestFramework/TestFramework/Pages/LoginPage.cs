@@ -9,11 +9,11 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2021.Data.Users;
+using TestFramework.Data.Users;
 using NLog;
 
 
-namespace crashCourse2021.Pages
+namespace TestFramework.Pages
 {
     public enum LoginPageL10nFields
     {
@@ -81,7 +81,7 @@ namespace crashCourse2021.Pages
         {
             // PageFactory
             //PageFactory.InitElements(driver, this);
-            //
+            
             // Classic Page Object
             //InitWebElements();
             VerifyWebElements();

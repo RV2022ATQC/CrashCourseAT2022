@@ -4,24 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using crashCourse2021.Data.Application;
-using crashCourse2021.Pages;
-using crashCourse2021.Tools.Find;
+using TestFramework.Data.Application;
+using TestFramework.Pages;
+using TestFramework.Tools.Find;
 
-namespace crashCourse2021.Tools
+namespace TestFramework.Tools
 {
     public class Application
     {
         private volatile static Application instance;
         private static object lockingObject = new object();
         //private static Logger log = LogManager.GetCurrentClassLogger();
+        
         // TODO Change for parallel work
         public ApplicationSource ApplicationSource { get; private set; }
         //public FlexAssert FlexAssert { get; private set; }
         //
         //public BrowserWrapper Browser { get; private set; }
+        
         // Parallel work
         private Dictionary<int, BrowserWrapper> browser;
+        
         public BrowserWrapper Browser
         {
             get
@@ -36,7 +39,7 @@ namespace crashCourse2021.Tools
                 return browser[currentThread];
             }
         }
-        //
+
         //private ISearch search;
         private ISearchStrategy search;
         //public ISearch Search
@@ -54,7 +57,7 @@ namespace crashCourse2021.Tools
                 search = value;
             }
         }
-        //public DBConnectionWrapper dbConnection { get; private set; }
+        public DBConnectionWrapper dbConnection { get; private set; }
 
         private Application(ApplicationSource applicationSource)
         {
@@ -80,7 +83,7 @@ namespace crashCourse2021.Tools
                             applicationSource = ApplicationSourceRepository.Default();
                         }
                         instance = new Application(applicationSource);
-                        //
+                        
                         //instance.InitBrowser(applicationSource);
                         //instance.InitSearch();
                     }
