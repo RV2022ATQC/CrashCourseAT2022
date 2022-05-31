@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Threading;
 using NUnit.Allure.Core;
 
-namespace RvCrashCourse2021
+namespace TestFramework
 {
     //[TestClass]
     [AllureNUnit]

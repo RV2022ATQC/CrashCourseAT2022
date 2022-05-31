@@ -9,11 +9,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using crashCourse2021.Data.Application;
+using TestFramework.Data.Application;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Opera;
 
-namespace crashCourse2021.Tools
+namespace TestFramework.Tools
 {
     public interface IBrowser
     {
@@ -52,7 +52,7 @@ namespace crashCourse2021.Tools
             //options.AddArguments("--disable-extensions");
             options.AddArguments("--headless");
             //options.BinaryLocation = @"C:\...\ChromiumPortable.exe";
-            return new ChromeDriver(options); ;
+            return new ChromeDriver(options);
         }
     }
 
@@ -71,7 +71,7 @@ namespace crashCourse2021.Tools
             //options.AddArguments("--disable-extensions");
             //options.AddArguments("--headless");
             //options.BinaryLocation = @"C:\...\ChromiumPortable.exe";
-            return new ChromeDriver(options); ;
+            return new ChromeDriver(options);
         }
     }
 
@@ -188,22 +188,13 @@ namespace crashCourse2021.Tools
             Browsers.Add(CONTINUES_INTEGRATION_BROWSER, new ChromeTemporaryWithoutUI());
         }
 
-        private bool IsContinuesIntegration()
-        {
-            // TODO Remone Message
-            //MessageBox.Show("IS_CONTINUES_INTEGRATION = " + System.Environment.GetEnvironmentVariable(IS_CONTINUES_INTEGRATION),
-            //    "CI", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //Console.WriteLine("+++ " + IS_CONTINUES_INTEGRATION + "= " 
-            //        + System.Environment.GetEnvironmentVariable("IS_CONTINUES_INTEGRATION"));
-            return System.Environment.GetEnvironmentVariable(IS_CONTINUES_INTEGRATION) == STRING_TRUE;
-        }
-
         private void InitWebDriver(ApplicationSource applicationSource)
         {
             //MessageBox.Show("Running InitWebDriver() BrowserName = " + applicationSource.BrowserName ,
             //    "Run", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //
+            
             IBrowser currentBrowser = Browsers[DEFAULT_BROWSER];
+            
             if (IsContinuesIntegration())
             {
                 currentBrowser = Browsers[CONTINUES_INTEGRATION_BROWSER];
@@ -227,6 +218,16 @@ namespace crashCourse2021.Tools
             // TODO Move to Search Class
             //Driver.Manage().Timeouts().ImplicitWait = TimeSpan
             //        .FromSeconds(applicationSource.ImplicitWaitTimeOut);
+        }
+
+        private bool IsContinuesIntegration()
+        {
+            // TODO Remone Message
+            //MessageBox.Show("IS_CONTINUES_INTEGRATION = " + System.Environment.GetEnvironmentVariable(IS_CONTINUES_INTEGRATION),
+            //    "CI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //Console.WriteLine("+++ " + IS_CONTINUES_INTEGRATION + "= " 
+            //        + System.Environment.GetEnvironmentVariable("IS_CONTINUES_INTEGRATION"));
+            return System.Environment.GetEnvironmentVariable(IS_CONTINUES_INTEGRATION) == STRING_TRUE;
         }
 
         private string GetTime()
@@ -322,5 +323,4 @@ namespace crashCourse2021.Tools
         }
 
     }
-
 }

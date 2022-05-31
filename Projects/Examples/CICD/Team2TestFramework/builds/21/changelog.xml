@@ -1,0 +1,14 @@
+commit ec858791bede9bea74e716083e365552aff15f6a
+tree f2b390777512320e7e964e88064615e2d1bb08b6
+parent 6fcbf902843e1bf6632642c67caee825fef54bfa
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-09 23:35:35 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-09 23:35:35 +0300
+
+    3_5 and OOP_1_1. Circle while + my first class Counter
+    
+    3_5 and OOP_1_1
+    Circle while + my first class Counter
+
+
+:000000 100644 0000000000000000000000000000000000000000 8ed3550b5c9f27bbd9af275ad4a1611b5d7e8833 A	Projects/SvitlanaLN/3_5_reverse.cs
+:000000 100644 0000000000000000000000000000000000000000 6fd63cebf6d1ba3fe4dfa007329cc2192efe034f A	Projects/SvitlanaLN/OOP_1_1_Counter.cs

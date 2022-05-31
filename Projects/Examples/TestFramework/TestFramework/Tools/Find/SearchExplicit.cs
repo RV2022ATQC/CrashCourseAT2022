@@ -10,7 +10,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 
-namespace crashCourse2021.Tools.Find
+namespace TestFramework.Tools.Find
 {
     public class SearchExplicit : ASearch, ISearch
     {

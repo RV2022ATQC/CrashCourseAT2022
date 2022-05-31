@@ -1,0 +1,255 @@
+commit 02eec93785de85dcbead57a442cc0550cb5fa9cb
+tree 9c1dac8a1d0f6dab4cf945f14814a007ae1abe89
+parent 70785546b0b0bbc0710f55b72d82fe09d305a833
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:12:17 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:12:17 +0300
+
+    Delete Bag-reportSvitlanaLN.docx
+
+
+:100644 000000 89267caa394ec84841e4d35f14a71062986d6250 0000000000000000000000000000000000000000 D	TestDoc/Bag-reportSvitlanaLN.docx
+commit 70785546b0b0bbc0710f55b72d82fe09d305a833
+tree ea2bae86d4657d1bfa3dda2473a97548185eee64
+parent 783ee99196fdb08e5c891a80c98c857e338475d4
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:07:00 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:07:00 +0300
+
+    Selenium with Page_Selenium
+    
+    Login on the site "https://setevuha.ua" using Selenium
+
+
+:000000 100644 0000000000000000000000000000000000000000 176eb3634027fba41600b59a43c751dd1714057d A	Projects/SvitlanaLN/Selenium/Page_Selenium.cs
+:000000 100644 0000000000000000000000000000000000000000 5b3461189c9204ed41a4a8bc3b3538a2082bc693 A	Projects/SvitlanaLN/Selenium/Selenium.csproj
+:000000 100644 0000000000000000000000000000000000000000 46f8e94ca3a3e30e8cdb1ca2ab1550d9f87ca16b A	Projects/SvitlanaLN/Selenium/Test_Selenium.cs
+:000000 100644 0000000000000000000000000000000000000000 30be3f5e5593637aeab319528a5b39d9c707115c A	Projects/SvitlanaLN/Selenium/printscreen.jpg
+commit 088c57b16148195b85367a137b7bfe7719354e4c
+tree 7057edd221e20eb55f56b09ca09d26e57b3ea1ed
+parent d58d975d2da604c475f0c92425c5059dc8c1c032
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:00:55 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:00:55 +0300
+
+    Revert "Selenium"
+    
+    This reverts commit 50e3d69a17de30e48f2f76573427d03e4e559a06.
+
+
+:100644 000000 176eb3634027fba41600b59a43c751dd1714057d 0000000000000000000000000000000000000000 D	Projects/SvitlanaLN/Selenium/Page_Selenium.cs
+:100644 000000 5b3461189c9204ed41a4a8bc3b3538a2082bc693 0000000000000000000000000000000000000000 D	Projects/SvitlanaLN/Selenium/Selenium.csproj
+:100644 000000 1e0f79b47f0e57ac359188ef874cf26362c79f2b 0000000000000000000000000000000000000000 D	Projects/SvitlanaLN/Selenium/Test_Selenium.cs
+:100644 000000 30be3f5e5593637aeab319528a5b39d9c707115c 0000000000000000000000000000000000000000 D	Projects/SvitlanaLN/Selenium/printscreen.jpg
+commit d58d975d2da604c475f0c92425c5059dc8c1c032
+tree fb025899c2488a147e645a40e7848a622fc6206e
+parent 7e7deabf6cccba6e108ce5063d72005d0f2d492c
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:00:33 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 10:00:33 +0300
+
+    Revert "Selenium v2"
+    
+    This reverts commit 7fd722284b7d49417c90cac5242670f6bc093f2e.
+
+
+:100644 100644 46f8e94ca3a3e30e8cdb1ca2ab1550d9f87ca16b 1e0f79b47f0e57ac359188ef874cf26362c79f2b M	Projects/SvitlanaLN/Selenium/Test_Selenium.cs
+commit 7e7deabf6cccba6e108ce5063d72005d0f2d492c
+tree 04a9b56ef258c253a2571f10708bcf5029afa647
+parent fd5adb7aafd2b138c5ecdd5d395a197c22ae5ec2
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 09:59:02 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-17 09:59:02 +0300
+
+    Revert "test1"
+    
+    This reverts commit fd5adb7aafd2b138c5ecdd5d395a197c22ae5ec2.
+
+
+:100644 000000 1669768a705d3d5d9ae9d88d0a24ffb279257ca9 0000000000000000000000000000000000000000 D	Projects/SvitlanaLN/tasks1.txt
+commit fd5adb7aafd2b138c5ecdd5d395a197c22ae5ec2
+tree ea0206caa429a52b8c8ad8e1c8258935eb50d755
+parent 014beef2842735ba70ace21fa401b362b85ed5a6
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 17:45:55 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 17:45:55 +0300
+
+    test1
+    
+    test1
+
+
+:000000 100644 0000000000000000000000000000000000000000 1669768a705d3d5d9ae9d88d0a24ffb279257ca9 A	Projects/SvitlanaLN/tasks1.txt
+commit 2527dd052eeb3ebac0d0b8ea65e8592d6fde2bd7
+tree 04a9b56ef258c253a2571f10708bcf5029afa647
+parent 8ee7594080ab8e2c9b860548c91477e644ac0c77
+author SvitlanaLN <82731013+SvitlanaLN@users.noreply.github.com> 2021-09-15 16:08:07 +0300
+committer GitHub <noreply@github.com> 2021-09-15 16:08:07 +0300
+
+    Delete learn_github.txt
+
+:100644 000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0000000000000000000000000000000000000000 D	Projects/SvitlanaLN/learn_github.txt
+commit a8f40ac31082fb5a9a28bbe5bae07c52e461bfdc
+tree 04a9b56ef258c253a2571f10708bcf5029afa647
+parent 8ee7594080ab8e2c9b860548c91477e644ac0c77
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 15:59:58 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 15:59:58 +0300
+
+    Revert "Create learn_github.txt"
+    
+    This reverts commit 8ee7594080ab8e2c9b860548c91477e644ac0c77.
+
+
+:100644 000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0000000000000000000000000000000000000000 D	Projects/SvitlanaLN/learn_github.txt
+commit 8ee7594080ab8e2c9b860548c91477e644ac0c77
+tree 8a0450efc6bf055b06bef76a2f32e56df8a7e009
+parent 62f77030c34013482917e839a21b8ff58ee539e5
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 13:12:42 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 13:12:42 +0300
+
+    Create learn_github.txt
+    
+    test_github
+
+
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	Projects/SvitlanaLN/learn_github.txt
+commit 62f77030c34013482917e839a21b8ff58ee539e5
+tree 04a9b56ef258c253a2571f10708bcf5029afa647
+parent 7fd722284b7d49417c90cac5242670f6bc093f2e
+author SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 00:18:11 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-09-15 00:18:11 +0300
+
+    API-tests and DataBase-tests.
+    
+    The realization on C# of created in POSTMAN collection of API-tests.
+
+
+:000000 100644 0000000000000000000000000000000000000000 43dd959205becdd006cf57f42171c6f57b10149e A	Projects/SvitlanaLN/API/API.sln
+:000000 100644 0000000000000000000000000000000000000000 a973960e67f882af95ed8c5a4e368df1f8a1b9f8 A	Projects/SvitlanaLN/API/Code_API.cs
+:000000 100644 0000000000000000000000000000000000000000 4ddfbec876ba98fdf2c9090f503031039ebd7738 A	Projects/SvitlanaLN/API/Code_Database.cs
+:000000 100644 0000000000000000000000000000000000000000 04d2c8e09c9ebeeca0ce8ec055d7d11bb5fc426e A	Projects/SvitlanaLN/API/NLog.config
+:000000 100644 0000000000000000000000000000000000000000 5bbb93747d09cbaae8e2f807a45cb3a3b7436e4a A	Projects/SvitlanaLN/API/Tests.cs
+:000000 100644 0000000000000000000000000000000000000000 42438bab0719db33dfe7695a486eebe897a8efc2 A	Projects/SvitlanaLN/API/file.txt
+commit 7fd722284b7d49417c90cac5242670f6bc093f2e
+tree e653f44b2af35ac28f8ed3c016bed5b8b7a6f12e
+parent f7bd472f2581c081b7c0be5e8916298350ac6c76
+author SvitlanaLN <sv_lugan@ukr.net> 2021-08-24 20:57:19 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-08-24 20:57:19 +0300
+
+    Selenium v2
+    
+    Selenium v2
+
+
+:100644 100644 1e0f79b47f0e57ac359188ef874cf26362c79f2b 46f8e94ca3a3e30e8cdb1ca2ab1550d9f87ca16b M	Projects/SvitlanaLN/Selenium/Test_Selenium.cs
+commit f7bd472f2581c081b7c0be5e8916298350ac6c76
+tree d27506e429a21af011749a00090552bfc6454cc9
+parent 50e3d69a17de30e48f2f76573427d03e4e559a06
+author SvitlanaLN <sv_lugan@ukr.net> 2021-08-23 22:55:32 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-08-23 22:55:32 +0300
+
+    STAR_3_Figure_v2
+    
+    STAR_3_Figure_v2
+
+
+:100644 100644 73987b16c1cc1fd36cbe9aa6f6e9f18153ce37ab ad1d038ea61ba1d51c85da4f94d0d6f2bdc8aa66 M	Projects/SvitlanaLN/STAR_3_Figure/Figure.cs
+:100644 100644 38b542230d095ca8f66229261ecdf7c8f74368bf 153c8090010653758b810e0cb9177f86a6434ec6 M	Projects/SvitlanaLN/STAR_3_Figure/Program.cs
+:100644 100644 eeb3b482b6cc6e55f3b5bed2163404f2f4b38d3e ad5d0cf07de5c3a42eda3ab60756a472c93e496d M	Projects/SvitlanaLN/STAR_3_Figure/Rectangle.cs
+:100644 100644 101e019dbab53b08b7bcfac8ed2bfffcd0a606d2 1f62ba956cf0fef1f099264febbb4eafccb0defd M	Projects/SvitlanaLN/STAR_3_Figure/Test.cs
+commit 50e3d69a17de30e48f2f76573427d03e4e559a06
+tree 2bc5f372ffd685cc0e3b021b2657fcc8cc15c569
+parent e86ee5307caa406349798fbb6bea2ca8295fdb98
+author SvitlanaLN <sv_lugan@ukr.net> 2021-08-22 17:28:20 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-08-22 17:28:20 +0300
+
+    Selenium
+    
+    Selenium
+
+
+:000000 100644 0000000000000000000000000000000000000000 176eb3634027fba41600b59a43c751dd1714057d A	Projects/SvitlanaLN/Selenium/Page_Selenium.cs
+:000000 100644 0000000000000000000000000000000000000000 5b3461189c9204ed41a4a8bc3b3538a2082bc693 A	Projects/SvitlanaLN/Selenium/Selenium.csproj
+:000000 100644 0000000000000000000000000000000000000000 1e0f79b47f0e57ac359188ef874cf26362c79f2b A	Projects/SvitlanaLN/Selenium/Test_Selenium.cs
+:000000 100644 0000000000000000000000000000000000000000 30be3f5e5593637aeab319528a5b39d9c707115c A	Projects/SvitlanaLN/Selenium/printscreen.jpg
+commit e86ee5307caa406349798fbb6bea2ca8295fdb98
+tree 51d9a4e7a661c082fa7bcff1af79932384b8cfc3
+parent eed9ec4fd0ca318b8d9314ef0857e13e3f4bda7c
+author SvitlanaLN <sv_lugan@ukr.net> 2021-06-24 01:14:29 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-06-24 01:14:29 +0300
+
+    Tast with star variant 2
+    
+    Tast with star variant 2
+
+
+:100644 100644 4be92b6e1d753f9f80daa9eaadd6bb1173cd6c51 73987b16c1cc1fd36cbe9aa6f6e9f18153ce37ab M	Projects/SvitlanaLN/STAR_3_Figure/Figure.cs
+:100644 100644 fb0de7f031416892ef6dd3a15fade47b374b5253 38b542230d095ca8f66229261ecdf7c8f74368bf M	Projects/SvitlanaLN/STAR_3_Figure/Program.cs
+:100644 100644 e67f3033b20c5b6a5e871a338699405d275deb5c 80c8f44cd51834840f17a615a36f3c3a5774a596 M	Projects/SvitlanaLN/STAR_3_Figure/Star_3_Figure.csproj
+:100644 100644 676ab71ad7c5d54f2ced410fd6a22d50d2ba0b6a 101e019dbab53b08b7bcfac8ed2bfffcd0a606d2 M	Projects/SvitlanaLN/STAR_3_Figure/Test.cs
+commit eed9ec4fd0ca318b8d9314ef0857e13e3f4bda7c
+tree f08d4d6f017c1399be9c820adf726a6b84d9b13d
+parent ea63d9bdd3b8a3d4962e1852d81f8fb814b73b23
+author SvitlanaLN <sv_lugan@ukr.net> 2021-06-14 01:33:43 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-06-14 01:33:43 +0300
+
+    STAR_3_FiGURE
+    
+    Task with star
+
+
+:000000 100644 0000000000000000000000000000000000000000 4be92b6e1d753f9f80daa9eaadd6bb1173cd6c51 A	Projects/SvitlanaLN/STAR_3_Figure/Figure.cs
+:000000 100644 0000000000000000000000000000000000000000 fb0de7f031416892ef6dd3a15fade47b374b5253 A	Projects/SvitlanaLN/STAR_3_Figure/Program.cs
+:000000 100644 0000000000000000000000000000000000000000 eeb3b482b6cc6e55f3b5bed2163404f2f4b38d3e A	Projects/SvitlanaLN/STAR_3_Figure/Rectangle.cs
+:000000 100644 0000000000000000000000000000000000000000 e67f3033b20c5b6a5e871a338699405d275deb5c A	Projects/SvitlanaLN/STAR_3_Figure/Star_3_Figure.csproj
+:000000 100644 0000000000000000000000000000000000000000 676ab71ad7c5d54f2ced410fd6a22d50d2ba0b6a A	Projects/SvitlanaLN/STAR_3_Figure/Test.cs
+commit ea63d9bdd3b8a3d4962e1852d81f8fb814b73b23
+tree 8bf05c40235b562af175bfbe6b280967171b0f9a
+parent a74acb0b2ab71fa5485d1e25d9c7355e489292a9
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-23 21:03:51 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-23 21:03:51 +0300
+
+    Create OOP_2_15_Area.cs
+    
+    Create an abstract base class with a virtual function -area.
+     Create derivative classes: rectangle, circle, right triangle, trapezoid with its area functions.
+     To verify, determine the array of references to the abstract class, which are assigned addresses of various objects.
+     Trapezoidal area: S = (a + b) h / 2
+
+
+:000000 100644 0000000000000000000000000000000000000000 9304a126f4270f52dd0588934d0c4a9d2a7bbeac A	Projects/SvitlanaLN/OOP_2_15_Area.cs
+commit a74acb0b2ab71fa5485d1e25d9c7355e489292a9
+tree f55b19a0ad72afb83750bc507fcdb01af63fd698
+parent 69070f62a81a4c3def245be1227d73ce59f7a6df
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-23 00:04:54 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-23 00:04:54 +0300
+
+    Create OOP_2_14_Employer.cs
+    
+    Create an abstract base class Employer with a virtual function Print().
+    Create three descendant classes: President, Manager, Worker.
+    Redefine the Print () function to output information that matches each type of employee.
+
+
+:000000 100644 0000000000000000000000000000000000000000 d425686d75f6e44c4d0fe456b2dcd974e4fd10cf A	Projects/SvitlanaLN/OOP_2_14_Employer.cs
+commit 69070f62a81a4c3def245be1227d73ce59f7a6df
+tree ef08f22009c68b90aa0d4d5c2b1fa7abf0671561
+parent b04d12451c0098af9146757e9633806ab2b92e76
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-22 13:08:39 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-22 13:08:39 +0300
+
+    Create OOP_2_3_Date.cs
+    
+    Create a Date class that will contain date information (day, month, year).
+     Using the operator overload mechanism, determine the operation of the difference of two dates
+    (the result in the form of the number of days between dates),
+    as well as the operation of increasing the date by a certain number of days.
+
+
+:000000 100644 0000000000000000000000000000000000000000 9010506dee18fac4207c49f2d49c936311fa96a5 A	Projects/SvitlanaLN/OOP_2_3_Date.cs
+commit 936ecca3649b017da6d7ee7b3cb51dd9ea84020b
+tree d7aba37ceb5f2d495582a950b1286e952b1ed648
+parent 9b2134a33b9d8aa110b62f31db6a6def62f95e39
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-01 01:01:25 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-01 01:01:25 +0300
+
+    Create Bag-reportSvitlanaLN.docx
+    
+    Add my first Bag-reports
+
+
+:000000 100644 0000000000000000000000000000000000000000 89267caa394ec84841e4d35f14a71062986d6250 A	TestDoc/Bag-reportSvitlanaLN.docx
