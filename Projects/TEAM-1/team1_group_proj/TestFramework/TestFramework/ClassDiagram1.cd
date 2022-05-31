@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="crashCourse2021.Data.Application.ApplicationSource" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAEABAAAAIAAAAAAAAEAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Data\Application\ApplicationSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Data.Application.ApplicationSourceRepository" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAIBAAAAAIAgAAABAIAAABADAAAAAAAAgAACAAAA=</HashCode>
+      <FileName>Data\Application\ApplicationSourceRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Pages.UserDropDownMenu" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAKAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Pages\ACommonComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Pages.ACommonComponent" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAFQAAAAAAkAAABAgAAAIAEAAAAAIIAQBAAAhACAE=</HashCode>
+      <FileName>Pages\ACommonComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Pages.ChangeLanguageRepository" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Pages\ATopComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Pages.ATopComponent" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAgCAAAAAAEIAACABEAAABAAAAAABgAAA=</HashCode>
+      <FileName>Pages\ATopComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Pages.LoginPageL10nRepository" Collapsed="true">
+    <Position X="4.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAABCAAAAAAAACAAAAA=</HashCode>
+      <FileName>Pages\LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Pages.LoginPage" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCABQBAECAAYAIBAQACVAQAAAAWAAAAABwAATAAoA=</HashCode>
+      <FileName>Pages\LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvcrashCourse2022.DBMySQLUtils" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\TestsAPI\Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvcrashCourse2022.DBUtils" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\TestsAPI\Class2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvcrashCourse2022.RestTest" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIEgAAAAAABAABAAAAACAAAAgAAABgBAAAACAAAAQA=</HashCode>
+      <FileName>Tests\TestsAPI\My_RestTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvcrashCourse2022.SeleniumFirst" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\TestsUI\SeleniumFirst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvCrashCourse2021.Browsers" Collapsed="true">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAHgBAAAAEEAAAAAAACAAAAAAABAIAAAAAIAAAAA=</HashCode>
+      <FileName>Tests\Browsers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvCrashCourse2021.ToolTipTest" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Tests\ToolTipTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvCrashCourse2021.UnitTest1" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAghCAAABQAAAAIAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Tests\UnitTest1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvCrashCourse2021.WaitTest" Collapsed="true">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAkAQQAAABAAAABAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Tests\WaitTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Tools.Find.ASearch" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAigIAAABDgAIEQAAAAAAQEAAADAAAAAIAABVAACgg=</HashCode>
+      <FileName>Tools\Find\ASearch.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.Find.SearchElement" Collapsed="true">
+    <Position X="2.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgIAAAADAAIAAAAAABAUEAAABAAAAAACAAVggCgA=</HashCode>
+      <FileName>Tools\Find\SearchElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.Find.SearchExplicit" Collapsed="true">
+    <Position X="0.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAAAAABAAAQAAAAAAAAAAAAAAAAAIAAABAIAAg=</HashCode>
+      <FileName>Tools\Find\SearchExplicit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.Find.SearchImplicit" Collapsed="true">
+    <Position X="0.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAABAAAAg=</HashCode>
+      <FileName>Tools\Find\SearchImplicit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Tools.Application" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABABCAABCAAAAFAQAAAACAAAAglAAA=</HashCode>
+      <FileName>Tools\Application.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Tools.FirefoxTemporaryWhithUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.ChromeTemporaryWhithUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.ChromeTemporaryWithoutUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.ChromeTemporaryMaximizedWhithUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.SelenoidChromeDriver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.SelenoidFireFoxWebDriver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.SelenoidOperaWebDriver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="crashCourse2021.Tools.BrowserWrapper" Collapsed="true">
+    <Position X="1.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAgIgAAAAAABIAlAIAAAAAAgEQFAAAAACAGAQA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RvCrashCourse2021.Database" Collapsed="true">
+    <Position X="1" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAICAAAAAAAAAA=</HashCode>
+      <FileName>Tools\DataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="crashCourse2021.Tools.TestRunner" Collapsed="true">
+    <Position X="1" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAggQAAADQAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\TestRunner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="crashCourse2021.Tools.Find.ISearch" Collapsed="true">
+    <Position X="2.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgIAAAADAAIAAAAAAAAQEAAABAAAAAAAAAVAACgA=</HashCode>
+      <FileName>Tools\Find\ISearch.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="crashCourse2021.Tools.Find.ISearchStrategy" Collapsed="true">
+    <Position X="2.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Tools\Find\ISearchStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="crashCourse2021.Tools.IBrowser" Collapsed="true">
+    <Position X="1" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\BrowserWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="crashCourse2021.Pages.ChangeLanguageFields" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAEAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\ATopComponent.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="crashCourse2021.Pages.LoginPageL10nFields" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
