@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using crashCourse2021.Data.Application;
+using TestFramework.Data.Application;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace crashCourse2021.Tools.Find
+namespace TestFramework.Tools.Find
 {
     //public class SearchImplicit : ASearch, ISearch
     public class SearchImplicit : ASearch

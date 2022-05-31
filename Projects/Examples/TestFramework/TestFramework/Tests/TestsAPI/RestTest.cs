@@ -14,10 +14,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
 using System.Xml.Serialization;
-using crashCourse2021.Tools;
+using TestFramework.Tools;
 using NUnit.Allure.Core;
 
-namespace RvCrashCourse2021
+namespace TestFramework
 {
     [AllureNUnit]
     [TestFixture]
@@ -26,7 +26,7 @@ namespace RvCrashCourse2021
         public new Logger log = LogManager.GetCurrentClassLogger(); // for NLog
         private string JsonToken;
 
-  //      [Test]
+       // [Test]
         public void VerifyItems()
         {
             log.Info("Start");
@@ -42,7 +42,7 @@ namespace RvCrashCourse2021
             log.Info("content: " + content);
         }
 
-  //      [Test]
+       // [Test]
         public void VerifyLogin()
         {
             log.Info("Start");
@@ -73,7 +73,7 @@ namespace RvCrashCourse2021
             log.Info("token= " + token);
         }
         
-        [Test,Order(1)]
+        //[Test,Order(1)]
         public void VerifyLogin2()
         {
             log.Info("Start");
@@ -96,7 +96,7 @@ namespace RvCrashCourse2021
             Console.WriteLine(data.api_token);
         }
 
-        [Test,Order(2)]
+        //[Test,Order(2)]
         public void ReadCart()
         {
             log.Info("Start");
@@ -157,11 +157,11 @@ namespace RvCrashCourse2021
             log.Info("done ");
         }
 
-        [Test]
+       // [Test]
         public void ReadDatabase()
         {
 
-            Database.GetFirstnameById("2");
+            DBConnectionWrapper.GetFirstnameById("2");
         }
 
     }

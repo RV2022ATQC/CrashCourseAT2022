@@ -1,0 +1,43 @@
+commit 6fcbf902843e1bf6632642c67caee825fef54bfa
+tree 068bf510a24af54184daa73be7c4cd1087aa7064
+parent 84bbd2b1fb5fd96f6d7bfde6fb6304a879dc52f8
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-07 21:17:51 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-07 21:17:51 +0300
+
+    add 2_1 and 2_3
+    
+    rename 1_1 and 1_2
+    add 2_1 and 2_3
+
+
+:100644 100644 2bde4dfcb2dba20f4b2ffcb2a1da1f69b5c44622 2bde4dfcb2dba20f4b2ffcb2a1da1f69b5c44622 R100	Projects/SvitlanaLN/ConsoleApp1_1/Program.cs	Projects/SvitlanaLN/1_1_Arithmetic_mean.cs
+:100644 100644 fd06165ed839515585a561f0fcb95ce1d99d1adc fd06165ed839515585a561f0fcb95ce1d99d1adc R100	Projects/SvitlanaLN/Dollar.cs	Projects/SvitlanaLN/1_2_Dollar.cs
+:000000 100644 0000000000000000000000000000000000000000 4e42dc2db95a440f06d322d17032b8287816864e A	Projects/SvitlanaLN/2_1_Even.cs
+:000000 100644 0000000000000000000000000000000000000000 642108eada0d97a0b990a93d0f869abf0925a924 A	Projects/SvitlanaLN/2_3_inch.cs
+commit 84bbd2b1fb5fd96f6d7bfde6fb6304a879dc52f8
+tree 6f09e7d6f8928fc9116d71c7e3bbf416ac899a2c
+parent a8c6ddefc0281358b7b0e016f1f47e7c0c884439
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-07 21:13:38 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-07 21:13:38 +0300
+
+    Revert "add 2_1 and 2_3"
+    
+    This reverts commit a8c6ddefc0281358b7b0e016f1f47e7c0c884439.
+
+
+:100644 100644 2bde4dfcb2dba20f4b2ffcb2a1da1f69b5c44622 2bde4dfcb2dba20f4b2ffcb2a1da1f69b5c44622 R100	Projects/SvitlanaLN/1_1_Arithmetic_mean.cs	Projects/SvitlanaLN/ConsoleApp1_1/Program.cs
+:100644 100644 fd06165ed839515585a561f0fcb95ce1d99d1adc fd06165ed839515585a561f0fcb95ce1d99d1adc R100	Projects/SvitlanaLN/1_2_Dollar.cs	Projects/SvitlanaLN/Dollar.cs
+commit a8c6ddefc0281358b7b0e016f1f47e7c0c884439
+tree b02385ba14996e384466526bd5a8abef18c8ef5b
+parent 37afe1b1ade59c2cba7928bc5e04aa439a940abc
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-07 21:06:14 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-07 21:06:14 +0300
+
+    add 2_1 and 2_3
+    
+    Just changed name of 1_1 and 1_2 programs.
+    New 2_1 and 2_3 programs.
+
+
+:100644 100644 2bde4dfcb2dba20f4b2ffcb2a1da1f69b5c44622 2bde4dfcb2dba20f4b2ffcb2a1da1f69b5c44622 R100	Projects/SvitlanaLN/ConsoleApp1_1/Program.cs	Projects/SvitlanaLN/1_1_Arithmetic_mean.cs
+:100644 100644 fd06165ed839515585a561f0fcb95ce1d99d1adc fd06165ed839515585a561f0fcb95ce1d99d1adc R100	Projects/SvitlanaLN/Dollar.cs	Projects/SvitlanaLN/1_2_Dollar.cs
