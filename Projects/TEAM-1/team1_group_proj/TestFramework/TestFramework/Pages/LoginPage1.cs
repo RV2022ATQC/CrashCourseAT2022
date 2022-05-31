@@ -8,6 +8,8 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
+using crashCourse2022.Tools;
+using crashCourse2022.Tools.Find;
 using OpenQA.Selenium.Support.PageObjects;
 using NLog;
 
@@ -39,23 +41,23 @@ namespace crashCourse2022.Pages
                 //public LoginPage(IWebDriver driver) : base(driver)
         public LoginPage() : base()
         {
-            // PageFactory
-            //PageFactory.InitElements(driver, this);
+           // PageFactory
+           // PageFactory.InitElements(driver, this);
             //
-            // Classic Page Object
-            //InitWebElements();
+           // Classic Page Object
+           // InitWebElements();
             VerifyWebElements();
         }
-
-        //private void InitWebElements()
-        //{
-        //    LoginLabel = driver.FindElement(By.XPath("//label[contains(@for,'inputEmail')]"));
-        //    LoginInput = driver.FindElement(By.Id("login"));
-        //    PasswordLabel = driver.FindElement(By.XPath("//label[contains(@for,'inputPassword')]"));
-        //    PasswordInput = driver.FindElement(By.Id("password"));
-        //    SigninButton = driver.FindElement(By.CssSelector("button.btn.btn-primary"));
-        //    LogoPicture = driver.FindElement(By.CssSelector("img.login_logo.col-md-8.col-xs-12"));
-        //}
+        /*
+        private void InitWebElements()
+        {
+           LoginLabel = driver.FindElement(By.XPath("//label[contains(@for,'inputEmail')]"));
+          LoginInput = driver.FindElement(By.Id("login"));
+          PasswordLabel = driver.FindElement(By.XPath("//label[contains(@for,'inputPassword')]"));
+          PasswordInput = driver.FindElement(By.Id("password"));
+          SigninButton = driver.FindElement(By.CssSelector("button.btn.btn-primary"));
+          LogoPicture = driver.FindElement(By.CssSelector("img.login_logo.col-md-8.col-xs-12"));
+        }*/
 
         private void VerifyWebElements()
         {

@@ -148,7 +148,9 @@
     <Compile Include="Data\Application\ApplicationSourceRepository.cs" />
     <Compile Include="Pages\ACommonComponent.cs" />
     <Compile Include="Pages\ATopComponent.cs" />
+    <Compile Include="Pages\LoginPage.UImap.cs" />
     <Compile Include="Pages\LoginPage1.cs" />
+    <Compile Include="Pages\RegistratorHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\TestAPI\Class1.cs" />
     <Compile Include="Tests\TestAPI\Class2.cs" />
