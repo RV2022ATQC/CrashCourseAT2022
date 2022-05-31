@@ -8,19 +8,19 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using crashCourse2021.Tools;
-using crashCourse2021.Tools.Find;
+using TestFramework.Tools;
+using TestFramework.Tools.Find;
 
-namespace crashCourse2021.Pages
+namespace TestFramework.Pages
 {
     class UserDropDownMenu
     {
-     //   protected ISearch Search { get; private set; }
+        protected ISearch Search { get; private set; }
         private IWebDriver driver;
         //
         public IWebElement ChangePassword
-            { get { return driver.FindElement(By.CssSelector("a.change-password")); } }
-   //         { get { return Search.CssSelector("a.change-password"); } }
+         //   { get { return driver.FindElement(By.CssSelector("a.change-password")); } }
+            { get {                return Search.CssSelector("a.change-password"); } }
         public IWebElement ResetPassword
             { get { return driver.FindElement(By.CssSelector("a.reset-my-password")); } }
         //  { get { return Search.CssSelector("a.reset-my-password"); } }

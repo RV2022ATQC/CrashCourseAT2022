@@ -12,12 +12,12 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-namespace RvCrashCourse2021
+namespace TestFramework
 {
     [TestFixture]
     public class ToolTipTest
     {
-        //[Test]
+        [Test]
         public void ExpectedConditions1()
         {
             IWebDriver driver = new ChromeDriver();
@@ -48,35 +48,35 @@ namespace RvCrashCourse2021
             //
             Actions action = new Actions(driver);
             action.ClickAndHold().MoveToElement(blogsElement).Build().Perform();
-            //action.MoveToElement(blogsElement).Build().Perform();
-            Thread.Sleep(4000);
+
+            Thread.Sleep(3000);
             //
-            string toolTipText = driver.FindElement(By.CssSelector("a[href='https://blogs.skype.com']")).Text;
+            string toolTipText = driver.FindElement(By.CssSelector("a[href='https://skype.com/en/blogs']")).Text;
             Console.WriteLine("blogsElement=" + toolTipText + "=end");
             Thread.Sleep(1000);
             driver.Quit();
         }
 
-        //[Test]
+        [Test]
         public void CheckToolTip()
         {
 
             IWebDriver driver = new ChromeDriver();
             //
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Navigate().GoToUrl("file:///D:/tooltip.html");
+            driver.Navigate().GoToUrl("file:///C:/tooltip.html");
             //
-            IWebElement element = driver.FindElement(By.Id("info-google"));
+            IWebElement element = driver.FindElement(By.XPath("//*[@id='gbwa']/div/a"));
             //
             Actions action = new Actions(driver);
             action.ClickAndHold().MoveToElement(element).Build().Perform();
-            //action.MoveToElement(blogsElement).Build().Perform();
-            Thread.Sleep(4000);
+
+            Thread.Sleep(2000);
             //
             Console.WriteLine("Text= " + element.Text + " =end");
-            Console.WriteLine("ToolTip= " + element.GetAttribute("title") + " =end");
+            Console.WriteLine("ToolTip= " + element.GetAttribute("aria-label") + " =end");
             //
-            Assert.AreEqual("info-google", element.GetAttribute("title"));
+            Assert.AreEqual("Додатки Google", element.GetAttribute("aria-label"));
             //
             driver.Quit();
         }

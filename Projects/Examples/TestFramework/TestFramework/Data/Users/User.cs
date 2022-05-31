@@ -3,10 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using crashCourse2021.Tools;
+using TestFramework.Tools;
 
-namespace crashCourse2021.Data.Users
+namespace TestFramework.Data.Users
 {
+    //В даному класі наведено різні підходи до роботи з тестовими даними:
+    //FluentInterface, Builder, вичитування даних з файлів
+
+
+    #region InterfacesForBuilder
+    //Для реалізації паттерну Builder визначаємо потрібні нам інтерфейси,
+    //кожен інтерфес встановлює певне поле класу і містить посилання на інтерфейс,
+    //який встановлює наступне поле, останній інтерфейс містить метод build, який
+    //ініціалізує потрібний нам об'єкт.
+    //таким чином ми маємо ланцюжок методів, які викликаються почергово і кінцевий
+    //об'єкт обов'язково матиме усі поля, що ініціалізовані відповідно до
+    //потрібної логіки кожне і у чіткій послідовності
     public interface ISetLogin
     {
         ISetFirstname SetLogin(string login);
@@ -96,16 +108,22 @@ namespace crashCourse2021.Data.Users
         string GetAddressAdd();
     }
 
-    public class User : ISetLogin, ISetFirstname, ISetLastname, ISetEmail,
+    #endregion InterfacesForBuilder
+
+    public class User : IUserBuild, IUser,
+        ISetLogin, ISetFirstname, ISetLastname, ISetEmail,
         ISetPhone, ISetAddressMain, ISetCity, ISetPostcode,
-        ISetCoutry, ISetRegionState, ISetPassword, ISetSubscribe, IUserBuild, IUser
+        ISetCoutry, ISetRegionState, ISetPassword, ISetSubscribe
+                        
     {
         // Required
         // 1. public string Firstname { get; private set; }
+
+
         // 2. Default public Constructor
-        //public string Firstname { get; set; }
-        //public string Lastname { get; set; }
-        //public string Email { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Email { get; set; }
         //public string Phone { get; set; }
         //public string AddressMain { get; set; }
         //public string City { get; set; }
@@ -120,9 +138,9 @@ namespace crashCourse2021.Data.Users
         //public string AddressAdd { get; set; }
 
         // Required
-        private string login;
-        private string firstname;
-        private string lastname;
+        string login;
+        string firstname;
+        string lastname;
         private string email;
         private string phone;
         private string addressMain;
@@ -137,41 +155,21 @@ namespace crashCourse2021.Data.Users
         private string company;
         private string addressAdd;
 
-        //// 1. Classic Constructor
-        //public User(string firstname, string lastname, string email,
-        //    string phone, string addressMain, string city,
-        //    string postcode, string coutry, string regionState,
-        //    string password, bool subscribe)
-        //{
-        //    // Required
-        //    this.Firstname = firstname;
-        //    this.Lastname = lastname;
-        //    this.Email = email;
-        //    this.Phone = phone;
-        //    this.AddressMain = addressMain;
-        //    this.City = city;
-        //    this.Postcode = postcode;
-        //    this.Coutry = coutry;
-        //    this.RegionState = regionState;
-        //    this.Password = password;
-        //    this.Subscribe = subscribe;
-        //    // Advanced
-        //    this.Fax = string.Empty;
-        //    this.Company = string.Empty;
-        //    this.AddressAdd = string.Empty;
-        //}
 
-        //// 1. Classic Constructor
-        //public User(string firstname, string lastname, string email,
+        /// Для ініціалізації об'єктів User можемо використовувати класичний конструктор
+        /// 1. Classic Constructor
+        
+        public User(string firstname, string lastname, string email
         //    string phone, string addressMain, string city,
         //    string postcode, string coutry, string regionState,
         //    string password, bool subscribe,
-        //    string fax, string company, string addressAdd)
-        //{
+        //    string fax, string company, string addressAdd
+                )
+        {
         //    // Required
-        //    this.Firstname = firstname;
-        //    this.Lastname = lastname;
-        //    this.Email = email;
+           this.Firstname = firstname;
+            this.Lastname = lastname;
+            this.Email = email;
         //    this.Phone = phone;
         //    this.AddressMain = addressMain;
         //    this.City = city;
@@ -184,18 +182,41 @@ namespace crashCourse2021.Data.Users
         //    this.Fax = fax;
         //    this.Company = company;
         //    this.AddressAdd = addressAdd;
-        //}
+        }
+
 
         // 2. Default public Constructor
-        //public User() { }
-        
-        // 5. Static Factory
-        private User() { }
+        public User() { }
+        //Для дефолтного конструктора ініціалізувати кожне поле потрібно буде окремо
+        // User usr = new User();
+        //usr.Firstname = "Name";
+        //usr.Lastname = "Lastname";
 
+
+        // 3. Add Setters, Getters
+        // User usr = new User();
+        //usr.SetFirstname("Name");
+        //usr.SetLastname("Lastname");
+
+
+        // 4. Fluent Interface
+        //Сеттери і геттери будуть повертати об'єкт User - this
+        //public User SetFirstname(string firstname)
+
+
+        // 5. Static Factory
+        //створюємо приватний конструктор
+        //private User() { }
+
+
+        //і статичний метод, який буде повертати об'єкт
         //public static User Get()
         //{
         //    return new User();
         //}
+        //даний підхід забороняє стоврювати об'єкти напряму через new, 
+        //а лише через метод Get() , який буде містити необхідну логіку
+
 
         // 6. Builder
         //public static ISetFirstname Get()
@@ -204,8 +225,8 @@ namespace crashCourse2021.Data.Users
             return new User();
         }
 
-        // 3. Add Setters, Getters
-        // Setters
+
+        #region Setters
 
         public ISetFirstname SetLogin(string login)
         {
@@ -215,10 +236,10 @@ namespace crashCourse2021.Data.Users
 
         //public void SetFirstname(string firstname)
 
-        // 4. Fluent Interface
-        //public User SetFirstname(string firstname)
+
 
         // 6. Builder
+
         public ISetLastname SetFirstname(string firstname)
         {
             this.firstname = firstname;
@@ -303,15 +324,16 @@ namespace crashCourse2021.Data.Users
             return this;
         }
 
-        // 6. Builder
-        //public User build()
+
         // 7. Dependency Inversion
         public IUser Build()
         {
             return this;
         }
+        #endregion Setters
 
-        // Getters
+
+        #region Getters
 
         public string GetLogin()
         {
@@ -386,9 +408,10 @@ namespace crashCourse2021.Data.Users
         {
             return addressAdd;
         }
+        #endregion Getters
 
-        // Static Factory
 
+        //приклад вичитування тестових даних з файлу
         public static List<IUser> GetAllUsers(AExternalReader externalData)
         {
             //logger.Debug("Start GetAllUsers, path = " + path);
@@ -400,9 +423,9 @@ namespace crashCourse2021.Data.Users
                 {
                     continue;
                 }
+                //Приклад ініціалізації об'єкту через Builder
                 users.Add(Get()
-                        .SetLogin(row[0])
-                        .SetFirstname(row[1])
+                        .SetLogin(row[0]).SetFirstname(row[1])
                         .SetLastname(row[2])
                         .SetEmail(row[3])
                         .SetPhone(row[4])

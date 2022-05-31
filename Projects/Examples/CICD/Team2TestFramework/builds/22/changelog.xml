@@ -1,0 +1,13 @@
+commit b04d12451c0098af9146757e9633806ab2b92e76
+tree aafdd22ceb20d0b8d7c10f9b2ee409feb05fec49
+parent ec858791bede9bea74e716083e365552aff15f6a
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-15 22:41:27 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-15 22:41:27 +0300
+
+    OOP_2_1_Person
+    
+    OOP_2_1_Person
+
+
+:000000 100644 0000000000000000000000000000000000000000 6fa74c9599c42628d0df1eb86e57397762de4b3a A	Projects/SvitlanaLN/OOP_2_1_Person/Person.cs
+:000000 100644 0000000000000000000000000000000000000000 116c7ea329815ed4f9b3c16b6eae7f480e52125d A	Projects/SvitlanaLN/OOP_2_1_Person/Program.cs

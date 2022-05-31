@@ -1,0 +1,11 @@
+commit 9b2134a33b9d8aa110b62f31db6a6def62f95e39
+tree c6991099fa7d38311c65c325232622f7b6fad9b0
+parent a75fc75faac22417ffa3d2997e0f2dbeba589085
+author Anton <romanukhaav@gmail.com> 2021-03-11 15:07:25 +0200
+committer Anton <romanukhaav@gmail.com> 2021-03-11 15:07:25 +0200
+
+    update allure config
+
+
+:100644 100644 4faaa7fb6ab7f91e98c417df5b0dac627ef14a16 ddf94b1e2568056b139d0d9e1c0c29ada41ccf7a M	Projects/Team2/FrameworkV2/Framework/Framework.csproj
+:100644 100644 b5e5f80f204b04c39380f16b42e75ba9e5267ab0 b5e5f80f204b04c39380f16b42e75ba9e5267ab0 R100	Projects/Team2/FrameworkV2/Framework/allureConfig.Template.json	Projects/Team2/FrameworkV2/Framework/allureConfig.json

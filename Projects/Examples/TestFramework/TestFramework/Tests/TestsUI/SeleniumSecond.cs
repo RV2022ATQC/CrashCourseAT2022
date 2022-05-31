@@ -9,11 +9,11 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2021.Pages;
-using crashCourse2021.Data.Users;
-using crashCourse2021.Tools;
+using TestFramework.Pages;
+using TestFramework.Data.Users;
+using TestFramework.Tools;
 
-namespace RvCrashCourse2021
+namespace TestFramework
 {
     //[TestFixture]
     public class SeleniumSecond
@@ -194,53 +194,61 @@ namespace RvCrashCourse2021
             RegistratorHomePage registratorHomePage = new LoginPage()
             //    .successRegistratorLogin("work", "qwerty");
                 .successRegistratorLogin(UserRepository.Get().Registered());
-            //
+            
             // Check
             Assert.AreEqual("work", registratorHomePage.GetLoginNameText());
-            //
+            
             // Steps
             LoginPage loginPage = registratorHomePage.Logout();
-            //
+            
             // Check
             //Assert.True(loginPage.GetLogoPictureSrcAttributeText()
             //    .Contains("ukraine_logo2.gif"));
+       //Покращили попередню перевірку і винесли тестові дані в константу LoginPage.IMAGE_NAME
             Assert.True(loginPage.GetLogoPictureSrcAttributeText()
                 .Contains(LoginPage.IMAGE_NAME));
         }
 
         //[Test]
-        public void LoginTest6()
+        public void LoginTest6_negative_case()
         {
             // Steps
             //RepeatLoginPage repeatLoginPage = new LoginPage(driver)
+
+            //прописуємо новий клас RepeatLoginPage для сторінки з повідомленням про невірну спробу логіну
             RepeatLoginPage repeatLoginPage = new LoginPage()
+
             //    .unsuccessfulLogin("hahaha", "qwerty");
+       //виносимо тестові дані користувачів у клас UserRepository
                 .unsuccessfulLogin(UserRepository.Get().Invalid());
-            //
+
             // Check
+            //перевіряємо, що відображається повідомлення п
             Assert.True(repeatLoginPage.GetInvalidLoginLabelText().Length > 0);
         }
 
         //[Test]
-        public void LoginTest7()
+        public void LoginTest7_PageFactory()
         {
             // PageFactory. Init Attribute
             //LoginPage loginPage = new LoginPage(driver);
-            //PageFactory.InitElements(driver, loginPage);
-            //
+            LoginPage loginPage = new LoginPage();
+            PageFactory.InitElements(driver, loginPage);
+            loginPage.LoginInput_PageFactoryExample.Click();
+
             // Steps
             //RegistratorHomePage registratorHomePage = new LoginPage(driver)
             RegistratorHomePage registratorHomePage = new LoginPage()
             //RegistratorHomePage registratorHomePage = loginPage
             //    .successRegistratorLogin("work", "qwerty");
                 .successRegistratorLogin(UserRepository.Get().Registered());
-            //
+            
             // Check
             Assert.AreEqual("work", registratorHomePage.GetLoginNameText());
         }
 
         //[Test]
-        public void LoginTest8()
+        public void LoginTest8_()
         {
             // Steps
             //LoginPage loginPage = new LoginPage(driver)
@@ -376,7 +384,7 @@ namespace RvCrashCourse2021
             //    .Build();
             //Console.WriteLine("Login= " + user.SetEmail("hahaha")); // Error
             //Console.WriteLine("Login= " + ((User)user).SetEmail("hahaha")); // (User)user Code Smell
-            //
+           
             // 8. Singleton. Repository
             IUser user = UserRepository.Get().Registered();
             Console.WriteLine("Login= " + user.GetLogin() + "   Password= " + user.GetPassword());

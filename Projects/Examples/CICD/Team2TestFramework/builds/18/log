@@ -1,0 +1,95 @@
+Started by user [8mha:////4OuY7d4ue8pAXtEDr+0KI5fvqhv3xiY6BX2+b5k8SI64AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Team2
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/RV2021ATQC/CrashCourseAT.git # timeout=10
+Fetching upstream changes from https://github.com/RV2021ATQC/CrashCourseAT.git
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.29.2.windows.4'
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe fetch --tags --force --progress -- https://github.com/RV2021ATQC/CrashCourseAT.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe rev-parse "origin/main^{commit}" # timeout=10
+Checking out Revision 9b2134a33b9d8aa110b62f31db6a6def62f95e39 (origin/main)
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe checkout -f 9b2134a33b9d8aa110b62f31db6a6def62f95e39 # timeout=10
+Commit message: "update allure config"
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.6\resources\app\git\cmd\git.exe rev-list --no-walk 9b2134a33b9d8aa110b62f31db6a6def62f95e39 # timeout=10
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Team2\Projects\Team2\FrameworkV2\Framework.sln " && exit %%ERRORLEVEL%% from C:\Team2
+[Team2] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" C:\Team2\Projects\Team2\FrameworkV2\Framework.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 16.8.3+39993bd9d for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+Build started 3/11/2021 3:21:48 PM.
+Project "C:\Team2\Projects\Team2\FrameworkV2\Framework.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Team2\Projects\Team2\FrameworkV2\Framework.sln" (1) is building "C:\Team2\Projects\Team2\FrameworkV2\Framework\Framework.csproj" (2) on node 1 (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyFilesMarkedCopyLocal:
+  Touching "C:\Team2\Projects\Team2\FrameworkV2\Framework\obj\Debug\Framework.csproj.CopyComplete".
+_CopyOutOfDateSourceItemsToOutputDirectory:
+Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectoryAlways:
+  Copying file from "C:\Team2\Projects\Team2\FrameworkV2\Framework\NLog.config" to "C:\Team2\Projects\Team2\FrameworkV2\Framework\bin\Debug\NLog.config".
+  Copying file from "C:\Team2\Projects\Team2\FrameworkV2\Framework\allureConfig.json" to "C:\Team2\Projects\Team2\FrameworkV2\Framework\bin\Debug\allureConfig.json".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Framework -> C:\Team2\Projects\Team2\FrameworkV2\Framework\bin\Debug\Framework.dll
+Done Building Project "C:\Team2\Projects\Team2\FrameworkV2\Framework\Framework.csproj" (default targets).
+Done Building Project "C:\Team2\Projects\Team2\FrameworkV2\Framework.sln" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.67
+[Team2] $ cmd /c call C:\Windows\TEMP\jenkins1571727690128740954.bat
+
+C:\Team2>C:\nunit-console\nunit3-console.exe C:\Team2\Projects\Team2\FrameworkV2\Framework\bin\Debug\Framework.dll /result:TestResults.xml 
+NUnit Console Runner 3.12.0 (.NET 2.0)
+Copyright (c) 2021 Charlie Poole, Rob Prouse
+Thursday, March 11, 2021 3:21:50 PM
+
+Runtime Environment
+   OS Version: Microsoft Windows NT 6.2.9200.0
+   Runtime: .NET Framework CLR v4.0.30319.42000
+
+Test Files
+    C:\Team2\Projects\Team2\FrameworkV2\Framework\bin\Debug\Framework.dll
+
+
+Run Settings
+    DisposeRunners: True
+    WorkDirectory: C:\Team2
+    ImageRuntimeVersion: 4.0.30319
+    ImageTargetFrameworkName: .NETFramework,Version=v4.6.1
+    ImageRequiresX86: False
+    ImageRequiresDefaultAppDomainAssemblyResolver: False
+    TargetRuntimeFramework: net-4.0
+    NumberOfTestWorkers: 8
+
+Test Run Summary
+  Overall result: Passed
+  Test Count: 3, Passed: 3, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
+  Start time: 2021-03-11 13:21:51Z
+    End time: 2021-03-11 13:22:17Z
+    Duration: 25.650 seconds
+
+Results (nunit3) saved as TestResults.xml
+
+C:\Team2>exit 0 
+[Team2] $ C:\Users\aromanuk\scoop\apps\allure\2.13.8\bin\allure-2.7.0\bin\allure.bat generate C:\Team2\allure-results -c -o C:\Team2\allure-report
+Report successfully generated to C:\Team2\allure-report
+Allure report was successfully generated.
+Creating artifact for the build.
+Artifact was added to the build.
+Finished: SUCCESS
