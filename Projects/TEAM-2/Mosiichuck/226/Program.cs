@@ -28,7 +28,7 @@ namespace _226
             SortArray(arr, count, flag);
         }
 
-        static void SortArray(int[] arr,int lenght,int flag=1)
+        static void SortArray(int[] arr, int lenght, int flag = 1)
         {
             if (flag == 1)
             {
@@ -36,14 +36,14 @@ namespace _226
                 Array.Reverse(arr, 0, lenght);
 
             }
-            else if(flag ==0)
+            else if (flag == 0)
             {
                 Array.Sort(arr, 0, lenght);
             }
             Console.Write("Sorted array: ");
             foreach (var item in arr)
             {
-                Console.Write(item+ " ");
+                Console.Write(item + " ");
             }
             Console.WriteLine();
         }
