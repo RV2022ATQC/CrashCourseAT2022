@@ -1,0 +1,93 @@
+Started by user [8mha:////4OuY7d4ue8pAXtEDr+0KI5fvqhv3xiY6BX2+b5k8SI64AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Team2
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe config remote.origin.url https://github.com/RV2021ATQC/CrashCourseAT.git # timeout=10
+Fetching upstream changes from https://github.com/RV2021ATQC/CrashCourseAT.git
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.29.2.windows.3'
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe fetch --tags --force --progress -- https://github.com/RV2021ATQC/CrashCourseAT.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe rev-parse "origin/main^{commit}" # timeout=10
+Checking out Revision e3e66875da942c6662b2ca593b125226749dc394 (origin/main)
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe checkout -f e3e66875da942c6662b2ca593b125226749dc394 # timeout=10
+Commit message: "Merge pull request #111 from taniamos09/testframeworkbranch1"
+ > C:\Users\aromanuk\AppData\Local\GitHubDesktop\app-2.6.3\resources\app\git\cmd\git.exe rev-list --no-walk e3e66875da942c6662b2ca593b125226749dc394 # timeout=10
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ""C:\Team2\Projects\Team2\Framework Team 2\Framework.sln"" " && exit %%ERRORLEVEL%% from C:\Team2
+[Team2] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" '"C:\Team2\Projects\Team2\Framework Team 2\Framework.sln"' " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 16.8.3+39993bd9d for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+Build started 3/11/2021 11:40:59 AM.
+Project "C:\Team2\Projects\Team2\Framework Team 2\Framework.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Team2\Projects\Team2\Framework Team 2\Framework.sln" (1) is building "C:\Team2\Projects\Team2\Framework Team 2\Framework\Framework.csproj" (2) on node 1 (default targets).
+GenerateBindingRedirects:
+  No suggested binding redirects from ResolveAssemblyReferences.
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyFilesMarkedCopyLocal:
+  Touching "C:\Team2\Projects\Team2\Framework Team 2\Framework\obj\Debug\Framework.csproj.CopyComplete".
+_CopyOutOfDateSourceItemsToOutputDirectory:
+Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectoryAlways:
+  Copying file from "C:\Team2\Projects\Team2\Framework Team 2\Framework\NLog.config" to "C:\Team2\Projects\Team2\Framework Team 2\Framework\bin\Debug\NLog.config".
+CopyFilesToOutputDirectory:
+  Framework -> C:\Team2\Projects\Team2\Framework Team 2\Framework\bin\Debug\Framework.dll
+Done Building Project "C:\Team2\Projects\Team2\Framework Team 2\Framework\Framework.csproj" (default targets).
+Done Building Project "C:\Team2\Projects\Team2\Framework Team 2\Framework.sln" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.47
+[Team2] $ cmd /c call C:\Windows\TEMP\jenkins2521667419267507345.bat
+
+C:\Team2>c:\nunit-console\nunit3-console.exe C:\Team2\Projects\Team2\Framework Team 2\Framework\bin\Debug\Framework.dll /result:TestResults.xml 
+NUnit Console Runner 3.12.0 (.NET 2.0)
+Copyright (c) 2021 Charlie Poole, Rob Prouse
+Thursday, March 11, 2021 11:40:59 AM
+
+Runtime Environment
+   OS Version: Microsoft Windows NT 6.2.9200.0
+   Runtime: .NET Framework CLR v4.0.30319.42000
+
+Test Files
+    C:\Team2\Projects\Team2\Framework
+    Team
+    2\Framework\bin\Debug\Framework.dll
+
+
+Errors, Failures and Warnings
+
+1) Invalid : C:\Team2\Projects\Team2\Framework
+File not found: C:\Team2\Projects\Team2\Framework
+
+2) Invalid : C:\Team2\Team
+File not found: C:\Team2\Team
+
+3) Invalid : C:\Team2\2\Framework\bin\Debug\Framework.dll
+File not found: C:\Team2\2\Framework\bin\Debug\Framework.dll
+
+Test Run Summary
+  Overall result: Failed
+  Test Count: 0, Passed: 0, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
+  Start time: 2021-03-11 09:41:00Z
+    End time: 2021-03-11 09:41:00Z
+    Duration: 0.537 seconds
+
+Results (nunit3) saved as TestResults.xml
+
+C:\Team2>exit -2 
+Build step 'Execute Windows batch command' marked build as failure
+Finished: FAILURE

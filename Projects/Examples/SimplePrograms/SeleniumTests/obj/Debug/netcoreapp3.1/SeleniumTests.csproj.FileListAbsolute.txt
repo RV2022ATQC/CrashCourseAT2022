@@ -195,3 +195,4 @@ C:\CrashCourseAT2022\Projects\Examples\SimplePrograms\SeleniumTests\obj\Debug\ne
 C:\CrashCourseAT2022\Projects\Examples\SimplePrograms\SeleniumTests\obj\Debug\netcoreapp3.1\SeleniumTests.dll
 C:\CrashCourseAT2022\Projects\Examples\SimplePrograms\SeleniumTests\obj\Debug\netcoreapp3.1\SeleniumTests.pdb
 C:\CrashCourseAT2022\Projects\Examples\SimplePrograms\SeleniumTests\obj\Debug\netcoreapp3.1\SeleniumTests.genruntimeconfig.cache
+C:\CrashCourseAT2022\Projects\Examples\SimplePrograms\SeleniumTests\obj\Debug\netcoreapp3.1\SeleniumTests.csproj.AssemblyReference.cache

@@ -1,0 +1,72 @@
+commit 37afe1b1ade59c2cba7928bc5e04aa439a940abc
+tree 6f09e7d6f8928fc9116d71c7e3bbf416ac899a2c
+parent f14ca6871c2eb897e946d4b3569cd198701b1b1c
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-05 00:37:58 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-05 00:37:58 +0300
+
+    1_2 Консольна про доллари
+    
+    1_2 Консольна про доллари
+
+
+:000000 100644 0000000000000000000000000000000000000000 fd06165ed839515585a561f0fcb95ce1d99d1adc A	Projects/SvitlanaLN/Dollar.cs
+commit f14ca6871c2eb897e946d4b3569cd198701b1b1c
+tree 998ab878f999c8efbc20149d085a99d18e606037
+parent 04fa2da5a2082d06d2440c2a13e232264dc891fd
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-03 21:08:06 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-03 21:08:06 +0300
+
+    1_1 Arithmetic mean
+    
+    1_1 Arithmetic mean
+
+
+:000000 100644 0000000000000000000000000000000000000000 2bde4dfcb2dba20f4b2ffcb2a1da1f69b5c44622 A	Projects/SvitlanaLN/ConsoleApp1_1/Program.cs
+commit 04fa2da5a2082d06d2440c2a13e232264dc891fd
+tree 48a0544dd25d6852f98c587d1d8144d20c462d9a
+parent e8e9132bf9acc1a057d08bab564376d14d57b275
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-02 00:54:16 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-02 00:54:16 +0300
+
+    Resume+bugreport+testcase
+    
+    Resume+bugreport+testcase
+
+
+:000000 100644 0000000000000000000000000000000000000000 34d3041b02ec2c322c0b027bb2c4b688766402d7 A	CV/CV-SvitlanaLN.docx
+:100644 000000 080a5ed5a1ec386662e815ee597b0865d6d2bd60 0000000000000000000000000000000000000000 D	CV/SvitlanaLN.doc
+:000000 100644 0000000000000000000000000000000000000000 89267caa394ec84841e4d35f14a71062986d6250 A	TestDoc/Bag-report SvitlanaLN.docx
+:100644 100644 ca978ce0fc976efb026ebfb4a037b4c8b37cc7d9 a5c9afd39cc84c84e321aae95864380b7ba4e167 M	TestDoc/TestDocsSvitlanaLN.xlsx
+commit e8e9132bf9acc1a057d08bab564376d14d57b275
+tree 9842540f1ab4b320e5c2d0ac7420c324a3cd8734
+parent de07f53ba38562fbce7fd53ea503c31c61c6f371
+author SvitlanaLN <sv_lugan@ukr.net> 2021-05-02 00:32:16 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-05-02 00:32:16 +0300
+
+    Create TestCase1
+    
+    TestCase1
+
+
+:000000 100644 0000000000000000000000000000000000000000 ca978ce0fc976efb026ebfb4a037b4c8b37cc7d9 A	TestDoc/TestDocsSvitlanaLN.xlsx
+commit de07f53ba38562fbce7fd53ea503c31c61c6f371
+tree 8de238dfb76740cef7c99ad0f742a25731442ce1
+parent ae289937a67cd5f4c98e516828aa10d01605a360
+author SvitlanaLN <sv_lugan@ukr.net> 2021-04-25 21:03:32 +0300
+committer SvitlanaLN <sv_lugan@ukr.net> 2021-04-25 21:03:32 +0300
+
+    Summary first
+    
+    Descryption first
+
+
+:100644 100644 080a5ed5a1ec386662e815ee597b0865d6d2bd60 080a5ed5a1ec386662e815ee597b0865d6d2bd60 R100	CV/SvitlanaL.doc	CV/SvitlanaLN.doc
+commit ae289937a67cd5f4c98e516828aa10d01605a360
+tree e532ddc5c92f34d4b5ccfa345385075bb3b04fc6
+parent 9b2134a33b9d8aa110b62f31db6a6def62f95e39
+author SvitlanaLN <82731013+SvitlanaLN@users.noreply.github.com> 2021-04-18 23:38:40 +0300
+committer GitHub <noreply@github.com> 2021-04-18 23:38:40 +0300
+
+    Add files via upload
+
+:000000 100644 0000000000000000000000000000000000000000 080a5ed5a1ec386662e815ee597b0865d6d2bd60 A	CV/SvitlanaL.doc

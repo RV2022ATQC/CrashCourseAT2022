@@ -7,21 +7,7 @@ namespace RestAPI
     public static class Database
     {
 
-        private static readonly string _connectionString = "datasource=127.0.0.1;port=3306;username=bn_opencart;password=;database= bitnami_opencart;";
-
-        //public static void ExecuteQueryOld(string queryString, string message = "", bool isTenantsDB = false)
-        //{
-
-        //    using (var connection = new SqlConnection(_connectionString))
-        //    {
-        //        var command = new SqlCommand(queryString, connection);
-        //        command.Connection.Open();
-        //        command.ExecuteNonQuery();
-
-        //        Console.WriteLine(message);
-        //    }
-        //} 
-
+        private static readonly string _connectionString = "server=localhost; userid=root; password=123456; database=bitnami_opencart";
 
         public static string ExecuteQuery(string queryString)
         {
@@ -37,7 +23,7 @@ namespace RestAPI
                 // Execute the query
                 var result = command.ExecuteScalar().ToString();
                 Console.WriteLine($"Result = {result}");
-                throw new Exception("Test exception");
+              //  throw new Exception("Test exception");
                 return result;
             }
             catch (Exception ex)
@@ -49,89 +35,11 @@ namespace RestAPI
         }
         public static string GetFirstnameById(string userId)
         {
+            // var queryString = "SELECT `firstname` FROM `oc_customer` WHERE `customer_id` = 2";
             var queryString = $@"SELECT `firstname` FROM `oc_customer` WHERE `customer_id` = {userId}";
-           // var queryString = "SELECT `firstname` FROM `oc_customer` WHERE `customer_id` = 2";
 
             return ExecuteQuery(queryString);
         }
 
-
-        //public static string GetFirstnameById(string scholarId)
-        //{
-        //    var queryString = $@"SELECT `firstname` FROM `oc_customer` WHERE `customer_id` = {scholarId}";
-
-        //    var value = "";
-
-        //    using (var connection = new SqlConnection(_connectionString))
-        //    {
-        //        var command = new SqlCommand(queryString, connection);
-        //        connection.Open();
-
-        //        SqlDataReader reader = command.ExecuteReader();
-
-        //        if (reader.Read())
-        //        {
-        //            value = (string)reader["firstname"];
-        //        }
-
-        //        Console.WriteLine($"Read from MySQL = {value}");
-
-        //        return value.ToString();
-        //    }
-        //}
-
-        //public static int ReadIntValues(string query)
-        //{
-        //    var value = 0;
-        //    using (var connection = new SqlConnection(_connectionString))
-        //    {
-        //        var command = new SqlCommand(query, connection);
-        //        connection.Open();
-
-        //        SqlDataReader reader = command.ExecuteReader();
-
-        //        if (reader.Read())
-        //        {
-        //            value = reader.GetInt32(0);
-        //        }
-
-        //        return value;
-        //    }
-        //}
-
-
-        //public static void CleanContacts(string scholarID)
-        //{
-        //    var queryClearScholarContacts = $"DELETE FROM tblxScholarContact WHERE ScholarID ='{scholarID}';";
-        //    ExecuteQuery(queryClearScholarContacts);
-
-        //    var queryClearContacts = $"DELETE FROM tblContact WHERE Email = 'Tester@invalid.com';";
-        //    ExecuteQuery(queryClearContacts, "tblContact is cleaned");
-        //}
-
-
-        //public static string GetStudentsTaskIdByTitle(string scholarID, string title)
-        //{
-        //    var queryString = $@" SELECT [TaskId] FROM [dbo].[tblTask]
-        //                WHERE [ScholarID]= '{scholarID}' AND [Title] = '{title}'";
-        //    var value = 0;
-
-        //    using (var connection = new SqlConnection(_connectionString))
-        //    {
-        //        var command = new SqlCommand(queryString, connection);
-        //        connection.Open();
-
-        //        SqlDataReader reader = command.ExecuteReader();
-
-        //        if (reader.Read())
-        //        {
-        //            value = (int)reader["TaskId"];
-        //        }
-
-        //        Console.WriteLine($"TaskId = {value}");
-
-        //        return value.ToString();
-        //    }
-        //}
     }
 }

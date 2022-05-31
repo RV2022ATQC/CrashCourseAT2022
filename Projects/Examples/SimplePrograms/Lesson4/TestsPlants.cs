@@ -5,6 +5,7 @@ using NUnit.Framework;
 namespace Lesson4
 {
     [TestFixture]//визначення тест-класу
+    [Parallelizable(ParallelScope.All)]
     public class TestPlants
     {
         [OneTimeSetUp] //код, що виконується один раз перед усіма тестами
@@ -13,10 +14,10 @@ namespace Lesson4
             Console.WriteLine("setup all tests");
         }
 
-        [SetUp] //код, що виконається для конфігурації одного конкретного тесту
+        [SetUp] //код, що виконається для конфігурації кожного тесту
         public void BeforeOneTest()
         {
-            Console.WriteLine("setup one spesific test");
+            Console.WriteLine("setup each test");
         }
 
         [OneTimeTearDown]//код виконається один раз після усіх тестів у класі
@@ -29,16 +30,22 @@ namespace Lesson4
         [Category("Smoke")]//позначаємо, що тест буде виконуватись з Smoke тестами
         [Category("Regression")]//також даний тест буде виконуватись у Reression категорії
         [Repeat(3)]//повторити тест 3 рази і якщо вони успішні, то тест пройдено
-        [Order(1)]
+        [Order(1)] // порядок виконання тестів
         public void TestCalculateVolume()
         {
-            //  Assert.Pass();
+            //Assert.Pass();
 
+            //Given
+            Console.WriteLine("TestCalculateVolume() execution");
             var plant = new Plants();
             int ExpectedValue = 12;
 
-            Console.WriteLine("TestCalculateVolume() execution");
-            Assert.IsTrue(plant.CalculateVolume(2, 3, 2) == ExpectedValue);
+            //When
+            var ActualValue = plant.CalculateVolume(2, 3, 2);
+
+            //Then
+            Assert.IsTrue(ActualValue == ExpectedValue);
+            Assert.AreEqual(ActualValue, ExpectedValue);
         }
 
         [Test]
@@ -55,8 +62,8 @@ namespace Lesson4
             var ActualValue = plant.CalculateVolume(2, 3, 3);
 
             //Then
-            Assert.AreEqual(ActualValue, ExpectedValue);
-            Assert.AreEqual(ActualValue, ExpectedValue);
+            Assert.AreEqual(ExpectedValue, ActualValue, "Error message: TestCalculateVolume broken");
+            Assert.AreEqual(ActualValue, ExpectedValue); // помилка!! ActualValue, ExpectedValue змінено місцями
         }
 
 
@@ -64,12 +71,14 @@ namespace Lesson4
 
         //подаємо дані через параметри тестового методу
         [Test]
+        [Order(2)]
         public void TestValues(
                         [Values("Value1", "Value2")] string strValue,
-                        [Random(1, 7, 3)] int intValue)
+                        [Random(1, 7, 2)] int intValue)
         {
             Console.WriteLine($"TestValues: {strValue} and {intValue}");
         }
+
 
         //подаємо дані через атрибути Nunit
         [TestCase(5, ExpectedResult = true)]
