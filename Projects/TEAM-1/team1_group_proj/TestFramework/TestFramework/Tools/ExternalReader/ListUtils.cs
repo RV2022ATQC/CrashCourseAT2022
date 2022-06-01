@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace crashCourse2021.Tools
+namespace crashCourse2022.Tools
 {
     public sealed class ListUtils
     {

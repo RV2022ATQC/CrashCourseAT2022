@@ -12,7 +12,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-namespace RvCrashCourse2021
+namespace RvCrashCourse2022
 {
     [TestFixture]
     public class ToolTipTest
@@ -38,7 +38,7 @@ namespace RvCrashCourse2021
 
             IWebDriver driver = new ChromeDriver();
             //
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(300);
             driver.Navigate().GoToUrl("https://www.skype.com/en/");
             //
             IWebElement blogsElement = driver.FindElement(By.PartialLinkText("Blogs"));
@@ -47,13 +47,13 @@ namespace RvCrashCourse2021
             Thread.Sleep(2000);
             //
             Actions action = new Actions(driver);
-            action.ClickAndHold().MoveToElement(blogsElement).Build().Perform();
-            //action.MoveToElement(blogsElement).Build().Perform();
-            Thread.Sleep(4000);
+           action.ClickAndHold().MoveToElement(blogsElement).Build().Perform();
+            action.MoveToElement(blogsElement).Build().Perform();
+           Thread.Sleep(4000);
             //
-            string toolTipText = driver.FindElement(By.CssSelector("a[href='https://blogs.skype.com']")).Text;
-            Console.WriteLine("blogsElement=" + toolTipText + "=end");
-            Thread.Sleep(1000);
+           // string toolTipText = driver.FindElement(By.CssSelector("a[href='https://blogs.skype.com']")).Text;
+           // Console.WriteLine("blogsElement=" + toolTipText + "=end");
+           // Thread.Sleep(1000);
             driver.Quit();
         }
 

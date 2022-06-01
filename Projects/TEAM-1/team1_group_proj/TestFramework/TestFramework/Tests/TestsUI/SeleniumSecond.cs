@@ -9,11 +9,11 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2021.Pages;
-//using crashCourse2021.Data.Users;
-using crashCourse2021.Tools;
+using crashCourse2022.Pages;
+//using crashCourse2022.Data.Users;
+using crashCourse2022.Tools;
 
-namespace RvCrashCourse2021
+namespace RvCrashCourse2022
 {
     //[TestFixture]
     public class SeleniumSecond
@@ -151,63 +151,9 @@ namespace RvCrashCourse2021
             //
         }
 
+        
         //[Test]
-        public void LoginTest4()
-        {
-            // Steps
-            //driver.FindElement(By.Id("login")).Click();
-            //driver.FindElement(By.Id("login")).Clear();
-            //driver.FindElement(By.Id("login")).SendKeys("work");
-            //Thread.Sleep(1000); // For Presentation ONLY
-            //
-            //driver.FindElement(By.Id("password")).Click();
-            //driver.FindElement(By.Id("password")).Clear();
-            //driver.FindElement(By.Id("password")).SendKeys("qwerty");
-            //Thread.Sleep(1000); // For Presentation ONLY
-            //
-            //driver.FindElement(By.CssSelector(".btn.btn-primary")).Click();
-            //
-            //LoginPage loginPage = new LoginPage(driver);
-            //loginPage.SetLoginInputClear("work");
-            //loginPage.SetPasswordInputClear("qwerty");
-            //loginPage.ClickSigninButton();
-            //
-            //new LoginPage(driver)
-            //    .SetLoginInputClear("work")
-            //    .SetPasswordInputClear("qwerty")
-            //    .ClickSigninButton();
-            //
-            //new LoginPage(driver)
-            //new LoginPage()
-            //    .successRegistratorLogin("work", "qwerty");
-            //    .successRegistratorLogin(UserRepository.Get().Registered());
-            //
-            Thread.Sleep(4000); // For Presentation ONLY
-            //
-        }
-
-        //[Test]
-        public void LoginTest5()
-        {
-            // Steps
-            //RegistratorHomePage registratorHomePage = new LoginPage(driver)
-         //   RegistratorHomePage registratorHomePage = new LoginPage()
-            //    .successRegistratorLogin("work", "qwerty");
-            //    .successRegistratorLogin(UserRepository.Get().Registered());
-            //
-            // Check
-          //  Assert.AreEqual("work", registratorHomePage.GetLoginNameText());
-            //
-            // Steps
-           // LoginPage loginPage = registratorHomePage.Logout();
-            //
-            // Check
-            //Assert.True(loginPage.GetLogoPictureSrcAttributeText()
-            //    .Contains("ukraine_logo2.gif"));
-           // Assert.True(loginPage.GetLogoPictureSrcAttributeText()
-              //  .Contains(LoginPage.IMAGE_NAME));
-        }
-
+       
         //[Test]
         public void LoginTest6()
         {

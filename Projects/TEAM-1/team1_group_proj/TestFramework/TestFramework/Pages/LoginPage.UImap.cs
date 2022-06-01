@@ -9,7 +9,7 @@ using System.Threading;
 using OpenQA.Selenium.Firefox;
 
 
-namespace crashCourse2021.Pages
+namespace crashCourse2022.Pages
 {
 
     public partial class LoginPage : ATopComponent

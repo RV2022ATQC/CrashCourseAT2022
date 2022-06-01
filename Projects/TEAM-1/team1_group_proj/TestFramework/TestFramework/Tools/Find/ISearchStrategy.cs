@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace crashCourse2021.Tools.Find
+namespace crashCourse2022.Tools.Find
 {
     public interface ISearchStrategy : ISearch
     {

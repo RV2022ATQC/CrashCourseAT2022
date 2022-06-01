@@ -12,7 +12,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Interactions;
 using NUnit.Allure.Core;
 
-namespace RvCrashCourse2021
+namespace RvCrashCourse2022
 {
     [AllureNUnit]
     [TestFixture]

@@ -9,17 +9,17 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.PageObjects;
-using crashCourse2021.Pages;
-//using crashCourse2021.Data.Users;
-using crashCourse2021.Tools;
-using crashCourse2021.Data.Application;
+using crashCourse2022.Pages;
+//using crashCourse2022.Data.Users;
+using crashCourse2022.Tools;
+using crashCourse2022.Data.Application;
 using NUnit.Framework.Interfaces;
 using NUnit.Allure.Attributes;
 using NLog;
 using System.IO;
 using NUnit.Allure.Core;
 
-namespace crashCourse2021.Tools
+namespace crashCourse2022.Tools
 {
     [AllureNUnit]
     [TestFixture]

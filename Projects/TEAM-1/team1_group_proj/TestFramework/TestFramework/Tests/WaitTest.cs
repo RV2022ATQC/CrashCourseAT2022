@@ -11,12 +11,12 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using crashCourse2021.Data.Application;
-using crashCourse2021.Tools;
-using crashCourse2021.Tools.Find;
+using crashCourse2022.Data.Application;
+using crashCourse2022.Tools;
+using crashCourse2022.Tools.Find;
 //#pragma warning disable
 
-namespace RvCrashCourse2021
+namespace RvCrashCourse2022
 {
 
     [TestFixture]

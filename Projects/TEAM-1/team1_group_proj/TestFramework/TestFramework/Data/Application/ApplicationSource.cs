@@ -4,19 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace crashCourse2021.Data.Application
+namespace crashCourse2022.Data.Application
 {
     public class ApplicationSource
     {
         // Browser Data
         public string BrowserName { get; private set; }
-        //public string DriverPath { get; private set; }
-        // public string BrowserPath { get; private set; }
-        // public string DefaulProfile { get; private set; }
-        // public IList<string> BrowserOptions { get; private set; }
-        //
-        // Implicit and Explicit Waits
-        public long ImplicitWaitTimeOut { get; private set; }
+            public long ImplicitWaitTimeOut { get; private set; }
         //public long ImplicitLoadTimeOut { get; private set; }
         //public long ImplicitScriptTimeOut { get; private set; }
         public long ExplicitTimeOut { get; private set; }

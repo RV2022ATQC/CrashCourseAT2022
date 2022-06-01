@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace RvCrashCourse2021
+namespace RvCrashCourse2022
 {
     public static class Database
     {

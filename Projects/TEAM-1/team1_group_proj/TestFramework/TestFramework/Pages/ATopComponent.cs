@@ -8,10 +8,10 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using crashCourse2021.Tools;
-using crashCourse2021.Tools.Find;
+using crashCourse2022.Tools;
+using crashCourse2022.Tools.Find;
 
-namespace crashCourse2021.Pages
+namespace crashCourse2022.Pages
 {
     public enum ChangeLanguageFields
     {
@@ -54,12 +54,7 @@ namespace crashCourse2021.Pages
         protected ATopComponent()
         {
             Search = Application.Get().Search;
-            //this.driver = driver;
-            //
-            // Classic Page Object
-            //TitleLabel = driver.FindElement(By.XPath("//div[@id='header']/div/h3/.."));
-            //ChangeLanguage = new SelectElement(driver.FindElement(By.Id("changeLanguage")));
-            //
+           
             VerifyWebElements();
         }
 
