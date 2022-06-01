@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "806d731f-aaac-46a7-a578-5ee0498d7c10",
+		"name": "Tsvihun_Opencart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19029294"
+	},
+	"item": [
+		{
+			"name": "Get token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"token\",responseJson.api_token);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": [
+						{
+							"key": "password",
+							"value": "hld6KM80jL5qlPzAxylp7rEzSGYKpf5hlDKhkGf17Sfyp8sUF0Rgj5MxynIbHi65vKx4sodqtGIurzDD0eg12FJJd0xz4dUOHpbGIvruRBe6SWCaD7w8OcJg6orBu2OUWKOgJjxvbugaPUA8VItSqsZubVuUYuw6h2FZi6Uh08tAWculbRoG32YB8WhFAI0NGJCfKGcFwsoUjfvr5N3uW7wgvkGmaDpvqaXE5lRcIlqb7HgKSw7B4a1kXsGsFm3b",
+							"type": "string"
+						},
+						{
+							"key": "disableRetryRequest",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "algorithm",
+							"value": "MD5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "Default",
+						"type": "text"
+					},
+					{
+						"key": "key",
+						"value": "j0M724bQvkcrVst6XJfafMfzNShlBx0W5PGnh2WkBy4sxPrpCk3hSqA2xAm2AHPZXynNAQEPJcOHgdPTuLSZdM1Il4wZ6vgk6Fvye0i5jSNEFIFk5s7tmKIMSItCeyYM2kLEMqaLe5mSgKOyIRTaGZq4TdPd44DleW2Q3qqfEW3jean6FbsPaCSbQeQWRqMXL5bmNWb4oFWufPMkozLdVofXUU3pY2lEZc32p6Tta1HzPUoD0APR4fCRGksv8RK6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Default",
+							"type": "text"
+						},
+						{
+							"key": "key",
+							"value": "BDXDwfcguvPuOvDs3xbxDOfvY2mZ5gkDGEWGIHj1RoHNV3VirH6Qow0INQQqY1XDjH0qKvTl5s0VhASBt1SZQW4sbRXnXGGsJCmOe1UnYLuS3VydnKbDtXwmJWzvVgfbq44gB7Xg78ojl6CF53TpMcABvKDVoNuux5A74sHjOw2mn0QBjWCFFFORTPWvj6v4UFxwQnMiIuZGv4sjPX46hEmHqmOVFcBturQWDMJYXAoxVWnHuNJS31cVRLLo1VFv",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}index.php?route=api/login",
+					"host": [
+						"{{baseUrl}}index",
+						"php"
+					],
+					"query": [
+						{
+							"key": "route",
+							"value": "api/login"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_product_to_cart",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "48",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/index.php?route=api/cart/add",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "route",
+							"value": "api/cart/add"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_cart_content",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"pm.environment.set(\"cart_id\",responseJson.products[0].cart_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}index.php?route=api/cart/products/",
+					"host": [
+						"{{baseUrl}}index",
+						"php"
+					],
+					"query": [
+						{
+							"key": "route",
+							"value": "api/cart/products/"
+						}
+					]
+				},
+				"description": "api/cart/products\r\nDESCRIPTION:cart content"
+			},
+			"response": []
+		},
+		{
+			"name": "Change_cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "key",
+							"value": "{{cart_id}}",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/index.php?route=api/cart/edit",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "route",
+							"value": "api/cart/edit"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove_from_cart",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "key",
+							"value": "{{cart_id}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}index.php?route=api/cart/remove",
+					"host": [
+						"{{baseUrl}}index",
+						"php"
+					],
+					"query": [
+						{
+							"key": "route",
+							"value": "api/cart/remove"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost/shop/"
+		}
+	]
+}
