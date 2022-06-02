@@ -22,10 +22,7 @@ namespace TestFramework.Utils
         public static readonly string TOKEN_STR = "hld6KM80jL5qlPzAxylp7rEzSGYKpf5hlDKhkGf17Sfyp8sUF0Rgj5MxynIbHi65vKx4sodqtGIurzDD0eg12FJJd0xz4dUOHpbGIvruRBe6SWCaD7w8OcJg6orBu2OUWKOgJjxvbugaPUA8VItSqsZubVuUYuw6h2FZi6Uh08tAWculbRoG32YB8WhFAI0NGJCfKGcFwsoUjfvr5N3uW7wgvkGmaDpvqaXE5lRcIlqb7HgKSw7B4a1kXsGsFm3b";
 
 
-        //public static readonly string F_NAME = "user";
-        //public static readonly string L_NAME = "user";
         public static readonly string EMAIL = "user@user.com";
-        //public static readonly string PHONE = "+380931234567";
         public static readonly string PASS = "user";
 
         public static readonly string ITEM_ID = "30";
@@ -62,7 +59,7 @@ namespace TestFramework.Utils
 
         public static void QuitWebDriver()
         {
-            driver.Quit();
+            driver.Close();
         }
     }
 }

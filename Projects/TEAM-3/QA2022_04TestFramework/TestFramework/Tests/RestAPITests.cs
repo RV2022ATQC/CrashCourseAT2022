@@ -60,7 +60,6 @@ namespace TestFramework.Tests
         public void APITest_1_VerifyLogin()
         {
             //Arrange
-            // enter your token from adminpanel bitnami
             Values.log.Info("START TEST APITest_1_VerifyLogin");
             // edit adress api/login
             string route = "index.php?route=api/login";
@@ -119,6 +118,7 @@ namespace TestFramework.Tests
         {
             //Arrange
             string ExpectedValue = "Canon EOS 5D";
+//            string ExpectedValue = "NIKON D5";
             string route = "index.php?route=api/cart/products/&api_token=";
             string url = Values.URL + route + JsonToken;
             Values.log.Info("START TEST APITest_3_VerifyAddItemInCartFromAPI");
@@ -137,7 +137,7 @@ namespace TestFramework.Tests
             Values.log.Info("RESULT TEST response.Content = " + response.Content + "\n");
 
             //Assert
-            Assert.AreEqual(ActualValue, ExpectedValue);
+            Assert.AreEqual(ExpectedValue, ActualValue);
         }
 
         [Test, Order(4)]

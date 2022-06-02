@@ -8,7 +8,7 @@ INSERT INTO oc_customer (customer_group_id, language_id, firstname, lastname, em
 
 // insert item (Canon5D color=blue) in cart
 // oc_cart.customer_id = oc_customer.customer_id
-// oc_cart.session_id from oc_api_session.session_id or {"api_token": "dbc965473863d561faf6fa31f9" from POSTMAN}
+// oc_cart.session_id from oc_api_session.session_id or {"api_token": "acb18b321ab95c6ec41e0e7f06" from POSTMAN}
 
 INSERT INTO oc_cart (api_id, customer_id, session_id, product_id, recurring_id, option, quantity, date_added)
 VALUES (0, 8, 'acb18b321ab95c6ec41e0e7f06', 30, 0 ,'{"226":"16"}' ,1, NOW())

@@ -21,6 +21,7 @@ namespace TestFramework.Pages
             string local_url = Values.URL + route_string;
             Values.driver.Navigate().GoToUrl(local_url);
             item = Values.driver.FindElement(By.LinkText("Canon EOS 5D"));
+            if (Values.screenshot) Values.ScreenShot();
             item.Click();
             if (Values.screenshot) Values.ScreenShot();
 
