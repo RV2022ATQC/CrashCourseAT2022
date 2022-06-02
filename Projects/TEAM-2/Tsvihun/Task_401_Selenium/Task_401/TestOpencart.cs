@@ -5,6 +5,21 @@ using OpenQA.Selenium.Chrome;
 using System.Threading;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+//using System.Windows.Forms;
+//using TestFramework.Data.Application;
+using OpenQA.Selenium.Remote;
+//using OpenQA.Selenium.Opera;
 
 namespace Task_401_Selenium
 {
@@ -14,13 +29,36 @@ namespace Task_401_Selenium
     {
         private static readonly string _url = "http://localhost/shop/";
         //private static readonly string _url = "https://demo.opencart.com/";
-        
+
         IWebDriver driver;
 
         [OneTimeSetUp]
         public void BeforeAllTests()
         {
-            driver = new ChromeDriver();
+            //driver = new ChromeDriver();
+            driver = GetBrowser();
+
+            //driver = new RemoteWebDriver(new Uri("http://127.0.0.1:4444/wd/hub"), new ChromeOptions());
+        }
+
+        public IWebDriver GetBrowser()
+        {
+            var runName = GetType().Assembly.GetName().Name;
+            var timestamp = $"{DateTime.Now:yyyyMMdd.HHmm}";
+
+            var firefoxoptions = new FirefoxOptions();
+            firefoxoptions.AddArgument("start-maximized");
+            firefoxoptions.AddAdditionalCapability("name", runName, true);
+            firefoxoptions.AddAdditionalCapability("videoName", $"{runName}.{timestamp}.mp4", true);
+            firefoxoptions.AddAdditionalCapability("logName", $"{runName}.{timestamp}.log", true);
+            firefoxoptions.AddAdditionalCapability("enableVNC", true, true);
+            firefoxoptions.AddAdditionalCapability("enableVideo", true, true);
+            firefoxoptions.AddAdditionalCapability("enableLog", true, true);
+            firefoxoptions.AddAdditionalCapability("screenResolution", "1920x1080x24", true);
+
+            var driver = new RemoteWebDriver(new Uri("http://127.0.0.1:4444/wd/hub"), firefoxoptions);
+
+            return driver;
         }
 
         [Test]
